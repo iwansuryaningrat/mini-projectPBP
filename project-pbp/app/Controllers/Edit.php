@@ -22,11 +22,12 @@ class Edit extends BaseController
         return view('admin/edit/form-edit-barang', $data);
     }
 
-    public function kategori($id)
+    public function kategori($idkategori)
     {
+        $datakategori = $this->kategoriModel->getKategori($idkategori);
         $data = [
             'title' => 'Form Edit Kategori | Sumber Jaya Furniture',
-            'data' => $this->kategoriModel->getData($id)
+            'data' => $datakategori
         ];
 
         return view('admin/edit/form-edit-kategori', $data);
@@ -54,7 +55,7 @@ class Edit extends BaseController
     {
         $this->kagegoriModel->delete($id);
 
-        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 
         return redirect()->to('/admin/barang');
     }

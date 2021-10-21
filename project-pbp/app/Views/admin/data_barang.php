@@ -246,6 +246,11 @@
 								</div>
 
 								<div class="card-body">
+									<?php if (session()->getFlashdata('pesan barang')) : ?>
+										<div class="alert alert-success" role="alert">
+											<?= session()->getFlashdata('pesan barang'); ?>
+										</div>
+									<?php endif; ?>
 									<div class="table-responsive">
 										<table id="add-row" class="display table table-striped table-hover">
 											<thead>
@@ -265,48 +270,6 @@
 													<td>Office Furniture</td>
 													<td>1,200,000</td>
 													<td>5</td>
-													<td>
-														<div class="form-button-action">
-															<a href="detail-barang.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
-																	<i class="fa fa-edit"></i>
-																</button>
-															</a>
-															<a href="#" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
-																	<i class="far fa-trash-alt"></i>
-																</button>
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>2</td>
-													<td>Sofa</td>
-													<td>Home Furniture</td>
-													<td>3,200,000</td>
-													<td>9</td>
-													<td>
-														<div class="form-button-action">
-															<a href="detail-barang.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
-																	<i class="fa fa-edit"></i>
-																</button>
-															</a>
-															<a href="#" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
-																	<i class="far fa-trash-alt"></i>
-																</button>
-															</a>
-														</div>
-													</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Meja Kerja</td>
-													<td>Office Furniture</td>
-													<td>4,999,000</td>
-													<td>12</td>
 													<td>
 														<div class="form-button-action">
 															<a href="detail-barang.html" class="d-flex">
@@ -359,12 +322,12 @@
 														<td><?= $data['nama']; ?></td>
 														<td>
 															<div class="form-button-action">
-																<a href="/edit/editkategori/<?= $data['idkategori']; ?>" class="d-flex">
+																<a href="/edit/kategori/<?= $data['idkategori']; ?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="#" class="d-flex">
+																<a href="/edit/hapuskategori/<?= $data['idkategori']; ?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>

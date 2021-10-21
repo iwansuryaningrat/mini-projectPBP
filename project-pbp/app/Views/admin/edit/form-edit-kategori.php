@@ -210,7 +210,7 @@
 						<h4 class="page-title">Formulir Edit Kategori</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="index.html">
+								<a href="/">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
@@ -218,13 +218,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html#data-kategori">Data Kategori</a>
+								<a href="/admin/barang">Data Kategori</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="form-edit-kategori.html">Formulir Edit Kategori</a>
+								<a href="#">Formulir Edit Kategori</a>
 							</li>
 						</ul>
 					</div> <!-- end page header -->
@@ -242,7 +242,7 @@
 										<div class="form-group form-show-validation row">
 											<label for="nameKategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Kategori <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="namaKategori" name="namaKategori" placeholder="" required>
+												<input type="text" class="form-control" id="namaKategori" name="namaKategori" placeholder="<?= $data['nama'] ?>" required>
 											</div>
 										</div> <!-- end nama -->
 									</div> <!-- end card body -->
