@@ -337,6 +337,11 @@
 									</div>
 								</div>
 								<div class="card-body">
+									<?php if (session()->getFlashdata('pesan')) : ?>
+										<div class="alert alert-success" role="alert">
+											<?= session()->getFlashdata('pesan'); ?>
+										</div>
+									<?php endif; ?>
 									<div class="table-responsive">
 										<table id="add-row2" class="display table table-striped table-hover">
 											<thead>
@@ -348,60 +353,27 @@
 											</thead>
 
 											<tbody>
-												<tr>
-													<td>1</td>
-													<td>Home Furniture</td>
-													<td>
-														<div class="form-button-action">
-															<a href="form-edit-kategori.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
-																	<i class="fa fa-edit"></i>
-																</button>
-															</a>
-															<a href="#" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
-																	<i class="far fa-trash-alt"></i>
-																</button>
-															</a>
-														</div>
-													</td>
-												</tr> <!-- kategori 1 -->
-												<tr>
-													<td>2</td>
-													<td>Hospital Furniture</td>
-													<td>
-														<div class="form-button-action">
-															<a href="form-edit-kategori.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
-																	<i class="fa fa-edit"></i>
-																</button>
-															</a>
-															<a href="#" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
-																	<i class="far fa-trash-alt"></i>
-																</button>
-															</a>
-														</div>
-													</td>
-												</tr> <!-- kategori 2 -->
-												<tr>
-													<td>3</td>
-													<td>Office Furniture</td>
-													<td>
-														<div class="form-button-action">
-															<a href="form-edit-kategori.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
-																	<i class="fa fa-edit"></i>
-																</button>
-															</a>
-															<a href="#" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
-																	<i class="far fa-trash-alt"></i>
-																</button>
-															</a>
-														</div>
-													</td>
-												</tr> <!-- kategori 3 -->
+												<?php foreach ($kategori as $data) : ?>
+													<tr>
+														<td><?= $i; ?></td>
+														<td><?= $data['nama']; ?></td>
+														<td>
+															<div class="form-button-action">
+																<a href="/edit/editkategori/<?= $data['idkategori']; ?>" class="d-flex">
+																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
+																		<i class="fa fa-edit"></i>
+																	</button>
+																</a>
+																<a href="#" class="d-flex">
+																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
+																		<i class="far fa-trash-alt"></i>
+																	</button>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<?php $i++; ?>
+												<?php endforeach; ?>
 											</tbody>
 										</table>
 									</div>
