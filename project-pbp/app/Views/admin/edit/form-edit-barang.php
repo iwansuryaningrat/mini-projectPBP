@@ -4,14 +4,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Form Edit Barang | Sumber Jaya Furniture</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="assets/img/favicon-sfj.ico" type="image/x-icon"/>
+	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
 	
 	<!-- Fonts and icons -->
-	<script src="assets/js/plugin/webfont/webfont.min.js"></script>
+	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css']},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -19,10 +19,10 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/atlantis.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/atlantis.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="assets/css/demo.css">
+	<link rel="stylesheet" href="/assets/css/demo.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -31,7 +31,7 @@
 			<div class="logo-header" data-background-color="blue">
 				
 				<a href="index.html" class="logo">
-					<img src="assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
+					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -120,14 +120,14 @@
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-											<div class="avatar-lg"><img src="assets/img/ava-musa.jpg" alt="image profile" class="avatar-img rounded"></div>
+											<div class="avatar-lg"><img src="/assets/img/ava-musa.jpg" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
 												<h4>Musa</h4>
 												<p class="text-muted">musaalfianmaulana@students.undip.ac.id</p>
@@ -153,7 +153,7 @@
 				<div class="sidebar-content">
 					<div class="user">
 						<div class="avatar-sm float-left mr-2">
-							<img src="assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
+							<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 						</div>
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -322,28 +322,28 @@
 	
 
 	<!--   Core JS Files   -->
-	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="assets/js/core/popper.min.js"></script>
-	<script src="assets/js/core/bootstrap.min.js"></script>
+	<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/assets/js/core/popper.min.js"></script>
+	<script src="/assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
-	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 	<!-- Moment JS -->
-	<script src="assets/js/plugin/moment/moment.min.js"></script>
+	<script src="/assets/js/plugin/moment/moment.min.js"></script>
 	<!-- Bootstrap Toggle -->
-	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 	<!-- jQuery Scrollbar -->
-	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- DateTimePicker -->
-	<script src="assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+	<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
 	<!-- Select2 -->
-	<script src="assets/js/plugin/select2/select2.full.min.js"></script>
+	<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
 	<!-- jQuery Validation -->
-	<script src="assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+	<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
 	<!-- Atlantis JS -->
-	<script src="assets/js/atlantis.min.js"></script>
+	<script src="/assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="assets/js/setting-demo2.js"></script>
+	<script src="/assets/js/setting-demo2.js"></script>
 	<script>
 		$('#birth').datetimepicker({
 			format: 'MM/DD/YYYY'

@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Detail Barang | Sumber Jaya Furniture</title>
+	<title>Form Edit Transaksi | Sumber Jaya Furniture</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="assets/img/favicon-sfj.ico" type="image/x-icon"/>
+	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
 	
 	<!-- Fonts and icons -->
-	<script src="assets/js/plugin/webfont/webfont.min.js"></script>
+	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css']},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css']},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -19,11 +19,10 @@
 	</script>
 
 	<!-- CSS Files -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/atlantis.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/atlantis.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
-	<link rel="stylesheet" href="assets/css/demo.css">
-	<link rel="stylesheet" href="assets/css/detail-barang-styles.css">
+	<link rel="stylesheet" href="/assets/css/demo.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -32,7 +31,7 @@
 			<div class="logo-header" data-background-color="blue">
 				
 				<a href="index.html" class="logo">
-					<img src="assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
+					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
@@ -86,6 +85,15 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
+											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+												<div class="quick-actions-item">
+													<div class="avatar-item bg-danger rounded-circle">
+														<i class="fas fa-box-open"></i>
+													</div>
+													<span class="text">Data Barang</span>
+												</div>
+											</a> <!-- end data barang -->
+
 											<a class="col-6 col-md-4 p-0" href="index.html">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-success rounded-circle">
@@ -94,15 +102,6 @@
 													<span class="text">Dashboard</span>
 												</div>
 											</a> <!-- end data barang -->
-
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
-												<div class="quick-actions-item">
-													<div class="avatar-item bg-warning rounded-circle">
-														<i class="fas fa-shopping-cart"></i>
-													</div>
-													<span class="text">Data Transaksi</span>
-												</div>
-											</a> <!-- end data transaksi -->
 
 											<a class="col-6 col-md-4 p-0" href="index.html">
 												<div class="quick-actions-item">
@@ -121,14 +120,14 @@
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
+									<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 								</div>
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-											<div class="avatar-lg"><img src="assets/img/ava-musa.jpg" alt="image profile" class="avatar-img rounded"></div>
+											<div class="avatar-lg"><img src="/assets/img/ava-musa.jpg" alt="image profile" class="avatar-img rounded"></div>
 											<div class="u-text">
 												<h4>Musa</h4>
 												<p class="text-muted">musaalfianmaulana@students.undip.ac.id</p>
@@ -147,13 +146,14 @@
 			</nav>
 			<!-- End Navbar -->
 		</div>
+
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2">			
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
 						<div class="avatar-sm float-left mr-2">
-							<img src="assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
+							<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 						</div>
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -183,14 +183,14 @@
 							</div>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a href="data_barang.html">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a href="data_transaksi.html">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
@@ -201,12 +201,12 @@
 			</div> <!-- end sidebar wripper -->
 		</div>
 		
-		<!-- detail barang -->
+		<!-- Formulir disini -->
 		<div class="main-panel">
 			<div class="container">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Detail Barang</h4>
+						<h4 class="page-title">Formulir Edit Transaksi</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
 								<a href="index.html">
@@ -217,73 +217,102 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html">Data Barang</a>
+								<a href="data_transaksi.html">Data Transaksi</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="detail-barang.html">Detail Barang</a>
+								<a href="form-edit-transaksi.html">Formulir Edit Transaksi</a>
 							</li>
 						</ul>
-					</div> <!-- end page header -->
-
+					</div>
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card">
-								<div class="card-body">
-									<div class="row">
-										<div class="col-md-6 col-sm-12 row image-gallery">
-											<a href="assets/img/productimg/chair-prod.png">
-												<img src="assets/img/productimg/chair-prod.png" class="img-fluid">
-											</a>
-										</div> <!-- end pictures -->
-
-										<div class="col-md-6 com-sm-12">
-											<p>1290901 ID</p>
-											<h1 class="fs_big fw-bold">Chair Coffea Shop</h1>
-											<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Accusantium corrupti odio in nostrum voluptatem perspiciatis eveniet reiciendis enim minus minima, inventore rem aspernatur molestias asperiores maxime similique ratione repellendus ad!</p>
-
-											<table class="table">
-												<thead>
-													<tr>
-														<td class="fw-bold">Kategori</td>
-														<td>Home Furniture</td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Harga</td>
-														<td>IDR 1,799,000</td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Berat</td>
-														<td>4,0 Kg</td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Stok</td>
-														<td>32</td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Tanggal Masuk</td>
-														<td>20/8/2021</td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Tanggal Update</td>
-														<td>20/10/2021</td>
-													</tr>
-												</thead>
-											</table>
-										</div> <!-- end desc -->
-									</div> <!-- end row -->
-								</div> <!-- end card body -->
-
-								<div class="card-body">
-									<div class="d-flex justify-content-end px-lg-4 px-sm-2">
-										<a href="data_barang.html" class="btn btn-danger" role="button" style="border-radius: 30px;">Kembali</a>
-										<a href="form-edit-barang.html" class="btn btn-primary ml-4" role="button" style="border-radius: 30px;">Edit Data</a>
-									</div>
+								<div class="card-header">
+									<div class="card-title">Edit Transaksi</div>
+									<div class="card-category">Masukkan data transaksi dengan sebenar-benarnya</div>
 								</div>
+								<form action="" method="POST">
+									<div class="card-body">
+										<div class="form-group form-show-validation row">
+											<label for="invoice" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">ID Invoice <span class="required-label">*</span></label>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<input type="text" class="form-control" id="invoice" name="invoice" placeholder="" disabled>
+											</div>
+										</div> <!-- end invoice -->
+
+										<div class="form-group form-show-validation row">
+											<label for="namaProduk" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Produk <span class="required-label">*</span></label>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<input type="text" class="form-control" id="namaProduk" name="namaProduk" placeholder="" disabled>
+											</div>
+										</div> <!-- end nama produk -->
+
+										<div class="form-group form-show-validation row">
+											<label for="waktuPemesanan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Waktu Pemesanan <span class="required-label">*</span></label>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<input type="text" class="form-control" id="waktuPemesanan" name="waktuPemesanan" placeholder="" disabled>
+											</div>
+										</div> <!-- end waktu pemesanan -->
+
+										<div class="form-group form-show-validation row">
+											<label for="status" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Status <span class="required-label">*</span></label>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<input type="text" class="form-control" id="status" name="status" placeholder="" disabled>
+											</div>
+										</div> <!-- end status -->
+
+										<div class="form-group form-show-validation row">
+											<label for="updateStatus" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Update Status <span class="required-label">*</span></label>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<div class="selectgroup selectgroup-pills d-flex">
+													<label class="selectgroup-item">
+														<input type="radio" name="update_status" value="sukses"
+															class="selectgroup-input bg-red">
+														<span class="selectgroup-button">Sukses</span>
+													</label> <!-- end sukses -->
+
+													<label class="selectgroup-item">
+														<input type="radio" name="update_status" value="dikirim"
+															class="selectgroup-input">
+														<span class="selectgroup-button">Dikirim</span>
+													</label> <!-- end dikirim -->
+
+													<label class="selectgroup-item">
+														<input type="radio" name="update_status" value="belum_dikirim"
+															class="selectgroup-input">
+														<span class="selectgroup-button">Belum Dikirim</span>
+													</label> <!-- end belum dikirm -->
+
+													<label class="selectgroup-item">
+														<input type="radio" name="update_status" value="belum_Transfer"
+															class="selectgroup-input">
+														<span class="selectgroup-button">Belum Transfer</span>
+													</label> <!-- end belum transfer -->
+													
+													<label class="selectgroup-item">
+														<input type="radio" name="update_status" value="dibatalkan"
+															class="selectgroup-input bg-red">
+														<span class="selectgroup-button">Dibatalkan</span>
+													</label> <!-- end dibatalkan -->
+												</div> <!-- end selectgroup -->
+											</div> <!-- end col -->
+										</div> <!-- end edit status -->
+									</div> <!-- end card body -->
+
+									<div class="card-action">
+										<div class="row">
+											<div class="col-md-12 d-flex justify-content-end">
+												<a href="data_transaksi.html" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
+												<input class="btn btn-primary ml-4" type="submit" value="Tambah" style="border-radius: 100px;">
+											</div>
+										</div>
+									</div> <!-- end button -->
+								</form> <!-- end form -->
 							</div> <!-- end card -->
-						</div> <!-- end col -->
+						</div> <!-- end col 12 -->
 					</div> <!-- end row -->
 				</div> <!-- end page inner -->
 			</div> <!-- end container -->
@@ -291,32 +320,32 @@
 			<footer class="footer text-center">	
 				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>	
 			</footer> <!-- end footer -->
-		</div>
+		</div> <!-- end main panel -->
+	
+
 	<!--   Core JS Files   -->
-	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="assets/js/core/popper.min.js"></script>
-	<script src="assets/js/core/bootstrap.min.js"></script>
+	<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="/assets/js/core/popper.min.js"></script>
+	<script src="/assets/js/core/bootstrap.min.js"></script>
 	<!-- jQuery UI -->
-	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+	<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
 	<!-- Moment JS -->
-	<script src="assets/js/plugin/moment/moment.min.js"></script>
+	<script src="/assets/js/plugin/moment/moment.min.js"></script>
 	<!-- Bootstrap Toggle -->
-	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+	<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 	<!-- jQuery Scrollbar -->
-	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+	<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- DateTimePicker -->
-	<script src="assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+	<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
 	<!-- Select2 -->
-	<script src="assets/js/plugin/select2/select2.full.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="assets/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
 	<!-- jQuery Validation -->
-	<script src="assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+	<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
 	<!-- Atlantis JS -->
-	<script src="assets/js/atlantis.min.js"></script>
+	<script src="/assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="assets/js/setting-demo2.js"></script>
+	<script src="/assets/js/setting-demo2.js"></script>
 	<script>
 		$('#birth').datetimepicker({
 			format: 'MM/DD/YYYY'
@@ -358,25 +387,6 @@
 			success: function(element) {
 				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 			},
-		});
-
-		// This will create a single gallery from all elements that have class "gallery-item"
-		$('.image-gallery').magnificPopup({
-			delegate: 'a', 
-			type: 'image',
-			removalDelay: 300,
-			gallery:{
-				enabled:true,
-			},
-			mainClass: 'mfp-with-zoom', 
-			zoom: {
-				enabled: true, 
-				duration: 300,
-				easing: 'ease-in-out',
-				opener: function(openerElement) {
-					return openerElement.is('img') ? openerElement : openerElement.find('img');
-				}
-			}
 		});
 	</script>
 </body>

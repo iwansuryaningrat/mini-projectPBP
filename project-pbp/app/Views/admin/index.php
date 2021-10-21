@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title><?= $title; ?></title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
+	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon" />
 
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
-			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css']},
+			google: {
+				"families": ["Lato:300,400,700,900"]
+			},
+			custom: {
+				"families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+				urls: ['/assets/css/fonts.min.css']
+			},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -28,12 +34,13 @@
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/assets/css/demo.css">
 </head>
+
 <body>
 	<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
-				
+
 				<a href="index.html" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
@@ -52,7 +59,7 @@
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-				
+
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -150,7 +157,7 @@
 		</div> <!-- end main header -->
 
 		<!-- Sidebar -->
-		<div class="sidebar sidebar-style-2">			
+		<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -158,7 +165,7 @@
 							<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 						</div>
 						<div class="info">
-							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<a data-toggle="collapse" href="/" aria-expanded="true">
 								<span>
 									Musa
 									<span class="user-level">Administrator</span>
@@ -169,31 +176,34 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item active">
-							<a  href="index.html">
+						<li class="nav-item 
+							<?php if ($title == 'Admin Dashboard | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
-							<div class="collapse" id="dashboard">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="index.html">
-											<span class="sub-item">Dashboard</span>
-										</a>
-									</li>
-								</ul>
-							</div>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item">
-							<a href="data_barang.html">
+						<li class="nav-item 
+							<?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/admin/barang">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item">
-							<a href="data_transaksi.html">
+						<li class="nav-item 
+							<?php if ($title == 'Data Transaksi | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
 							</a>
@@ -203,6 +213,8 @@
 			</div> <!-- end sidebar wripper -->
 		</div> <!-- End Sidebar -->
 
+		<!-- Content -->
+		<!-- Content -->
 		<div class="main-panel">
 			<div class="container">
 				<div class="panel-header bg-primary-gradient">
@@ -235,7 +247,7 @@
 										<div class="col col-stats ml-3 ml-sm-0">
 											<div class="numbers">
 												<p class="card-category">Total Barang Terjual</p>
-												<h4 class="card-title">476</h4>
+												<h4 class="card-title">2,097</h4>
 											</div>
 										</div>
 									</div>
@@ -256,7 +268,7 @@
 										<div class="col col-stats ml-3 ml-sm-0">
 											<div class="numbers">
 												<p class="card-category">Total Pembelian</p>
-												<h4 class="card-title">397</h4>
+												<h4 class="card-title">1,762</h4>
 											</div>
 										</div>
 									</div>
@@ -277,7 +289,7 @@
 										<div class="col col-stats ml-3 ml-sm-0">
 											<div class="numbers">
 												<p class="card-category">Total Pendapatan</p>
-												<h4 class="card-title">IDR 670,870,000</h4>
+												<h4 class="card-title">IDR 4,670,870,000</h4>
 											</div>
 										</div>
 									</div>
@@ -300,7 +312,7 @@
 								<div class="card-body pb-0">
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
+											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">Nama Barang</h6>
@@ -314,42 +326,42 @@
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
+											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">Sofa</h6>
 											<small class="text-muted">Home Furniture</small>
 										</div>
 										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">1,099,000</h3>
+											<h3 class="text-info fw-bold">426</h3>
 										</div>
 									</div> <!-- top sale 2 -->
 
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
+											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">Meja Kerja</h6>
 											<small class="text-muted">Office Furniture</small>
 										</div>
 										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">799,000</h3>
+											<h3 class="text-info fw-bold">301</h3>
 										</div>
 									</div> <!-- top sale 3 -->
 
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
-											<img src="/assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
+											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
 											<h6 class="fw-bold mb-1">Trolley Linen</h6>
 											<small class="text-muted">Hospital Furniture</small>
 										</div>
 										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">1,499,000</h3>
+											<h3 class="text-info fw-bold">194</h3>
 										</div>
 									</div> <!-- top sale 4 -->
 
@@ -367,89 +379,89 @@
 								<div class="card-body">
 									<div class="table-responsive">
 										<table class="table teble table-hover">
-										<thead>
-											<tr>
-												<th scope="col">Bulan</th>
-												<th scope="col">Jumlah</th>
-												<th scope="col">Total Penjualan</th>
-												<th scope="col">Action</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>Januari</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Februari</td>
-												<td>20</td>
-												<td>7290000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Maret</td>
-												<td>18</td>
-												<td>8082000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>April</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Mei</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Juni</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Juli</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Agustus</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>September</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Oktober</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>November</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-											<tr>
-												<td>Desember</td>
-												<td>24</td>
-												<td>9576000</td>
-												<td><a href="#" class="badge badge-info">Lihat Detail</a></td>
-											</tr>
-										</tbody>
-									</table>
+											<thead>
+												<tr>
+													<th scope="col">Bulan</th>
+													<th scope="col">Jumlah</th>
+													<th scope="col">Total Penjualan</th>
+													<th scope="col">Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Januari</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Februari</td>
+													<td>20</td>
+													<td>7290000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Maret</td>
+													<td>18</td>
+													<td>8082000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>April</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Mei</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Juni</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Juli</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Agustus</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>September</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Oktober</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>November</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+												<tr>
+													<td>Desember</td>
+													<td>24</td>
+													<td>9576000</td>
+													<td><a href="laporan-bulanan.html" class="badge badge-info">Lihat Detail</a></td>
+												</tr>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</div>
@@ -458,8 +470,8 @@
 				</div> <!-- end page inner -->
 			</div> <!-- end container -->
 
-			<footer class="footer text-center">	
-				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>	
+			<footer class="footer text-center">
+				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>
 			</footer> <!-- end footer -->
 		</div> <!-- end main panel -->
 	</div> <!-- end wrapper -->
@@ -541,53 +553,54 @@
 	<!-- Atlantis JS -->
 	<script src="/assets/js/atlantis.min.js"></script>
 
+	<!-- INDEX SCRIPTS -->
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="/assets/js/setting-demo.js"></script>
 	<script src="/assets/js/demo.js"></script>
 	<script>
 		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
+			id: 'circles-1',
+			radius: 45,
+			value: 60,
+			maxValue: 100,
+			width: 7,
 			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
+			colors: ['#f1f1f1', '#FF9E27'],
+			duration: 400,
+			wrpClass: 'circles-wrp',
+			textClass: 'circles-text',
+			styleWrapper: true,
+			styleText: true
 		})
 
 		Circles.create({
-			id:'circles-2',
-			radius:45,
-			value:70,
-			maxValue:100,
-			width:7,
+			id: 'circles-2',
+			radius: 45,
+			value: 70,
+			maxValue: 100,
+			width: 7,
 			text: 36,
-			colors:['#f1f1f1', '#2BB930'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
+			colors: ['#f1f1f1', '#2BB930'],
+			duration: 400,
+			wrpClass: 'circles-wrp',
+			textClass: 'circles-text',
+			styleWrapper: true,
+			styleText: true
 		})
 
 		Circles.create({
-			id:'circles-3',
-			radius:45,
-			value:40,
-			maxValue:100,
-			width:7,
+			id: 'circles-3',
+			radius: 45,
+			value: 40,
+			maxValue: 100,
+			width: 7,
 			text: 12,
-			colors:['#f1f1f1', '#F25961'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
+			colors: ['#f1f1f1', '#F25961'],
+			duration: 400,
+			wrpClass: 'circles-wrp',
+			textClass: 'circles-text',
+			styleWrapper: true,
+			styleText: true
 		})
 
 		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
@@ -596,7 +609,7 @@
 			type: 'bar',
 			data: {
 				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-				datasets : [{
+				datasets: [{
 					label: "Total Income",
 					backgroundColor: '#ff9e27',
 					borderColor: 'rgb(23, 125, 255)',
@@ -614,22 +627,22 @@
 						ticks: {
 							display: false //this will remove only the label
 						},
-						gridLines : {
+						gridLines: {
 							drawBorder: false,
-							display : false
+							display: false
 						}
 					}],
-					xAxes : [ {
-						gridLines : {
+					xAxes: [{
+						gridLines: {
 							drawBorder: false,
-							display : false
+							display: false
 						}
 					}]
 				},
 			}
 		});
 
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
+		$('#lineChart').sparkline([105, 103, 123, 100, 95, 105, 115], {
 			type: 'line',
 			height: '70',
 			width: '100%',
@@ -639,4 +652,5 @@
 		});
 	</script>
 </body>
+
 </html>

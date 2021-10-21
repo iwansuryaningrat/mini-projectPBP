@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title><?= $title; ?></title>
+	<title>Detail Barang | Sumber Jaya Furniture</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
-
+	
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
@@ -21,12 +21,9 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/assets/css/atlantis.css">
-
-	<!-- custom -->
-	<link rel="stylesheet" href="/assets/css/index-styles.css">
-
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/assets/css/demo.css">
+	<link rel="stylesheet" href="/assets/css/detail-barang-styles.css">
 </head>
 <body>
 	<div class="wrapper">
@@ -48,7 +45,8 @@
 						<i class="icon-menu"></i>
 					</button>
 				</div>
-			</div> <!-- End Logo Header -->
+			</div>
+			<!-- End Logo Header -->
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
@@ -88,12 +86,12 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="index.html">
 												<div class="quick-actions-item">
-													<div class="avatar-item bg-danger rounded-circle">
-														<i class="fas fa-box-open"></i>
+													<div class="avatar-item bg-success rounded-circle">
+														<i class="fas fa-home"></i>
 													</div>
-													<span class="text">Data Barang</span>
+													<span class="text">Dashboard</span>
 												</div>
 											</a> <!-- end data barang -->
 
@@ -139,16 +137,16 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
+										<a class="dropdown-item" href="/logout">Logout</a>
 									</li>
 								</div>
 							</ul>
 						</li> <!-- end profil -->
 					</ul> <!-- end navbar top navbar -->
 				</div> <!-- end container fluid -->
-			</nav> <!-- End Navbar -->
-		</div> <!-- end main header -->
-
+			</nav>
+			<!-- End Navbar -->
+		</div>
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2">			
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
@@ -169,8 +167,8 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item <?php if($title == 'Admin Dashboard | Sumber Jaya Furniture') : echo "active"; ?>">
-							<a  href="/">
+						<li class="nav-item">
+							<a  href="index.html">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
@@ -185,14 +183,14 @@
 							</div>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item <?php if($title == 'Data Barang | Sumber Jaya Furniture') : echo "active"; ?>">
+						<li class="nav-item active">
 							<a href="data_barang.html">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item <?php if($title == 'Data Transaksi | Sumber Jaya Furniture') : echo "active"; ?>">
+						<li class="nav-item">
 							<a href="data_transaksi.html">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
@@ -201,185 +199,184 @@
 					</ul> <!-- end nav primary -->
 				</div> <!-- end sidebar content -->
 			</div> <!-- end sidebar wripper -->
-		</div> <!-- End Sidebar -->
+		</div>
+		
+		<!-- detail barang -->
+		<div class="main-panel">
+			<div class="container">
+				<div class="page-inner">
+					<div class="page-header">
+						<h4 class="page-title">Detail Barang</h4>
+						<ul class="breadcrumbs">
+							<li class="nav-home">
+								<a href="index.html">
+									<i class="flaticon-home"></i>
+								</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="data_barang.html">Data Barang</a>
+							</li>
+							<li class="separator">
+								<i class="flaticon-right-arrow"></i>
+							</li>
+							<li class="nav-item">
+								<a href="detail-barang.html">Detail Barang</a>
+							</li>
+						</ul>
+					</div> <!-- end page header -->
 
-        <!-- Content -->
-        <?= $this->renderSection('content'); ?>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="row">
+										<div class="col-md-6 col-sm-12 row image-gallery">
+											<a href="/assets/img/productimg/chair-prod.png">
+												<img src="/assets/img/productimg/chair-prod.png" class="img-fluid">
+											</a>
+										</div> <!-- end pictures -->
 
-	</div> <!-- end wrapper -->
+										<div class="col-md-6 com-sm-12">
+											<p>1290901 ID</p>
+											<h1 class="fs_big fw-bold">Chair Coffea Shop</h1>
+											<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Accusantium corrupti odio in nostrum voluptatem perspiciatis eveniet reiciendis enim minus minima, inventore rem aspernatur molestias asperiores maxime similique ratione repellendus ad!</p>
 
+											<table class="table">
+												<thead>
+													<tr>
+														<td class="fw-bold">Kategori</td>
+														<td>Home Furniture</td>
+													</tr>
+													<tr>
+														<td class="fw-bold">Harga</td>
+														<td>IDR 1,799,000</td>
+													</tr>
+													<tr>
+														<td class="fw-bold">Berat</td>
+														<td>4,0 Kg</td>
+													</tr>
+													<tr>
+														<td class="fw-bold">Stok</td>
+														<td>32</td>
+													</tr>
+													<tr>
+														<td class="fw-bold">Tanggal Masuk</td>
+														<td>20/8/2021</td>
+													</tr>
+													<tr>
+														<td class="fw-bold">Tanggal Update</td>
+														<td>20/10/2021</td>
+													</tr>
+												</thead>
+											</table>
+										</div> <!-- end desc -->
+									</div> <!-- end row -->
+								</div> <!-- end card body -->
 
+								<div class="card-body">
+									<div class="d-flex justify-content-end px-lg-4 px-sm-2">
+										<a href="data_barang.html" class="btn btn-danger" role="button" style="border-radius: 30px;">Kembali</a>
+										<a href="form-edit-barang.html" class="btn btn-primary ml-4" role="button" style="border-radius: 30px;">Edit Data</a>
+									</div>
+								</div>
+							</div> <!-- end card -->
+						</div> <!-- end col -->
+					</div> <!-- end row -->
+				</div> <!-- end page inner -->
+			</div> <!-- end container -->
+
+			<footer class="footer text-center">	
+				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>	
+			</footer> <!-- end footer -->
+		</div>
 	<!--   Core JS Files   -->
 	<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="/assets/js/core/popper.min.js"></script>
 	<script src="/assets/js/core/bootstrap.min.js"></script>
-
 	<!-- jQuery UI -->
 	<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-
-	<!-- jQuery Scrollbar -->
-	<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-
 	<!-- Moment JS -->
 	<script src="/assets/js/plugin/moment/moment.min.js"></script>
-
-	<!-- Chart JS -->
-	<script src="/assets/js/plugin/chart.js/chart.min.js"></script>
-
-	<!-- jQuery Sparkline -->
-	<script src="/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
-
-	<!-- Chart Circle -->
-	<script src="/assets/js/plugin/chart-circle/circles.min.js"></script>
-
-	<!-- Datatables -->
-	<script src="/assets/js/plugin/datatables/datatables.min.js"></script>
-
-	<!-- Bootstrap Notify -->
-	<script src="/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
-
 	<!-- Bootstrap Toggle -->
 	<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-
-	<!-- jQuery Vector Maps -->
-	<script src="/assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
-	<script src="/assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
-
-	<!-- Google Maps Plugin -->
-	<script src="/assets/js/plugin/gmaps/gmaps.js"></script>
-
-	<!-- Dropzone -->
-	<script src="/assets/js/plugin/dropzone/dropzone.min.js"></script>
-
-	<!-- Fullcalendar -->
-	<script src="/assets/js/plugin/fullcalendar/fullcalendar.min.js"></script>
-
+	<!-- jQuery Scrollbar -->
+	<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
 	<!-- DateTimePicker -->
 	<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
-
-	<!-- Bootstrap Tagsinput -->
-	<script src="/assets/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
-
-	<!-- Bootstrap Wizard -->
-	<script src="/assets/js/plugin/bootstrap-wizard/bootstrapwizard.js"></script>
-
-	<!-- jQuery Validation -->
-	<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
-
-	<!-- Summernote -->
-	<script src="/assets/js/plugin/summernote/summernote-bs4.min.js"></script>
-
 	<!-- Select2 -->
 	<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
-
-	<!-- Sweet Alert -->
-	<script src="/assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-
-	<!-- Owl Carousel -->
-	<script src="/assets/js/plugin/owl-carousel/owl.carousel.min.js"></script>
-
 	<!-- Magnific Popup -->
 	<script src="/assets/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-
+	<!-- jQuery Validation -->
+	<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
 	<!-- Atlantis JS -->
 	<script src="/assets/js/atlantis.min.js"></script>
-
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/assets/js/setting-demo.js"></script>
-	<script src="/assets/js/demo.js"></script>
+	<script src="/assets/js/setting-demo2.js"></script>
 	<script>
-		Circles.create({
-			id:'circles-1',
-			radius:45,
-			value:60,
-			maxValue:100,
-			width:7,
-			text: 5,
-			colors:['#f1f1f1', '#FF9E27'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-2',
-			radius:45,
-			value:70,
-			maxValue:100,
-			width:7,
-			text: 36,
-			colors:['#f1f1f1', '#2BB930'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		Circles.create({
-			id:'circles-3',
-			radius:45,
-			value:40,
-			maxValue:100,
-			width:7,
-			text: 12,
-			colors:['#f1f1f1', '#F25961'],
-			duration:400,
-			wrpClass:'circles-wrp',
-			textClass:'circles-text',
-			styleWrapper:true,
-			styleText:true
-		})
-
-		var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
-
-		var mytotalIncomeChart = new Chart(totalIncomeChart, {
-			type: 'bar',
-			data: {
-				labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-				datasets : [{
-					label: "Total Income",
-					backgroundColor: '#ff9e27',
-					borderColor: 'rgb(23, 125, 255)',
-					data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
-				}],
-			},
-			options: {
-				responsive: true,
-				maintainAspectRatio: false,
-				legend: {
-					display: false,
-				},
-				scales: {
-					yAxes: [{
-						ticks: {
-							display: false //this will remove only the label
-						},
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}],
-					xAxes : [ {
-						gridLines : {
-							drawBorder: false,
-							display : false
-						}
-					}]
-				},
-			}
+		$('#birth').datetimepicker({
+			format: 'MM/DD/YYYY'
 		});
 
-		$('#lineChart').sparkline([105,103,123,100,95,105,115], {
-			type: 'line',
-			height: '70',
-			width: '100%',
-			lineWidth: '2',
-			lineColor: '#ffa534',
-			fillColor: 'rgba(255, 165, 52, .14)'
+		$('#state').select2({
+			theme: "bootstrap"
+		});
+
+		/* validate */
+
+		// validation when select change
+		$("#state").change(function(){
+			$(this).valid();
+		})
+
+		// validation when inputfile change
+		$("#uploadImg").on("change", function(){
+			$(this).parent('form').validate();
+		})
+
+		$("#exampleValidation").validate({
+			validClass: "success",
+			rules: {
+				gender: {required: true},
+				confirmpassword: {
+					equalTo: "#password"
+				},
+				birth: {
+					date: true
+				},
+				uploadImg: {
+					required: true, 
+				},
+			},
+			highlight: function(element) {
+				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+			},
+			success: function(element) {
+				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			},
+		});
+
+		// This will create a single gallery from all elements that have class "gallery-item"
+		$('.image-gallery').magnificPopup({
+			delegate: 'a', 
+			type: 'image',
+			removalDelay: 300,
+			gallery:{
+				enabled:true,
+			},
+			mainClass: 'mfp-with-zoom', 
+			zoom: {
+				enabled: true, 
+				duration: 300,
+				easing: 'ease-in-out',
+				opener: function(openerElement) {
+					return openerElement.is('img') ? openerElement : openerElement.find('img');
+				}
+			}
 		});
 	</script>
 </body>
