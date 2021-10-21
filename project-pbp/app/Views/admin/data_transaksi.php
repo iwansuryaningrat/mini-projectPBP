@@ -61,6 +61,7 @@
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
+
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -73,7 +74,7 @@
 								<input type="text" placeholder="Search ..." class="form-control">
 							</div>
 						</form>
-					</div> <!-- end collapse -->
+					</div>
 
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item toggle-nav-search hidden-caret">
@@ -105,12 +106,12 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
 												<div class="quick-actions-item">
-													<div class="avatar-item bg-success rounded-circle">
-														<i class="fas fa-home"></i>
+													<div class="avatar-item bg-warning rounded-circle">
+														<i class="fas fa-shopping-cart"></i>
 													</div>
-													<span class="text">Dashboard</span>
+													<span class="text">Data Transaksi</span>
 												</div>
 											</a> <!-- end data transaksi -->
 
@@ -147,12 +148,12 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
+										<a class="dropdown-item" href="/logout">Logout</a>
 									</li>
 								</div>
 							</ul>
 						</li> <!-- end profil -->
-					</ul> <!-- end navbar topbar -->
+					</ul> <!-- end navbar top navbar -->
 				</div> <!-- end container fluid -->
 			</nav> <!-- End Navbar -->
 		</div> <!-- end main header -->

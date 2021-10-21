@@ -146,7 +146,7 @@
 									</li>
 									<li>
 										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Logout</a>
+										<a class="dropdown-item" href="/logout">Logout</a>
 									</li>
 								</div>
 							</ul>
@@ -213,7 +213,6 @@
 			</div> <!-- end sidebar wripper -->
 		</div> <!-- End Sidebar -->
 
-		<!-- Content -->
 		<!-- Content -->
 		<div class="main-panel">
 			<div class="container">
@@ -475,7 +474,6 @@
 			</footer> <!-- end footer -->
 		</div> <!-- end main panel -->
 	</div> <!-- end wrapper -->
-
 
 	<!--   Core JS Files   -->
 	<script src="/assets/js/core/jquery.3.2.1.min.js"></script>

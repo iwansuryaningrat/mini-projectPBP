@@ -30,7 +30,7 @@
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
-				
+
 				<a href="index.html" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
@@ -45,12 +45,11 @@
 						<i class="icon-menu"></i>
 					</button>
 				</div>
-			</div>
-			<!-- End Logo Header -->
+			</div> <!-- End Logo Header -->
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-				
+
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -86,12 +85,12 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="data_barang.html">
 												<div class="quick-actions-item">
-													<div class="avatar-item bg-success rounded-circle">
-														<i class="fas fa-home"></i>
+													<div class="avatar-item bg-danger rounded-circle">
+														<i class="fas fa-box-open"></i>
 													</div>
-													<span class="text">Dashboard</span>
+													<span class="text">Data Barang</span>
 												</div>
 											</a> <!-- end data barang -->
 
@@ -144,11 +143,11 @@
 						</li> <!-- end profil -->
 					</ul> <!-- end navbar top navbar -->
 				</div> <!-- end container fluid -->
-			</nav>
-			<!-- End Navbar -->
-		</div>
+			</nav> <!-- End Navbar -->
+		</div> <!-- end main header -->
+
 		<!-- Sidebar -->
-		<div class="sidebar sidebar-style-2">			
+		<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -156,7 +155,7 @@
 							<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 						</div>
 						<div class="info">
-							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<a data-toggle="collapse" href="/" aria-expanded="true">
 								<span>
 									Musa
 									<span class="user-level">Administrator</span>
@@ -167,31 +166,34 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item">
-							<a  href="index.html">
+						<li class="nav-item 
+							<?php if ($title == 'Admin Dashboard | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
-							<div class="collapse" id="dashboard">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="index.html">
-											<span class="sub-item">Dashboard</span>
-										</a>
-									</li>
-								</ul>
-							</div>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item active">
-							<a href="data_barang.html">
+						<li class="nav-item 
+							<?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/admin/barang">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item">
-							<a href="data_transaksi.html">
+						<li class="nav-item 
+							<?php if ($title == 'Data Transaksi | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
 							</a>
@@ -199,7 +201,7 @@
 					</ul> <!-- end nav primary -->
 				</div> <!-- end sidebar content -->
 			</div> <!-- end sidebar wripper -->
-		</div>
+		</div> <!-- End Sidebar -->
 		
 		<!-- detail barang -->
 		<div class="main-panel">

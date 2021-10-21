@@ -36,6 +36,7 @@
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
+
 				<a href="index.html" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
@@ -149,7 +150,7 @@
 					</ul> <!-- end navbar top navbar -->
 				</div> <!-- end container fluid -->
 			</nav> <!-- End Navbar -->
-		</div>
+		</div> <!-- end main header -->
 
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2">
@@ -160,7 +161,7 @@
 							<img src="/assets/img/ava-musa.jpg" alt="..." class="avatar-img rounded-circle">
 						</div>
 						<div class="info">
-							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
+							<a data-toggle="collapse" href="/" aria-expanded="true">
 								<span>
 									Musa
 									<span class="user-level">Administrator</span>
@@ -171,22 +172,34 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item active">
-							<a href="index.html">
+						<li class="nav-item 
+							<?php if ($title == 'Admin Dashboard | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item">
-							<a href="data_barang.html">
+						<li class="nav-item 
+							<?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/admin/barang">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item">
-							<a href="data_transaksi.html">
+						<li class="nav-item 
+							<?php if ($title == 'Data Transaksi | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
+							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
 							</a>
