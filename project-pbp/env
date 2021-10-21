@@ -38,11 +38,19 @@
 #--------------------------------------------------------------------
 
 # database.default.hostname = localhost
+<<<<<<< HEAD
 # database.default.database = ci4
 # database.default.username = root
 # database.default.password = root
 # database.default.DBDriver = MySQLi
 # database.default.DBPrefix =
+=======
+# database.default.database = ecommerce_db
+# database.default.username = root
+# database.default.password = 
+# database.default.DBDriver = MySQLi
+# database.default.DBPrefix = 
+>>>>>>> 8425d212c6b9fe304b2447fc103519cc1ed14d6e
 
 # database.tests.hostname = localhost
 # database.tests.database = ci4
