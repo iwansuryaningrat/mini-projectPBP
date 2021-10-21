@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Form Tambah Barang | Sumber Jaya Furniture</title>
+	<title>Laporan Penjualan | Sumber Jaya Furniture</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="assets/img/favicon-sfj.ico" type="image/x-icon"/>
 	
@@ -29,7 +29,6 @@
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
-				
 				<a href="index.html" class="logo">
 					<img src="assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
@@ -44,8 +43,7 @@
 						<i class="icon-menu"></i>
 					</button>
 				</div>
-			</div>
-			<!-- End Logo Header -->
+			</div> <!-- End Logo Header -->
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
@@ -85,12 +83,12 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="data_barang.html">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
 													</div>
-													<span class="text">Dashboard</span>
+													<span class="text">Data Barang</span>
 												</div>
 											</a> <!-- end data barang -->
 
@@ -143,9 +141,9 @@
 						</li> <!-- end profil -->
 					</ul> <!-- end navbar top navbar -->
 				</div> <!-- end container fluid -->
-			</nav>
-			<!-- End Navbar -->
+			</nav> <!-- End Navbar -->
 		</div>
+
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2">			
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
@@ -166,23 +164,14 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a  href="index.html">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
-							<div class="collapse" id="dashboard">
-								<ul class="nav nav-collapse">
-									<li>
-										<a href="index.html">
-											<span class="sub-item">Dashboard</span>
-										</a>
-									</li>
-								</ul>
-							</div>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a href="data_barang.html">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
@@ -198,14 +187,14 @@
 					</ul> <!-- end nav primary -->
 				</div> <!-- end sidebar content -->
 			</div> <!-- end sidebar wripper -->
-		</div>
-		
-		<!-- Formulir disini -->
+		</div> <!-- End Sidebar -->
+
+		<!-- main panel -->
 		<div class="main-panel">
 			<div class="container">
 				<div class="page-inner">
 					<div class="page-header">
-						<h4 class="page-title">Formulir Tambah Barang</h4>
+						<h4 class="page-title">Laporan Penjualan Bulanan</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
 								<a href="index.html">
@@ -216,110 +205,99 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html">Data Barang</a>
-							</li>
-							<li class="separator">
-								<i class="flaticon-right-arrow"></i>
-							</li>
-							<li class="nav-item">
-								<a href="form-add-barang.html">Formulir edit barang</a>
+								<a href="laporan-bulanan.html">Laporan Penjualan Bulanan</a>
 							</li>
 						</ul>
-					</div>
+					</div> <!-- end page header -->
+
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card">
 								<div class="card-header">
-									<div class="card-title">Edit Barang</div>
-									<div class="card-category">Masukkan data barang dengan sebenar-benarnya</div>
+									<div class="d-flex align-items-center">
+										<h4 class="card-title">Januari</h4>
+									</div>
 								</div>
-								<form action="" method="POST">
-									<div class="card-body">
-										<div class="form-group form-show-validation row">
-											<label for="name" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama <span class="required-label">*</span></label>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="nama" name="nama" placeholder="" required>
-											</div>
-										</div> <!-- end nama -->
 
-										<div class="form-group form-show-validation row">
-											<label for="disabledSelect" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Kategori <span class="required-label">*</span></label>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<select id="Kategori" required class="form-control" name="kategori">
-													<option hidden> --  Pilih  --</option>
-													<!-- Ambil dari database -->
-													<option value="">Kursi</option>
-													<option value="">Meja</option>
-													<option value="">Lemari</option>
-												</select>
-											</div>
-										</div> <!-- end kategori -->
-
-										<div class="form-group form-show-validation row">
-											<label for="jumlah" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Jumlah <span class="required-label">*</span></label>
-											<br>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="jumlah" min="1" step="1" name="jumlah">
-											</div>											
-										</div> <!-- end jumlah -->
-
-										<div class="form-group form-show-validation row">
-											<label for="harga" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Harga (Rp) <span class="required-label">*</span></label>
-											<br>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="Harga" min="500" step="500" name="harga">
-											</div>											
-										</div> <!-- end harga -->
-
-										<div class="form-group form-show-validation row">
-											<label for="berat" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Berat (Kg) <span class="required-label">*</span></label>
-											<br>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="Harga" min="1" step="1" name="berat">
-											</div>											
-										</div> <!-- end berat -->
-
-										<div class="form-group form-show-validation row">
-											<label for="keterangan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Keterangan <span class="required-label">*</span></label>
-											<br>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<textarea class="form-control" name="keterangan" id="Keterangan" cols="30" rows="10">
-												</textarea>
-											</div>
-										</div> <!-- end keterangan -->
-
-										<div class="form-group form-show-validation row">
-											<label class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Upload Image <span class="required-label">*</span></label>
-											<div class="col-lg-7 col-md-9 col-sm-8">
-												<div class="input-file input-file-image">
-													<img class="img-upload-preview" width="100" height="100" src="http://placehold.it/100x100" alt="preview">
-													<input type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required >
-													<label for="uploadImg" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload a Image</label>
-												</div>
-											</div>
-										</div>
+								<div class="card-body">
+									<div class="table-responsive">
+                                        <!-- Table laporan penjualan -->
+                                        <table class="table table-bordered table-head-bg-info table-bordered-bd-info mt-4">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">No</th>
+                                                    <th scope="col">Nama Barang</th>
+                                                    <th scope="col">Kategori</th>
+                                                    <th scope="col">Jumlah</th>
+                                                    <th scope="col">Harga Satuan</th>
+                                                    <th scope="col">Total Penjualan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Kursi Lipat</td>
+                                                    <td>Kursi</td>
+                                                    <td>15</td>
+                                                    <td>150000</td>
+                                                    <td>2250000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>Kursi Goyang</td>
+                                                    <td>Kursi</td>
+                                                    <td>20</td>
+                                                    <td>200000</td>
+                                                    <td>4000000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Lemari Pakaian</td>
+                                                    <td>Lemari</td>
+                                                    <td>10</td>
+                                                    <td>500000</td>
+                                                    <td>5000000</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 									</div>
-									<div class="card-action">
-										<div class="row">
-											<div class="col-md-12 d-flex justify-content-end">
-												<a href="data_barang.html" class="btn btn-danger" style="border-radius: 100px;">
-													Batal
-												</a>
-												<input class="btn btn-primary ml-4" type="submit" value="Submit" style="border-radius: 100px;">
-											</div>										
-										</div>
-									</div>
-								</form>
+
+                                    <div class="table-responsive">
+                                        <!-- Tabel total keseluruhan -->
+                                        <table class="table mt-4">
+                                            
+                                            <tbody>
+                                                <tr>
+                                                    <th>Total Jumlah</th>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    
+                                                    
+                                                    <td><span class="mr-3">=</span><strong>45</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Total Penjualan Keseluruhan</th>
+                                                    <td><span class="mr-3">=</span><strong>23400000</strong></td>
+                                                </tr>
+                                             
+                                            </tbody>
+                                        </table>
+                                    </div>
+								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+						</div> <!-- end tabel barang -->
+					</div> <!-- end row -->
+				</div> <!-- end page inner -->
+			</div> <!-- end container -->
 
 			<footer class="footer text-center">	
 				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>	
 			</footer> <!-- end footer -->
-		</div>
+		</div> <!-- end main panel -->
+	</div>
 	<!--   Core JS Files   -->
 	<script src="assets/js/core/jquery.3.2.1.min.js"></script>
 	<script src="assets/js/core/popper.min.js"></script>
@@ -327,63 +305,80 @@
 	<!-- jQuery UI -->
 	<script src="assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
 	<script src="assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-	<!-- Moment JS -->
-	<script src="assets/js/plugin/moment/moment.min.js"></script>
 	<!-- Bootstrap Toggle -->
 	<script src="assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
 	<!-- jQuery Scrollbar -->
 	<script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-	<!-- DateTimePicker -->
-	<script src="assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
-	<!-- Select2 -->
-	<script src="assets/js/plugin/select2/select2.full.min.js"></script>
-	<!-- jQuery Validation -->
-	<script src="assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+	<!-- Datatables -->
+	<script src="assets/js/plugin/datatables/datatables.min.js"></script>
 	<!-- Atlantis JS -->
 	<script src="assets/js/atlantis.min.js"></script>
 	<!-- Atlantis DEMO methods, don't include it in your project! -->
 	<script src="assets/js/setting-demo2.js"></script>
-	<script>
-		$('#birth').datetimepicker({
-			format: 'MM/DD/YYYY'
-		});
+	<script >
+		$(document).ready(function() {
+			$('#basic-datatables').DataTable({
+			});
 
-		$('#state').select2({
-			theme: "bootstrap"
-		});
+			$('#multi-filter-select').DataTable( {
+				"pageLength": 5,
+				initComplete: function () {
+					this.api().columns().every( function () {
+						var column = this;
+						var select = $('<select class="form-control"><option value=""></option></select>')
+						.appendTo( $(column.footer()).empty() )
+						.on( 'change', function () {
+							var val = $.fn.dataTable.util.escapeRegex(
+								$(this).val()
+								);
 
-		/* validate */
+							column
+							.search( val ? '^'+val+'$' : '', true, false )
+							.draw();
+						} );
 
-		// validation when select change
-		$("#state").change(function(){
-			$(this).valid();
-		})
+						column.data().unique().sort().each( function ( d, j ) {
+							select.append( '<option value="'+d+'">'+d+'</option>' )
+						} );
+					} );
+				}
+			});
 
-		// validation when inputfile change
-		$("#uploadImg").on("change", function(){
-			$(this).parent('form').validate();
-		})
+			// Add Row
+			$('#add-row').DataTable({
+				"pageLength": 5,
+			});
 
-		$("#exampleValidation").validate({
-			validClass: "success",
-			rules: {
-				gender: {required: true},
-				confirmpassword: {
-					equalTo: "#password"
-				},
-				birth: {
-					date: true
-				},
-				uploadImg: {
-					required: true, 
-				},
-			},
-			highlight: function(element) {
-				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-			},
-			success: function(element) {
-				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-			},
+			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus"> <i class="far fa-trash-alt"></i> </button> </div> </td>';
+
+			$('#addRowButton').click(function() {
+				$('#add-row').dataTable().fnAddData([
+					$("#addName").val(),
+					$("#addPosition").val(),
+					$("#addOffice").val(),
+					action
+					]);
+				$('#addRowModal').modal('hide');
+
+			});
+
+
+			$('#add-row2').DataTable({
+				"pageLength": 5,
+			});
+
+			var action = '<td> <div class="form-button-action"> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit"> <i class="fa fa-edit"></i> </button> <button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus"> <i class="far fa-trash-alt"></i> </button> </div> </td>';
+
+			$('#addRowButton').click(function() {
+				$('#add-row2').dataTable().fnAddData([
+					$("#addName").val(),
+					$("#addPosition").val(),
+					$("#addOffice").val(),
+					action
+					]);
+				$('#addRowModal').modal('hide');
+
+			});
 		});
 	</script>
 </body>

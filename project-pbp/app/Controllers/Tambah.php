@@ -2,15 +2,15 @@
 
 namespace App\Controllers;
 
-class Edit extends BaseController
+class Tambah extends BaseController
 {
-    public function editBarang()
+    public function tambahBarang()
     {
         $data = [
             'title' => 'Admin Dashboard | Sumber Jaya Furniture'
         ];
 
-        return view('admin/edit/form-edit-barang', $data);
+        return view('admin/form-add-barang', $data);
     }
     
 }

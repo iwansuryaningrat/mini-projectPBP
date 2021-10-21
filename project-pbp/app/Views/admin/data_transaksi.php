@@ -110,7 +110,7 @@
 
 											<a class="col-6 col-md-4 p-0" href="index.html">
 												<div class="quick-actions-item">
-													<div class="avatar-item bg-warning rounded-circle">
+													<div class="avatar-item bg-success rounded-circle">
 														<i class="fas fa-home"></i>
 													</div>
 													<span class="text">Dashboard</span>
@@ -268,10 +268,11 @@
 													<th>900,000</th>
 													<td><span class="badge badge-warning">Belum Transfer</span></td>
 													<td style="text-align: center;">
-														<button type="button" class="btn" data-bs-toggle="modal"
-															data-bs-target="#staticBackdrop">
-															<i class="bi bi-pencil-square"></i>
-														</button>
+														<a href="form-edit-transaksi.html">
+															<button type="button" class="btn">
+																<i class="bi bi-pencil-square"></i>
+															</button>
+														</a>
 													</td>
 												</tr>
 												<tr>
@@ -283,10 +284,11 @@
 													<th>1,499,000</th>
 													<td><span class="badge badge-danger">Dibatalkan</span></td>
 													<td style="text-align: center;">
-														<button type="button" class="btn" data-bs-toggle="modal"
-															data-bs-target="#staticBackdrop">
-															<i class="bi bi-pencil-square"></i>
-														</button>
+														<a href="form-edit-transaksi.html">
+															<button type="button" class="btn">
+																<i class="bi bi-pencil-square"></i>
+															</button>
+														</a>
 													</td>
 												</tr>
 												<tr>
@@ -298,10 +300,11 @@
 													<th>6,999,000</th>
 													<td><span class="badge badge-primary">Dikirim</span></td>
 													<td style="text-align: center;">
-														<button type="button" class="btn" data-bs-toggle="modal"
-															data-bs-target="#staticBackdrop">
-															<i class="bi bi-pencil-square"></i>
-														</button>
+														<a href="form-edit-transaksi.html">
+															<button type="button" class="btn">
+																<i class="bi bi-pencil-square"></i>
+															</button>
+														</a>
 													</td>
 												</tr>
 												<tr>
@@ -313,10 +316,11 @@
 													<th>4,499,000</th>
 													<td><span class="badge badge-success">Sukses</span></td>
 													<td style="text-align: center;">
-														<button type="button" class="btn" data-bs-toggle="modal"
-															data-bs-target="#staticBackdrop">
-															<i class="bi bi-pencil-square"></i>
-														</button>
+														<a href="form-edit-transaksi.html">
+															<button type="button" class="btn">
+																<i class="bi bi-pencil-square"></i>
+															</button>
+														</a>
 													</td>
 												</tr>
 												<tr>
@@ -328,10 +332,11 @@
 													<th>5,999,000</th>
 													<td><span class="badge" style="background-color: grey;">Belum Dikirim</span></td>
 													<td style="text-align: center;">
-														<button type="button" class="btn" data-bs-toggle="modal"
-															data-bs-target="#staticBackdrop">
-															<i class="bi bi-pencil-square"></i>
-														</button>
+														<a href="form-edit-transaksi.html">
+															<button type="button" class="btn">
+																<i class="bi bi-pencil-square"></i>
+															</button>
+														</a>
 													</td>
 												</tr>
 											</tbody>
@@ -342,9 +347,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- Modal -->
-				<!-- Button trigger modal -->
-
 
 				<!-- Modal -->
 				<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
