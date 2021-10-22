@@ -28,7 +28,7 @@ class Admin extends BaseController
     public function barang()
     {
         $kategori = $this->kategoriModel->findAll();
-        $barang = $this->barangModel->findAll();
+        $barang = $this->barangModel->getBarang();
         $i = 1;
         $j = 1;
         $data = [
@@ -39,8 +39,9 @@ class Admin extends BaseController
             'barang' => $barang
             
         ];
+        dd($barang);
 
-        return view('admin/data_barang', $data);
+        // return view('admin/data_barang', $data);
     }
 
     public function transaksi()

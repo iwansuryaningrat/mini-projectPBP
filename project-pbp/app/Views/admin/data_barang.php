@@ -236,6 +236,7 @@
 						</ul>
 					</div> <!-- end page header -->
 
+					<!-- Tabel Barang -->
 					<div class="row">
 						<div class="col-md-12">
 							<div class="card">
@@ -301,6 +302,7 @@
 							</div>
 						</div> <!-- end tabel barang -->
 
+						<!-- Tabel Kategori -->
 						<div class="col-md-12">
 							<div id="data-kategori" class="card">
 								<div class="card-header">
