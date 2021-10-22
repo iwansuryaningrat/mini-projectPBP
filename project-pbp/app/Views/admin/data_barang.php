@@ -270,27 +270,30 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>1</td>
-													<td>Papan tulis</td>
-													<td>Office Furniture</td>
-													<td>1,200,000</td>
-													<td>5</td>
-													<td>
-														<div class="form-button-action">
-															<a href="detail-barang.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
-																	<i class="fa fa-edit"></i>
-																</button>
-															</a>
-															<a href="form-delete-barang.html" class="d-flex">
-																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
-																	<i class="far fa-trash-alt"></i>
-																</button>
-															</a>
-														</div>
-													</td>
-												</tr>
+												<?php foreach ($barang as $data) : ?>
+													<tr>
+														<td><?= $j; ?></td>
+														<td><?= $data['nama']; ?></td>
+														<td><?= $data['kategori']; ?></td>
+														<td><?= $data['harga']; ?></td>
+														<td><?= $data['stok']; ?></td>
+														<td>
+															<div class="form-button-action">
+																<a href="detail-barang.html" class="d-flex">
+																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
+																		<i class="fa fa-edit"></i>
+																	</button>
+																</a>
+																<a href="#" class="d-flex">
+																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
+																		<i class="far fa-trash-alt"></i>
+																	</button>
+																</a>
+															</div>
+														</td>
+													</tr>
+													<?php $j++; ?>
+												<?php endforeach; ?>
 											</tbody>
 										</table>
 									</div>

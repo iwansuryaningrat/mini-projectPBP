@@ -3,14 +3,17 @@
 namespace App\Controllers;
 
 use App\Models\KategoriModel;
+use App\Models\BarangModel;
 
 class Admin extends BaseController
 {
     protected $kategoriModel;
+    protected $barangModel;
 
     public function __construct()
     {
         $this->kategoriModel = new KategoriModel();
+        $this->barangModel = new BarangModel();
     }
 
     public function index()
@@ -25,11 +28,16 @@ class Admin extends BaseController
     public function barang()
     {
         $kategori = $this->kategoriModel->findAll();
+        $barang = $this->barangModel->findAll();
         $i = 1;
+        $j = 1;
         $data = [
             'title' => 'Data Barang | Sumber Jaya Furniture',
             'i' => $i,
-            'kategori' => $kategori
+            'j' => $j,
+            'kategori' => $kategori,
+            'barang' => $barang
+            
         ];
 
         return view('admin/data_barang', $data);
