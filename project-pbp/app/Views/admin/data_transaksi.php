@@ -93,7 +93,7 @@
 								<div class="quick-actions-header">
 									<span class="title mb-1">Quick Actions</span>
 									<span class="subtitle op-8">Shortcuts</span>
-								</div> 
+								</div>
 								<!-- quick actions header -->
 
 								<div class="quick-actions-scroll scrollbar-outer">
@@ -274,22 +274,24 @@
 														</a>
 													</td>
 												</tr>
-												<tr>
-													<td>INV102</td>
-													<td>02-01-2001</td>
-													<td>Lemari Olympic</td>
-													<td>Musa Alfian</td>
-													<th>1</th>
-													<th>1,499,000</th>
-													<td><span class="badge badge-danger">Dibatalkan</span></td>
-													<td style="text-align: center;">
-														<a href="/edit/transaksi">
-															<button type="button" class="btn">
-																<i class="bi bi-pencil-square"></i>
-															</button>
-														</a>
-													</td>
-												</tr>
+												<?php foreach ($dataTransaksi as $data) : ?>
+													<tr>
+														<td><?= $j; ?></td>
+														<td><?= $data['nama']; ?></td>
+														<td><?= $data['kategori']; ?></td>
+														<td><?= $data['harga']; ?></td>
+														<td><?= $data['stok']; ?></td>
+														<td><span class="badge badge-warning">Belum Transfer</span></td>
+														<td style="text-align: center;">
+															<a href="/edit/transaksi">
+																<button type="button" class="btn">
+																	<i class="bi bi-pencil-square"></i>
+																</button>
+															</a>
+														</td>
+													</tr>
+													<?php $j++; ?>
+												<?php endforeach; ?>
 												<tr>
 													<td>INV103</td>
 													<td>19-01-2001</td>

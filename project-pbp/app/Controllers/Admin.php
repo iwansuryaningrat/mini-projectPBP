@@ -4,16 +4,20 @@ namespace App\Controllers;
 
 use App\Models\KategoriModel;
 use App\Models\BarangModel;
+use App\Models\DataTransaksiModel;
+
 
 class Admin extends BaseController
 {
     protected $kategoriModel;
     protected $barangModel;
+    protected $transaksiModel;
 
     public function __construct()
     {
         $this->kategoriModel = new KategoriModel();
         $this->barangModel = new BarangModel();
+        $this->transaksiModel = new DataTransaksiModel();
     }
 
     public function index()
@@ -70,10 +74,14 @@ class Admin extends BaseController
 
     public function transaksi()
     {
+        $dataTransaksi = $this->kategoriModel->findAll();
+        $i = 1;
         $data = [
-            'title' => 'Data Transaksi | Sumber Jaya Furniture'
+            'title' => 'Data Transaksi | Sumber Jaya Furniture',
+            'i' => $i,
+            'dataTransaksi' => $dataTransaksi,
+            
         ];
-
         return view('admin/data_transaksi', $data);
     }
 

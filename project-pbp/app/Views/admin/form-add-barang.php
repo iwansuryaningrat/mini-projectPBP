@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Form Tambah Barang | Sumber Jaya Furniture</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
-	
+	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon" />
+
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
-			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css']},
+			google: {
+				"families": ["Lato:300,400,700,900"]
+			},
+			custom: {
+				"families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+				urls: ['/assets/css/fonts.min.css']
+			},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -27,6 +33,7 @@
 	<!-- custom -->
 	<link rel="stylesheet" href="/assets/css/sumber-jaya-styles.css">
 </head>
+
 <body>
 	<div class="wrapper">
 		<div class="main-header">
@@ -204,7 +211,7 @@
 				</div> <!-- end sidebar content -->
 			</div> <!-- end sidebar wripper -->
 		</div> <!-- End Sidebar -->
-		
+
 		<!-- Formulir disini -->
 		<div class="main-panel">
 			<div class="container">
@@ -238,12 +245,13 @@
 									<div class="card-title">Tambah Barang</div>
 									<div class="card-category">Masukkan data barang dengan sebenar-benarnya</div>
 								</div>
-								<form action="" method="POST">
+								<form action="<?php echo base_url("/admin/add_validation") ?>" method="POST">
 									<div class="card-body">
 										<div class="form-group form-show-validation row">
 											<label for="name" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<input type="text" class="form-control" id="nama" name="nama" placeholder="" required>
+												<!--  -->
 											</div>
 										</div> <!-- end nama -->
 
@@ -251,7 +259,7 @@
 											<label for="kategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Kategori <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<select id="Kategori" required class="form-control" name="kategori">
-													<option hidden> --  Pilih Kategori  --</option>
+													<option hidden> -- Pilih Kategori --</option>
 													<!-- Ambil dari database -->
 													<option value="">Home Furniture</option>
 													<option value="">Hospital Furniture</option>
@@ -265,7 +273,7 @@
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<input class="form-control" type="number" id="jumlah" min="1" step="1" name="jumlah">
-											</div>											
+											</div>
 										</div> <!-- end jumlah -->
 
 										<div class="form-group form-show-validation row">
@@ -273,7 +281,7 @@
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<input class="form-control" type="number" id="harga" min="500" step="500" name="harga">
-											</div>											
+											</div>
 										</div> <!-- end harga -->
 
 										<div class="form-group form-show-validation row">
@@ -281,7 +289,7 @@
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<input class="form-control" type="number" id="berat" min="1" step="1" name="berat">
-											</div>											
+											</div>
 										</div> <!-- end berat -->
 
 										<div class="form-group form-show-validation row">
@@ -298,7 +306,7 @@
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<div class="input-file input-file-image">
 													<img class="img-upload-preview" width="100" height="100" src="http://placehold.it/100x100" alt="preview">
-													<input type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required >
+													<input type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required>
 													<label for="uploadImg" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload a Image</label>
 												</div>
 											</div>
@@ -311,7 +319,7 @@
 													Batal
 												</a>
 												<input class="btn btn-primary ml-4" type="submit" value="Tambah" style="border-radius: 100px;">
-											</div>										
+											</div>
 										</div>
 									</div>
 								</form>
@@ -321,75 +329,78 @@
 				</div>
 			</div>
 
-			<footer class="footer text-center">	
-				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>	
+			<footer class="footer text-center">
+				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>
 			</footer> <!-- end footer -->
 		</div>
-	<!--   Core JS Files   -->
-	<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="/assets/js/core/popper.min.js"></script>
-	<script src="/assets/js/core/bootstrap.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-	<!-- Moment JS -->
-	<script src="/assets/js/plugin/moment/moment.min.js"></script>
-	<!-- Bootstrap Toggle -->
-	<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-	<!-- jQuery Scrollbar -->
-	<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-	<!-- DateTimePicker -->
-	<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
-	<!-- Select2 -->
-	<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
-	<!-- jQuery Validation -->
-	<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
-	<!-- Atlantis JS -->
-	<script src="/assets/js/atlantis.min.js"></script>
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/assets/js/setting-demo2.js"></script>
-	<script>
-		$('#birth').datetimepicker({
-			format: 'MM/DD/YYYY'
-		});
+		<!--   Core JS Files   -->
+		<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
+		<script src="/assets/js/core/popper.min.js"></script>
+		<script src="/assets/js/core/bootstrap.min.js"></script>
+		<!-- jQuery UI -->
+		<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+		<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+		<!-- Moment JS -->
+		<script src="/assets/js/plugin/moment/moment.min.js"></script>
+		<!-- Bootstrap Toggle -->
+		<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+		<!-- jQuery Scrollbar -->
+		<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+		<!-- DateTimePicker -->
+		<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+		<!-- Select2 -->
+		<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
+		<!-- jQuery Validation -->
+		<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+		<!-- Atlantis JS -->
+		<script src="/assets/js/atlantis.min.js"></script>
+		<!-- Atlantis DEMO methods, don't include it in your project! -->
+		<script src="/assets/js/setting-demo2.js"></script>
+		<script>
+			$('#birth').datetimepicker({
+				format: 'MM/DD/YYYY'
+			});
 
-		$('#state').select2({
-			theme: "bootstrap"
-		});
+			$('#state').select2({
+				theme: "bootstrap"
+			});
 
-		/* validate */
+			/* validate */
 
-		// validation when select change
-		$("#state").change(function(){
-			$(this).valid();
-		})
+			// validation when select change
+			$("#state").change(function() {
+				$(this).valid();
+			})
 
-		// validation when inputfile change
-		$("#uploadImg").on("change", function(){
-			$(this).parent('form').validate();
-		})
+			// validation when inputfile change
+			$("#uploadImg").on("change", function() {
+				$(this).parent('form').validate();
+			})
 
-		$("#exampleValidation").validate({
-			validClass: "success",
-			rules: {
-				gender: {required: true},
-				confirmpassword: {
-					equalTo: "#password"
+			$("#exampleValidation").validate({
+				validClass: "success",
+				rules: {
+					gender: {
+						required: true
+					},
+					confirmpassword: {
+						equalTo: "#password"
+					},
+					birth: {
+						date: true
+					},
+					uploadImg: {
+						required: true,
+					},
 				},
-				birth: {
-					date: true
+				highlight: function(element) {
+					$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
 				},
-				uploadImg: {
-					required: true, 
+				success: function(element) {
+					$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 				},
-			},
-			highlight: function(element) {
-				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-			},
-			success: function(element) {
-				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-			},
-		});
-	</script>
+			});
+		</script>
 </body>
+
 </html>
