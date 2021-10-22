@@ -93,12 +93,13 @@
 								<div class="quick-actions-header">
 									<span class="title mb-1">Quick Actions</span>
 									<span class="subtitle op-8">Shortcuts</span>
-								</div> <!-- quick actions header -->
+								</div> 
+								<!-- quick actions header -->
 
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/barang">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
@@ -107,16 +108,16 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/index">
 												<div class="quick-actions-item">
-													<div class="avatar-item bg-warning rounded-circle">
-														<i class="fas fa-shopping-cart"></i>
+													<div class="avatar-item bg-success rounded-circle">
+														<i class="fas fa-home"></i>
 													</div>
-													<span class="text">Data Transaksi</span>
+													<span class="text">Dashboard</span>
 												</div>
 											</a> <!-- end data transaksi -->
 
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/index">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-info rounded-circle">
 														<i class="fas fa-file-signature"></i>

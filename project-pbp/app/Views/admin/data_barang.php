@@ -89,24 +89,24 @@
 								<div class="quick-actions-header">
 									<span class="title mb-1">Quick Actions</span>
 									<span class="subtitle op-8">Shortcuts</span>
-								</div> <!-- quick actions header -->
+								</div> 
+								
+								
+								<!-- quick actions header -->
 
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
-												<div class="quick-actions-item <?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
-								echo "active";
-							endif;
-							?>">
-													<div class="avatar-item bg-danger rounded-circle">
-														<i class="fas fa-box-open"></i>
+											<a class="col-6 col-md-4 p-0" href="/admin/index">
+												<div class="quick-actions-item">
+													<div class="avatar-item bg-success rounded-circle">
+														<i class="fas fa-home"></i>
 													</div>
-													<span class="text">Data Barang</span>
+													<span class="text">Dashboard</span>
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -115,7 +115,7 @@
 												</div>
 											</a> <!-- end data transaksi -->
 
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/index">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-info rounded-circle">
 														<i class="fas fa-file-signature"></i>

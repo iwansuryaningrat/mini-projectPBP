@@ -37,6 +37,7 @@
 <body>
 	<div class="wrapper">
 		<div class="main-header">
+			
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 
@@ -309,7 +310,7 @@
 											</tbody>
 										</table>
 									</div>
-								</div> <!-- end card body -->
+								</div>
 
 								<div class="card-body d-flex justify-content-end align-items-center">
 									<a href="index.html" class="btn btn-danger btn-round" role="button">Kembali</a>
