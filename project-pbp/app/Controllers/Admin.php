@@ -27,6 +27,15 @@ class Admin extends BaseController
 
     public function barang()
     {
+        // $db = \Config\Database::connect();
+        // $databarang = $db->query("SELECT barang.nama, kategori.nama AS namaKategori, barang.harga, barang.stok FROM `barang`
+        // JOIN kategori
+        // WHERE barang.idkategori = kategori.idkategori");
+        // // $builder->select('barang.nama, kategori.nama, barang.harga, barang.stok');
+        // // $builder->join('kategori', 'barang.idkategori = kategori.idkategori');
+        // // $barang = $builder->get();
+
+
         $kategori = $this->kategoriModel->findAll();
         $barang = $this->barangModel->findAll();
         $i = 1;
@@ -39,7 +48,7 @@ class Admin extends BaseController
             'barang' => $barang
             
         ];
-
+        // dd($databarang);
         return view('admin/data_barang', $data);
     }
 
