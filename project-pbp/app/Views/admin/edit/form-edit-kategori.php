@@ -237,12 +237,12 @@
 									<div class="card-category">Masukkan data kategori dengan sebenar-benarnya</div>
 								</div> <!-- end card header -->
 
-								<form action="" method="POST">
+								<form action="/edit/editkategori/<?= $data['idkategori'] ?>" method="POST">
 									<div class="card-body">
 										<div class="form-group form-show-validation row">
 											<label for="nameKategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Kategori <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="namaKategori" name="namaKategori" placeholder="<?= $data['nama'] ?>" required>
+												<input type="text" class="form-control" id="namaKategori" name="namaKategori" value="<?= $data['nama'] ?>" required>
 											</div>
 										</div> <!-- end nama -->
 									</div> <!-- end card body -->
@@ -251,7 +251,7 @@
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
 												<a href="/admin/barang#data-kategori" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
-												<input class="btn btn-primary ml-4" type="submit" value="Tambah" style="border-radius: 100px;">
+												<input class="btn btn-primary ml-4" type="submit" value="Submit" style="border-radius: 100px;">
 											</div>										
 										</div>
 									</div> <!-- end card action -->
