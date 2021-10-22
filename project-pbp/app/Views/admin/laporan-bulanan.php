@@ -95,7 +95,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/barang">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
@@ -104,7 +104,7 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -229,7 +229,7 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="laporan-bulanan.html">Laporan Penjualan Bulanan</a>
+								<a href="/admin/laporan">Laporan Penjualan Bulanan</a>
 							</li>
 						</ul>
 					</div> <!-- end page header -->

@@ -84,7 +84,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/barang">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
@@ -93,7 +93,7 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -210,7 +210,7 @@
 						<h4 class="page-title">Formulir Edit Transaksi</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="/">
+								<a href="/admin/index">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
@@ -218,13 +218,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_transaksi.html">Data Transaksi</a>
+								<a href="/admin/transaksi">Data Transaksi</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="form-edit-transaksi.html">Formulir Edit Transaksi</a>
+								<a href="/edit/transaksi">Formulir Edit Transaksi</a>
 							</li>
 						</ul>
 					</div>
@@ -306,7 +306,7 @@
 									<div class="card-action">
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
-												<a href="data_transaksi.html" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
+												<a href="/admin/transaksi" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
 												<input class="btn btn-primary ml-4" type="submit" value="Tambah" style="border-radius: 100px;">
 											</div>
 										</div>

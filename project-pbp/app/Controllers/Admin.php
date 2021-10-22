@@ -86,6 +86,16 @@ class Admin extends BaseController
         return view('admin/detail-barang', $data);
     }
     
+    public function laporan()
+    {
+        $data = [
+            'title' => 'Detail Barang | Sumber Jaya Furniture'
+        ];
+
+        return view('admin/laporan-bulanan', $data);
+    }
+
+    
 
     
 }

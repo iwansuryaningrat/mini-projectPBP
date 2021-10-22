@@ -97,7 +97,7 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -186,14 +186,14 @@
 						</li> <!-- end nav item -->
 
 						<li class="nav-item active">
-							<a href="data_barang.html">
+							<a href="/admin/barang">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
 						<li class="nav-item">
-							<a href="data_transaksi.html">
+							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
 							</a>
@@ -219,13 +219,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html">Data Barang</a>
+								<a href="/admin/barang">Data Barang</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="form-delete-barang.html">Hapus Barang</a>
+								<a href="/edit/hapusbarang">Hapus Barang</a>
 							</li>
 						</ul>
 					</div> <!-- end page header -->
@@ -280,7 +280,7 @@
 
 								<div class="card-body">
 									<div class="d-flex justify-content-end px-lg-4 px-sm-2">
-										<a href="data_barang.html" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
+										<a href="/admin/barang" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
 										<a href="#" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</a>
 									</div>
 								</div>

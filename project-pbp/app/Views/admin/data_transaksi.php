@@ -267,7 +267,7 @@
 													<th>900,000</th>
 													<td><span class="badge badge-warning">Belum Transfer</span></td>
 													<td style="text-align: center;">
-														<a href="form-edit-transaksi.html">
+														<a href="/edit/transaksi">
 															<button type="button" class="btn">
 																<i class="bi bi-pencil-square"></i>
 															</button>
@@ -283,7 +283,7 @@
 													<th>1,499,000</th>
 													<td><span class="badge badge-danger">Dibatalkan</span></td>
 													<td style="text-align: center;">
-														<a href="form-edit-transaksi.html">
+														<a href="/edit/transaksi">
 															<button type="button" class="btn">
 																<i class="bi bi-pencil-square"></i>
 															</button>
@@ -299,7 +299,7 @@
 													<th>6,999,000</th>
 													<td><span class="badge badge-primary">Dikirim</span></td>
 													<td style="text-align: center;">
-														<a href="form-edit-transaksi.html">
+														<a href="/edit/transaksi">
 															<button type="button" class="btn">
 																<i class="bi bi-pencil-square"></i>
 															</button>
@@ -315,7 +315,7 @@
 													<th>4,499,000</th>
 													<td><span class="badge badge-success">Sukses</span></td>
 													<td style="text-align: center;">
-														<a href="form-edit-transaksi.html">
+														<a href="/edit/transaksi">
 															<button type="button" class="btn">
 																<i class="bi bi-pencil-square"></i>
 															</button>
@@ -331,7 +331,7 @@
 													<th>5,999,000</th>
 													<td><span class="badge" style="background-color: grey;">Belum Dikirim</span></td>
 													<td style="text-align: center;">
-														<a href="form-edit-transaksi.html">
+														<a href="/edit/transaksi">
 															<button type="button" class="btn">
 																<i class="bi bi-pencil-square"></i>
 															</button>

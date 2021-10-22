@@ -338,7 +338,7 @@
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="form-delete-kategori.html" class="d-flex">
+																<a href="/edit/hapusbarang" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>

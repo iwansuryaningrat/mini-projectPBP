@@ -84,7 +84,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/barang">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
@@ -93,7 +93,7 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -250,7 +250,7 @@
 									<div class="card-action">
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
-												<a href="data_barang.html#data-kategori" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
+												<a href="/admin/barang#data-kategori" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
 												<input class="btn btn-primary ml-4" type="submit" value="Tambah" style="border-radius: 100px;">
 											</div>										
 										</div>

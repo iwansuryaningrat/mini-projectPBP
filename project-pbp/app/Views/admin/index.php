@@ -393,73 +393,73 @@
 													<td>Januari</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Februari</td>
 													<td>20</td>
 													<td>7290000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Maret</td>
 													<td>18</td>
 													<td>8082000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>April</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Mei</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Juni</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Juli</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Agustus</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>September</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Oktober</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>November</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<tr>
 													<td>Desember</td>
 													<td>24</td>
 													<td>9576000</td>
-													<td><a href="/admin/laporan-bulanan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 											</tbody>
 										</table>

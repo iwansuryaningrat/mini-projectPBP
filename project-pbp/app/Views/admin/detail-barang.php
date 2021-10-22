@@ -86,7 +86,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/barang">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
@@ -281,7 +281,7 @@
 
 								<div class="card-body">
 									<div class="d-flex justify-content-end px-lg-4 px-sm-2">
-										<a href="data_barang.html" class="btn btn-danger" role="button" style="border-radius: 30px;">Kembali</a>
+										<a href="/admin/barang" class="btn btn-danger" role="button" style="border-radius: 30px;">Kembali</a>
 										<a href="form-edit-barang.html" class="btn btn-primary ml-4" role="button" style="border-radius: 30px;">Edit Data</a>
 									</div>
 								</div>
