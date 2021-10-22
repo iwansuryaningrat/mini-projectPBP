@@ -27,17 +27,21 @@ class Admin extends BaseController
 
     public function barang()
     {
-        // $db = \Config\Database::connect();
-        // $databarang = $db->query("SELECT barang.nama, kategori.nama AS namaKategori, barang.harga, barang.stok FROM `barang`
-        // JOIN kategori
-        // WHERE barang.idkategori = kategori.idkategori");
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT barang.idbarang, barang.nama, kategori.nama AS kategori, barang.harga, barang.stok FROM `barang` JOIN kategori WHERE barang.idkategori = kategori.idkategori");
+        // $result = $query->getResult();
         // // $builder->select('barang.nama, kategori.nama, barang.harga, barang.stok');
         // // $builder->join('kategori', 'barang.idkategori = kategori.idkategori');
         // // $barang = $builder->get();
-
+        // foreach($query->getResultArray() as $row)
+        // {
+        //     d($row);
+        // }
+        
+        
 
         $kategori = $this->kategoriModel->findAll();
-        $barang = $this->barangModel->findAll();
+        $barang = $query->getResultArray();
         $i = 1;
         $j = 1;
         $data = [
@@ -48,7 +52,19 @@ class Admin extends BaseController
             'barang' => $barang
             
         ];
-        // dd($databarang);
+        // echo"<pre>";
+        // print_r($result);
+        // foreach($result as $result)
+        // {
+        //     $barang = (array)$result;
+        // }
+        
+        // foreach($query->getResultArray() as $row)
+        // {
+        //     d($row);
+        // }
+        // dd($barang);
+
         return view('admin/data_barang', $data);
     }
 
