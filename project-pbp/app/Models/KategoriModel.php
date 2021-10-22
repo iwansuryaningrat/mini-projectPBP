@@ -11,4 +11,9 @@ class KategoriModel extends Model
 
     protected $useAutoIncrement = true;
     protected $allowedFields = ['idkategori','nama'];
+
+    public function getKategori($idkategori)
+    {
+        return $this->where(['idkategori' => $idkategori])->first();
+    }
 }

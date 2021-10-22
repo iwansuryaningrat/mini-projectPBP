@@ -220,13 +220,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="/admin/barang#data-kategori">Data Kategori</a>
+								<a href="/admin/barang">Data Kategori</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="/edit/hapuskategori">Hapus Kategori</a>
+								<a href="#">Hapus Kategori</a>
 							</li>
 						</ul>
 					</div> <!-- end page header -->
@@ -243,7 +243,7 @@
 										<div class="form-group form-show-validation row">
 											<label for="nameKategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Kategori <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="namaKategori" name="namaKategori" placeholder="" disabled>
+												<input type="text" class="form-control" id="namaKategori" name="namaKategori" value="<?= $data['nama']; ?>" disabled>
 											</div>
 										</div> <!-- end nama -->
 									</div> <!-- end card body -->
@@ -251,8 +251,8 @@
 									<div class="card-action">
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
-												<a href="/admin/barang#data-kategori" class="btn btn-info" style="border-radius: 100px;">Kembali</a>
-												<a href="#" class="btn btn-danger ml-4" style="border-radius: 100px;">Hapus Data</a>
+												<a href="/admin/barang" class="btn btn-info" style="border-radius: 100px;">Kembali</a>
+												<a href="/admin/hapuskategori/<?= $data['idkategori']; ?>" class="btn btn-danger ml-4" style="border-radius: 100px;">Hapus Data</a>
 											</div>										
 										</div>
 									</div> <!-- end card action -->

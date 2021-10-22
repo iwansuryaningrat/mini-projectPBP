@@ -12,11 +12,8 @@ class BarangModel extends Model
 
     public function getBarang()
     {
-        $db      = \Config\Database::connect();
-        $builder = $db->table('barang');
-        $builder->select('*');
-        $builder->join('kategori', 'kategori.idkategori = barang.idkategori');
-        $query = $builder->get();
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT barang.idbarang, barang.nama, kategori.nama AS kategori, barang.harga, barang.stok FROM `barang` JOIN kategori WHERE barang.idkategori = kategori.idkategori");
 
         return $query;
     }

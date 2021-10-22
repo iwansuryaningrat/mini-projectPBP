@@ -41,19 +41,36 @@ class Edit extends BaseController
 
         return view('admin/edit/form-edit-transaksi', $data);
     }
-    
-    public function hapuskategori($id)
+
+    public function confirmhapuskategori($idkategori)
     {
-        $this->kategoriModel->delete($id);
+
+    }
+    
+    public function hapuskategori($idkategori)
+    {
+        $this->kategoriModel->delete($idkategori);
 
         session()->setFlashdata('pesan', 'Data berhasil dihapus.');
 
         return redirect()->to('/admin/barang');
     }
 
-    public function hapusbarang($id)
+    public function editkategori($idkategori)
     {
-        $this->kagegoriModel->delete($id);
+        $this->kategoriModel->update([
+            'idkategori' => $idkategori,
+            'nama' => $this->request->getVar('namaKategori')
+        ]);
+
+        session()->setFlashdata('pesan', 'Data berhasil diubah.');
+
+        return redirect()->to('/admin/barang');
+    }
+
+    public function hapusbarang($idbarang)
+    {
+        $this->kagegoriModel->delete($idbarang);
 
         session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 

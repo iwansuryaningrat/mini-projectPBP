@@ -243,6 +243,11 @@
 									<h4 class="card-title">Transaksi Penjualan</h4>
 								</div>
 								<div class="card-body">
+									<?php if (session()->getFlashdata('pesan transaksi')) : ?>
+										<div class="alert alert-success" role="alert">
+											<?= session()->getFlashdata('pesan transaksi'); ?>
+										</div>
+									<?php endif; ?>
 									<div class="table-responsive">
 										<table id="multi-filter-select" class="display table table-striped table-hover">
 											<thead>
@@ -258,30 +263,24 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>INV101</td>
-													<td>01-01-2001</td>
-													<td>Kursi Lipat</td>
-													<td>Sutejo</td>
-													<th>3</th>
-													<th>900,000</th>
-													<td><span class="badge badge-warning">Belum Transfer</span></td>
-													<td style="text-align: center;">
-														<a href="/edit/transaksi">
-															<button type="button" class="btn">
-																<i class="bi bi-pencil-square"></i>
-															</button>
-														</a>
-													</td>
-												</tr>
-												<?php foreach ($dataTransaksi as $data) : ?>
+												<?php foreach ($transaksi as $data) : ?>
+													<?php $tgl = date('d F Y', strtotime($data['tgl_penjualan'])); ?>
 													<tr>
-														<td><?= $j; ?></td>
-														<td><?= $data['nama']; ?></td>
-														<td><?= $data['kategori']; ?></td>
-														<td><?= $data['harga']; ?></td>
-														<td><?= $data['stok']; ?></td>
-														<td><span class="badge badge-warning">Belum Transfer</span></td>
+														<td><?= $data['idpenjualan']; ?></td>
+														<td><?= $tgl; ?></td>
+														<td><?= $data['nama_barang']; ?></td>
+														<td><?= $data['nama_pembeli']; ?></td>
+														<th><?= $data['jumlah']; ?></th>
+														<th><?= $data['harga_total']; ?></th>
+														<td><span class="badge <?php if($data['status'] == 'Sukses'){
+															echo 'badge-success';
+														} elseif ($data['status'] == 'Dikirim') {
+															echo 'badge-primary';
+														} elseif ($data['status'] == 'Belum Transfer') {
+															echo 'badge-warning';
+														} elseif ($data['status'] == 'Dibatalkan') {
+															echo 'badge-danger';
+														}?>" <?php if($data['status'] == 'Belum Dikirim') : echo 'style="background-color : grey;"'; endif;?>><?= $data['status'];?></span></td>
 														<td style="text-align: center;">
 															<a href="/edit/transaksi">
 																<button type="button" class="btn">
@@ -290,56 +289,7 @@
 															</a>
 														</td>
 													</tr>
-													<?php $j++; ?>
 												<?php endforeach; ?>
-												<tr>
-													<td>INV103</td>
-													<td>19-01-2001</td>
-													<td>Meja Kerja</td>
-													<td>Kipli</td>
-													<th>8</th>
-													<th>6,999,000</th>
-													<td><span class="badge badge-primary">Dikirim</span></td>
-													<td style="text-align: center;">
-														<a href="/edit/transaksi">
-															<button type="button" class="btn">
-																<i class="bi bi-pencil-square"></i>
-															</button>
-														</a>
-													</td>
-												</tr>
-												<tr>
-													<td>INV104</td>
-													<td>21-03-2001</td>
-													<td>Meja Kerja</td>
-													<td>Rahma</td>
-													<th>10</th>
-													<th>4,499,000</th>
-													<td><span class="badge badge-success">Sukses</span></td>
-													<td style="text-align: center;">
-														<a href="/edit/transaksi">
-															<button type="button" class="btn">
-																<i class="bi bi-pencil-square"></i>
-															</button>
-														</a>
-													</td>
-												</tr>
-												<tr>
-													<td>INV105</td>
-													<td>24-03-2001</td>
-													<td>Meja Belajar</td>
-													<td>Bejo</td>
-													<th>8</th>
-													<th>5,999,000</th>
-													<td><span class="badge" style="background-color: grey;">Belum Dikirim</span></td>
-													<td style="text-align: center;">
-														<a href="/edit/transaksi">
-															<button type="button" class="btn">
-																<i class="bi bi-pencil-square"></i>
-															</button>
-														</a>
-													</td>
-												</tr>
 											</tbody>
 										</table>
 									</div>
