@@ -223,7 +223,7 @@
 						<h4 class="page-title">Data Barang</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="index.html">
+								<a href="/admin/index">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
@@ -231,7 +231,7 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html">Data Barang</a>
+								<a href="/admin/barang">Data Barang</a>
 							</li>
 						</ul>
 					</div> <!-- end page header -->
@@ -243,7 +243,7 @@
 								<div class="card-header">
 									<div class="d-flex align-items-center">
 										<h4 class="card-title">Data Barang</h4>
-										<a class="d-block ml-auto" href="form-add-barang.html">
+										<a class="d-block ml-auto" href="/tambah/tambahBarang">
 											<button class="btn btn-primary btn-round d-flex align-items-center">
 												<i class="la flaticon-add d-block mr-2"></i>
 												<span class="d-block">Tambah Barang</span>
@@ -280,7 +280,7 @@
 														<td><?= $data['stok']; ?></td>
 														<td>
 															<div class="form-button-action">
-																<a href="detail-barang.html" class="d-flex">
+																<a href="/admin/detail" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
 																		<i class="fa fa-edit"></i>
 																	</button>

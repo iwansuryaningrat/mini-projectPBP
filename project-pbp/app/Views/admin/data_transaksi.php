@@ -224,7 +224,7 @@
 						<h4 class="page-title">Data Transaksi</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="index.html">
+								<a href="/admin/index">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
@@ -232,7 +232,7 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_transaksi.html">Data Transaksi</a>
+								<a href="/admin/transaksi">Data Transaksi</a>
 							</li>
 						</ul>
 					</div>

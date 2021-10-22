@@ -87,7 +87,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="data_barang.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/barang">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
@@ -96,7 +96,7 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -105,7 +105,7 @@
 												</div>
 											</a> <!-- end data transaksi -->
 
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/index">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-info rounded-circle">
 														<i class="fas fa-file-signature"></i>
@@ -213,7 +213,7 @@
 						<h4 class="page-title">Formulir Tambah Barang</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="index.html">
+								<a href="/admin/index">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
@@ -221,13 +221,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html">Data Barang</a>
+								<a href="/admin/barang">Data Barang</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="form-add-barang.html">Formulir tambah barang</a>
+								<a href="/tambah/tambahBarang">Formulir tambah barang</a>
 							</li>
 						</ul>
 					</div>

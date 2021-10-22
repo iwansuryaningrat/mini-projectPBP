@@ -85,4 +85,7 @@ class Admin extends BaseController
 
         return view('admin/detail-barang', $data);
     }
+    
+
+    
 }

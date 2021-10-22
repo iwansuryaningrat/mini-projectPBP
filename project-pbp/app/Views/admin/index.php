@@ -226,7 +226,7 @@
 								<h5 class="text-white op-7 mb-2">Sumber Jaya Furniture selalu menyediakan barang berkualitas, kuat, dan tahan lama.</h5>
 							</div>
 							<div class="ml-md-auto py-2 py-md-0">
-								<a href="form-add-barang.html" class="btn btn-white btn-border btn-round mr-2">Tambah Barang</a>
+								<a href="/tambah/tambahBarang" class="btn btn-white btn-border btn-round mr-2">Tambah Barang</a>
 							</div>
 						</div>
 					</div>
