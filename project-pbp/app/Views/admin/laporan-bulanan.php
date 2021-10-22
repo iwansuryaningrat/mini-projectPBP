@@ -314,7 +314,7 @@
 
 								<div class="card-body d-flex justify-content-end align-items-center">
 									<a href="/" class="btn btn-danger btn-round" role="button">Kembali</a>
-									<a href="404-page.html" class="btn btn-info btn-round ml-4" role="button">Cetak</a>
+									<a href="/error/" class="btn btn-info btn-round ml-4" role="button">Cetak</a>
 								</div>
 							</div> <!-- end card -->
 						</div> <!-- end tabel barang -->
