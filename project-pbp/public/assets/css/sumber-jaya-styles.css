@@ -1,0 +1,18 @@
+/*detail barang*/
+.fs_big {
+	font-size: 48px;
+}
+
+
+/*responsive*/
+@media screen and (max-width: 425px) {
+	/*detail barang*/
+	.fs_big {
+		font-size: 36px;
+	}
+
+	/*404 page*/
+	.desc_error {
+		font-size: 16px;
+	}
+}

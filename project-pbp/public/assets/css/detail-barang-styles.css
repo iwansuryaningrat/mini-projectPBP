@@ -1,9 +1,0 @@
-.fs_big {
-	font-size: 48px;
-}
-
-@media screen and (max-width: 425px) {
-	.fs_big {
-		font-size: 36px;
-	}
-}

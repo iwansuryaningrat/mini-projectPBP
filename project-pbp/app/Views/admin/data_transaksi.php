@@ -34,7 +34,8 @@
 	<link rel="stylesheet" href="/assets/css/demo.css">
 
 	<!-- custom styles -->
-	<link rel="stylesheet" href="/assets/css/data_transaksi-styles.css">
+	<!-- custom -->
+	<link rel="stylesheet" href="assets/css/sumber-jaya-styles.css">
 </head>
 
 <body>

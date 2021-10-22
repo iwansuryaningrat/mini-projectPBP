@@ -29,6 +29,9 @@
 	<link rel="stylesheet" href="/assets/css/atlantis.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/assets/css/demo.css">
+
+	<!-- custom -->
+	<link rel="stylesheet" href="assets/css/sumber-jaya-styles.css">
 </head>
 
 <body>
@@ -306,8 +309,13 @@
 											</tbody>
 										</table>
 									</div>
+								</div> <!-- end card body -->
+
+								<div class="card-body d-flex justify-content-end align-items-center">
+									<a href="index.html" class="btn btn-danger btn-round" role="button">Kembali</a>
+									<a href="404-page.html" class="btn btn-info btn-round ml-4" role="button">Cetak</a>
 								</div>
-							</div>
+							</div> <!-- end card -->
 						</div> <!-- end tabel barang -->
 					</div> <!-- end row -->
 				</div> <!-- end page inner -->

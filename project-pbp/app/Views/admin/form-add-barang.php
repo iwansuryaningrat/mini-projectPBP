@@ -23,6 +23,9 @@
 	<link rel="stylesheet" href="/assets/css/atlantis.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/assets/css/demo.css">
+
+	<!-- custom -->
+	<link rel="stylesheet" href="assets/css/sumber-jaya-styles.css">
 </head>
 <body>
 	<div class="wrapper">

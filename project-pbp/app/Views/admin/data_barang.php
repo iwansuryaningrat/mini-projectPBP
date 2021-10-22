@@ -29,6 +29,9 @@
 	<link rel="stylesheet" href="/assets/css/atlantis.css">
 	<!-- CSS Just for demo purpose, don't include it in your project -->
 	<link rel="stylesheet" href="/assets/css/demo.css">
+
+	<!-- custom -->
+	<link rel="stylesheet" href="assets/css/sumber-jaya-styles.css">
 </head>
 
 <body>
@@ -92,7 +95,10 @@
 									<div class="quick-actions-items">
 										<div class="row m-0">
 											<a class="col-6 col-md-4 p-0" href="data_barang.html">
-												<div class="quick-actions-item">
+												<div class="quick-actions-item <?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
+								echo "active";
+							endif;
+							?>">
 													<div class="avatar-item bg-danger rounded-circle">
 														<i class="fas fa-box-open"></i>
 													</div>
@@ -277,7 +283,7 @@
 																	<i class="fa fa-edit"></i>
 																</button>
 															</a>
-															<a href="#" class="d-flex">
+															<a href="form-delete-barang.html" class="d-flex">
 																<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																	<i class="far fa-trash-alt"></i>
 																</button>
@@ -327,7 +333,7 @@
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="/edit/hapuskategori/<?= $data['idkategori']; ?>" class="d-flex">
+																<a href="form-delete-kategori.html" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>
