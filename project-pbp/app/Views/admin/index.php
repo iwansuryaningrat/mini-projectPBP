@@ -44,7 +44,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 
-				<a href="index.html" class="logo">
+				<a href="/" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,7 +115,7 @@
 												</div>
 											</a> <!-- end data transaksi -->
 
-											<a class="col-6 col-md-4 p-0" href="/admin/index">
+											<a class="col-6 col-md-4 p-0" href="/">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-info rounded-circle">
 														<i class="fas fa-file-signature"></i>

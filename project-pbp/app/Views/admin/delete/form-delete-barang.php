@@ -33,7 +33,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 				
-				<a href="index.html" class="logo">
+				<a href="/" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,7 +88,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="/">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-success rounded-circle">
 														<i class="fas fa-home"></i>
@@ -106,7 +106,7 @@
 												</div>
 											</a> <!-- end data transaksi -->
 
-											<a class="col-6 col-md-4 p-0" href="index.html">
+											<a class="col-6 col-md-4 p-0" href="/">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-info rounded-circle">
 														<i class="fas fa-file-signature"></i>
@@ -170,14 +170,14 @@
 
 					<ul class="nav nav-primary">
 						<li class="nav-item">
-							<a  href="index.html">
+							<a  href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
 							<div class="collapse" id="dashboard">
 								<ul class="nav nav-collapse">
 									<li>
-										<a href="index.html">
+										<a href="/">
 											<span class="sub-item">Dashboard</span>
 										</a>
 									</li>
@@ -211,7 +211,7 @@
 						<h4 class="page-title">Hapus Barang</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="index.html">
+								<a href="/">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>

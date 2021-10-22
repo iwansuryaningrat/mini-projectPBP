@@ -40,7 +40,7 @@
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 
-				<a href="index.html" class="logo">
+				<a href="/" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
 				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,7 +97,7 @@
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
-											<a class="col-6 col-md-4 p-0" href="/admin/index">
+											<a class="col-6 col-md-4 p-0" href="/">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-success rounded-circle">
 														<i class="fas fa-home"></i>
@@ -115,7 +115,7 @@
 												</div>
 											</a> <!-- end data transaksi -->
 
-											<a class="col-6 col-md-4 p-0" href="/admin/index">
+											<a class="col-6 col-md-4 p-0" href="/">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-info rounded-circle">
 														<i class="fas fa-file-signature"></i>
@@ -223,7 +223,7 @@
 						<h4 class="page-title">Data Barang</h4>
 						<ul class="breadcrumbs">
 							<li class="nav-home">
-								<a href="/admin/index">
+								<a href="/">
 									<i class="flaticon-home"></i>
 								</a>
 							</li>
