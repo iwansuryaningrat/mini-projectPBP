@@ -14,11 +14,15 @@ class BarangModel extends Model
     {
         $db = \Config\Database::connect();
         $query = $db->query("SELECT barang.idbarang, barang.nama, kategori.nama AS kategori, barang.harga, barang.stok FROM `barang` JOIN kategori WHERE barang.idkategori = kategori.idkategori");
-        // $builder = $db->table('barang');
-        // $builder->select('barang.idbarang', 'barang.nama', 'kategori.nama AS kategori', 'barang.harga', 'barang.stok');
-        // $builder->join('kategori', 'barang.idkategori = kategori.idkategori');
-        // $query = $builder->get();
+        
+        return $query;
+    }
 
+    public function getBarangid($idbarang)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->query("SELECT barang.idbarang, barang.nama, kategori.nama AS kategori, barang.harga, barang.stok FROM `barang` JOIN kategori WHERE barang.idkategori = kategori.idkategori AND idbarang = $idbarang");
+        
         return $query;
     }
 }
