@@ -52,23 +52,20 @@ class Admin extends BaseController
     public function transaksi()
     {
         $query = $this->penjualanModel->getTransaksi();
-        // $builder->where('name', $name);
-        $transaksi = $query->where('name', '5');
+        $transaksi = $query->getResultArray();
         
-        // $data = [
-        //     'title' => 'Data Transaksi | Sumber Jaya Furniture',
-        //     'transaksi' => $transaksi
-        // ];
+        $data = [
+            'title' => 'Data Transaksi | Sumber Jaya Furniture',
+            'transaksi' => $transaksi
+        ];
 
-        dd($transaksi);
 
-        // return view('admin/data_transaksi', $data);
+        return view('admin/data_transaksi', $data);
     }
 
     public function detail()
     {
         $query = $this->barangModel->getBarang();
-        // $query->where();
         $data = [
             'title' => 'Detail Barang | Sumber Jaya Furniture'
         ];
