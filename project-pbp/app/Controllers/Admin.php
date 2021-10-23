@@ -5,26 +5,55 @@ namespace App\Controllers;
 use App\Models\KategoriModel;
 use App\Models\BarangModel;
 use App\Models\PenjualanModel;
+use App\Models\RekapPenjualanModel;
 
 class Admin extends BaseController
 {
     protected $kategoriModel;
     protected $barangModel;
     protected $penjualanModel;
+    protected $RekapPenjualanModel;
 
     public function __construct()
     {
         $this->kategoriModel = new KategoriModel();
         $this->barangModel = new BarangModel();
         $this->penjualanModel = new PenjualanModel();
+        $this->RekapPenjualanModel = new RekapPenjualanModel();
     }
 
     public function index()
     {
-        $data = [
-            'title' => 'Admin Dashboard | Sumber Jaya Furniture'
-        ];
+        $query = $this->RekapPenjualanModel->getRekap();
+        $index = $query->getResultArray();
+        // $index = $this->RekapPenjualanModel->findAll();
+        $total_terjual = $this->RekapPenjualanModel->getTotalPenjualan();
+        $total = $total_terjual->getResultArray();
+        
+        // total pembeli
+        $total_pembelian = $this->RekapPenjualanModel->getPenjualan();
+        $pembeli = $total_pembelian->getResultArray();
 
+        //total pendapatan
+        $total_pendapatan = $this->RekapPenjualanModel->getTotalPendapatan();
+        $pendapatan = $total_pendapatan->getResultArray();
+        
+        //terlaris
+        $barangTerlaris = $this->RekapPenjualanModel->getTerlaris();
+        $terlaris = $barangTerlaris->getResultArray();
+
+        
+        $data = [
+            'title' => 'Admin Dashboard | Sumber Jaya Furniture',
+            'index' => $index,
+            'total' => $total,
+            'pembeli' => $pembeli,
+            'pendapatan' => $pendapatan,
+            'terlaris' => $terlaris
+        ];
+        // echo '<pre>';
+        // print_r($total_terjual);
+        // dd($terlaris);
         return view('admin/index', $data);
     }
 
@@ -74,10 +103,14 @@ class Admin extends BaseController
     
     public function laporan()
     {
+        $rekap = $this->RekapPenjualanModel->findAll();
+        $i = 1;
         $data = [
-            'title' => 'Detail Barang | Sumber Jaya Furniture'
+            'title' => 'Detail Barang | Sumber Jaya Furniture',
+            'i' => $i,
+            'rekap' => $rekap
         ];
-
+        // dd($rekap);
         return view('admin/laporan-bulanan', $data);
     }
 }

@@ -258,15 +258,17 @@
 												</tr>
 											</thead>
 											<tbody>
+												<?php foreach ($rekap as $data)?>
+												<?php $idpenjualan = $data['idpenjualan'];?>
 												<tr>
-													<td>1</td>
-													<td>Kursi Lipat</td>
-													<td>Kursi</td>
-													<td>15</td>
-													<td>150000</td>
-													<td>2250000</td>
+													<td><?= $i; ?></td>
+													<td><?= $data['']; ?></td>
+													<td><?= $data['']; ?></td>
+													<td><?= $data['']; ?></td>
+													<td><?= $data['']; ?></td>
+													<td><?= $data['']; ?></td>
 												</tr>
-												<tr>
+												<!-- <tr>
 													<td>2</td>
 													<td>Kursi Goyang</td>
 													<td>Kursi</td>
@@ -281,7 +283,7 @@
 													<td>10</td>
 													<td>500000</td>
 													<td>5000000</td>
-												</tr>
+												</tr> -->
 											</tbody>
 										</table>
 									</div>

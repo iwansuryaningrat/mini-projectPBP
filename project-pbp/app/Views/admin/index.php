@@ -247,8 +247,10 @@
 										</div>
 										<div class="col col-stats ml-3 ml-sm-0">
 											<div class="numbers">
+												<?php foreach ($total as $sum) : ?>
 												<p class="card-category">Total Barang Terjual</p>
-												<h4 class="card-title">2,097</h4>
+												<h4 class="card-title"><?= $sum['jumlah']; ?></h4>
+												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
@@ -268,8 +270,10 @@
 										</div>
 										<div class="col col-stats ml-3 ml-sm-0">
 											<div class="numbers">
+												<?php foreach ($pembeli as $pembeli) : ?>
 												<p class="card-category">Total Pembelian</p>
-												<h4 class="card-title">1,762</h4>
+												<h4 class="card-title"><?= $pembeli['idpenjualan']; ?></h4>
+												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
@@ -289,8 +293,10 @@
 										</div>
 										<div class="col col-stats ml-3 ml-sm-0">
 											<div class="numbers">
+											<?php foreach ($pendapatan as $pendapatan) : ?>
 												<p class="card-category">Total Pendapatan</p>
-												<h4 class="card-title">IDR 4,670,870,000</h4>
+												<h4 class="card-title">IDR <?= number_format($pendapatan['total_penjualan']); ?></h4>
+												<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
@@ -311,60 +317,23 @@
 								</div> <!-- end card header -->
 
 								<div class="card-body pb-0">
-									<div class="d-flex">
-										<div class="avatar">
-											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="flex-1 pt-1 ml-2">
-											<h6 class="fw-bold mb-1">Nama Barang</h6>
-											<small class="text-muted">Kategori</small>
-										</div>
-										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">Jumlah Terjual</h3>
-										</div>
-									</div> <!-- top sale 1 -->
-
+									
+									<!-- top sale -->
+									<?php foreach ($terlaris as $terlaris) : ?>
 									<div class="separator-dashed"></div>
 									<div class="d-flex">
 										<div class="avatar">
 											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
 										</div>
 										<div class="flex-1 pt-1 ml-2">
-											<h6 class="fw-bold mb-1">Sofa</h6>
-											<small class="text-muted">Home Furniture</small>
+											<h6 class="fw-bold mb-1"><?= $terlaris['namaBarang']; ?></h6>
+											<small class="text-muted"><?= $terlaris['namaKategori']; ?></small>
 										</div>
 										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">426</h3>
+											<h3 class="text-info fw-bold"><?= $terlaris['total_terjual']; ?></h3>
 										</div>
-									</div> <!-- top sale 2 -->
-
-									<div class="separator-dashed"></div>
-									<div class="d-flex">
-										<div class="avatar">
-											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="flex-1 pt-1 ml-2">
-											<h6 class="fw-bold mb-1">Meja Kerja</h6>
-											<small class="text-muted">Office Furniture</small>
-										</div>
-										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">301</h3>
-										</div>
-									</div> <!-- top sale 3 -->
-
-									<div class="separator-dashed"></div>
-									<div class="d-flex">
-										<div class="avatar">
-											<img src="assets/img/logoproduct3.svg" alt="..." class="avatar-img rounded-circle">
-										</div>
-										<div class="flex-1 pt-1 ml-2">
-											<h6 class="fw-bold mb-1">Trolley Linen</h6>
-											<small class="text-muted">Hospital Furniture</small>
-										</div>
-										<div class="d-flex ml-auto align-items-center">
-											<h3 class="text-info fw-bold">194</h3>
-										</div>
-									</div> <!-- top sale 4 -->
+									</div> <!-- End top sale -->
+									<?php endforeach; ?>
 
 									<div class="separator-dashed"></div>
 								</div> <!-- end card body -->
