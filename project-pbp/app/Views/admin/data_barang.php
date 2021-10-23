@@ -285,11 +285,19 @@
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="#" class="d-flex">
-																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
+																<!-- <form action=""> -->
+																	<a href="/edit/delete/<? $edit['idbarang'];?>" class="d-flex">
+																	<button type="button" data-toggle="tooltip"  title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
+																		<!-- /edit/delete/
+																		<?// $edit['idbarang'];?>
+																	 -->
+																		<!-- onclick="delete_barang('.$admin["idbarang"].')" -->
 																	</button>
 																</a>
+
+																<!-- </form> -->
+																
 															</div>
 														</td>
 													</tr>
@@ -338,7 +346,7 @@
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="/edit/hapusbarang" class="d-flex">
+																<a href="/edit/hapuskategori/<?= $data['idkategori'];?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>
@@ -452,6 +460,16 @@
 
 			});
 		});
+	</script>
+	<script>
+		function delete_barang(idbarang)
+		{
+			if(confirm("Are you sure you want to remove it?"))
+			{
+				window.location.href="<?php echo base_url(); ?>/edit/hapusbarang/"+idbarang;
+			}
+			return false;
+		}
 	</script>
 </body>
 
