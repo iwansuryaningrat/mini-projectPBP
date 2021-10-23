@@ -11,11 +11,12 @@ class RekapPenjualanModel extends Model
     protected $useAutoIncrement = true;
     protected $allowedFields = ['idpenjualan','idbarang','jumlah','harga_satuan','total_penjualan','tgl_input'];
 
-    public function getRekap()
+    public function getRekap($bln)
     {
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT barang.nama AS namaBarang, kategori.nama AS namaKategori, SUM(rekap_penjualan.jumlah) AS jumlah, rekap_penjualan.harga_satuan AS hargaSatuan, SUM(rekap_penjualan.total_penjualan) AS totalPenjualan
+        $query = $db->query("SELECT barang.nama AS namaBarang, MONTH(rekap_penjualan.tgl_input) AS bulan, kategori.nama AS namaKategori,SUM(rekap_penjualan.jumlah) AS jumlah, rekap_penjualan.harga_satuan AS hargaSatuan, SUM(rekap_penjualan.total_penjualan) AS totalPenjualan
         FROM ((rekap_penjualan JOIN barang ON rekap_penjualan.idbarang = barang.idbarang) JOIN kategori ON barang.idkategori = kategori.idkategori )
+        WHERE MONTH(rekap_penjualan.tgl_input) = ".$bln."
         GROUP BY barang.nama");
         
         return $query;

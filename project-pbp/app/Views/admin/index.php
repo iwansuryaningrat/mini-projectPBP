@@ -388,7 +388,7 @@
 													?></td>
 													<td><?= $bulan['jumlah']; ?></td>
 													<td><?= number_format($bulan['total_penjualan']); ?></td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
+													<td><a href="/admin/laporan/<?= $bulan['bulan'];?>" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
 												<?php endforeach; ?>
 												<!-- End Bulan -->

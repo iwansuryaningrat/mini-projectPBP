@@ -107,9 +107,9 @@ class Admin extends BaseController
         return view('admin/detail-barang', $data);
     }
     
-    public function laporan()
+    public function laporan($bln)
     {
-        $query = $this->RekapPenjualanModel->getRekap();
+        $query = $this->RekapPenjualanModel->getRekap($bln);
         $rekap = $query->getResultArray();
         $i = 1;
         $data = [

@@ -304,7 +304,12 @@
 													<td></td>
 
 
-													<td><span class="mr-3">=</span><strong>45</strong></td>
+													<td><span class="mr-3">=</span>
+													<strong>
+														<?php foreach ($rekap as $data) : ?>
+															<?php  ?>
+														<?php endforeach; ?>
+													</strong></td>
 												</tr>
 												<tr>
 													<th colspan="6">Total Penjualan Keseluruhan</th>
