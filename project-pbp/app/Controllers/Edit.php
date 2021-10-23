@@ -104,12 +104,27 @@ class Edit extends BaseController
         return redirect()->to('/admin/barang');
     }
 
-    public function hapusbarang($idbarang)
+    public function delete($idbarang)
     {
-        $this->barangModel->delete($idbarang);
+        // $idbarang = $this->input->get('user');
+
+        // $this->db->where('idbarang',$idbarang);
+        $this->delete('barang');
+        $this->KagegoriModel->delete($idbarang);
 
         session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 
-        return redirect()->to('/admin/data_barang');
+        return redirect()->to('/admin/barang');
+        // $barangModel = new BarangkModel();
+
+        // $barangModel->where('idbarang', $idbarang)->hapusbarang($idbarang);
+
+        // $session = \Config\Services::session();
+
+        // $session->setFlashdata('success', 'Book is Deleted');
+
+        // return $this->response->redirect(site_url('/admin'));
     }
+
+    
 }
