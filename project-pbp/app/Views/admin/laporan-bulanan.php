@@ -37,7 +37,7 @@
 <body>
 	<div class="wrapper">
 		<div class="main-header">
-			
+
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 
@@ -229,7 +229,9 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="/admin/laporan">Laporan Penjualan Bulanan</a>
+								<?php foreach ($rekap as $bulan) : ?>
+									<a href="/admin/laporan/<?= $bulan['bulan']; ?>">Laporan Penjualan Bulanan</a>
+								<?php endforeach; ?>
 							</li>
 						</ul>
 					</div> <!-- end page header -->
@@ -239,7 +241,37 @@
 							<div class="card">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
-										<h4 class="card-title">Januari</h4>
+
+										<?php foreach ($rekap as $bulan) : ?>
+											<h4 class="card-title">
+												<?php if ($bulan['bulan'] == 1) {
+													echo "Januari";
+												} else if ($bulan['bulan'] == 2) {
+													echo "Februari";
+												} else if ($bulan['bulan'] == 3) {
+													echo "Maret";
+												} else if ($bulan['bulan'] == 4) {
+													echo "April";
+												} else if ($bulan['bulan'] == 5) {
+													echo "Mei";
+												} else if ($bulan['bulan'] == 6) {
+													echo "Juni";
+												} else if ($bulan['bulan'] == 7) {
+													echo "Juli";
+												} else if ($bulan['bulan'] == 8) {
+													echo "Agustus";
+												} else if ($bulan['bulan'] == 9) {
+													echo "September";
+												} else if ($bulan['bulan'] == 10) {
+													echo "Oktober";
+												} else if ($bulan['bulan'] == 11) {
+													echo "November";
+												} else if ($bulan['bulan'] == 12) {
+													echo "Desember";
+												}
+												?>
+											</h4>
+										<?php endforeach; ?>
 									</div>
 								</div>
 
@@ -259,33 +291,16 @@
 											</thead>
 											<tbody>
 												<?php foreach ($rekap as $data) : ?>
-												<tr>
-													<td><?= $i; ?></td>
-													<td><?= $data['namaBarang']; ?></td>
-													<td><?= $data['namaKategori']; ?></td>
-													<td><?= $data['jumlah']; ?></td>
-													<td><?= $data['hargaSatuan']; ?></td>
-													<td><?= $data['totalPenjualan']; ?></td>
-												</tr>
-												<?php $i++; ?>
+													<tr>
+														<td><?= $i; ?></td>
+														<td><?= $data['namaBarang']; ?></td>
+														<td><?= $data['namaKategori']; ?></td>
+														<td><?= $data['jumlah']; ?></td>
+														<td><?= $data['hargaSatuan']; ?></td>
+														<td><?= $data['totalPenjualan']; ?></td>
+													</tr>
+													<?php $i++; ?>
 												<?php endforeach; ?>
-
-												<!-- <tr>
-													<td>2</td>
-													<td>Kursi Goyang</td>
-													<td>Kursi</td>
-													<td>20</td>
-													<td>200000</td>
-													<td>4000000</td>
-												</tr>
-												<tr>
-													<td>3</td>
-													<td>Lemari Pakaian</td>
-													<td>Lemari</td>
-													<td>10</td>
-													<td>500000</td>
-													<td>5000000</td>
-												</tr> -->
 											</tbody>
 										</table>
 									</div>
@@ -305,23 +320,25 @@
 
 
 													<td><span class="mr-3">=</span>
-													<strong>
-														<?php $total=0; ?>
-														<?php foreach ($rekap as $data) : ?>
-															<?php $total = $total + $data['jumlah']; ?>
-														<?php endforeach; ?>
-														<?php echo $total; ?>
-													</strong></td>
+														<strong>
+															<?php $total = 0; ?>
+															<?php foreach ($rekap as $data) : ?>
+																<?php $total = $total + $data['jumlah']; ?>
+															<?php endforeach; ?>
+															<?php echo $total; ?>
+														</strong>
+													</td>
 												</tr>
 												<tr>
 													<th colspan="6">Total Penjualan Keseluruhan</th>
 													<td><span class="mr-3">=</span>
-													<strong><?php $totalPenjualan=0; ?>
-														<?php foreach ($rekap as $data) : ?>
-															<?php $totalPenjualan = $totalPenjualan + $data['totalPenjualan']; ?>
-														<?php endforeach; ?>
-														<?php echo $totalPenjualan; ?>
-													</strong></td>
+														<strong><?php $totalPenjualan = 0; ?>
+															<?php foreach ($rekap as $data) : ?>
+																<?php $totalPenjualan = $totalPenjualan + $data['totalPenjualan']; ?>
+															<?php endforeach; ?>
+															<?php echo $totalPenjualan; ?>
+														</strong>
+													</td>
 												</tr>
 
 											</tbody>
