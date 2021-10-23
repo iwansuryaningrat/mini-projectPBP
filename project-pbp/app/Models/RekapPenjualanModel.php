@@ -58,4 +58,13 @@ class RekapPenjualanModel extends Model
         
         return $query;
     }
+    public function getBulanan()
+    {
+        $db      = \Config\Database::connect();
+        $query = $db->query("SELECT MONTH(rekap_penjualan.tgl_input) AS bulan, SUM(rekap_penjualan.jumlah) AS jumlah, SUM(rekap_penjualan.total_penjualan) AS total_penjualan
+        FROM rekap_penjualan
+        GROUP BY MONTH(tgl_input)");
+        
+        return $query;
+    }
 }

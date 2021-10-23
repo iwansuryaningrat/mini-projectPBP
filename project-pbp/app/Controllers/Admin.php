@@ -24,8 +24,10 @@ class Admin extends BaseController
 
     public function index()
     {
-        $query = $this->RekapPenjualanModel->getRekap();
-        $index = $query->getResultArray();
+
+
+        $index = $this->RekapPenjualanModel->findAll();
+        // $index = $query->getResultArray();
         // $index = $this->RekapPenjualanModel->findAll();
         $total_terjual = $this->RekapPenjualanModel->getTotalPenjualan();
         $total = $total_terjual->getResultArray();
@@ -42,14 +44,18 @@ class Admin extends BaseController
         $barangTerlaris = $this->RekapPenjualanModel->getTerlaris();
         $terlaris = $barangTerlaris->getResultArray();
 
-        
+        //bulanan
+        $bulanan = $this->RekapPenjualanModel->getBulanan();
+        $bulan = $bulanan->getResultArray();
+
         $data = [
             'title' => 'Admin Dashboard | Sumber Jaya Furniture',
             'index' => $index,
             'total' => $total,
             'pembeli' => $pembeli,
             'pendapatan' => $pendapatan,
-            'terlaris' => $terlaris
+            'terlaris' => $terlaris,
+            'bulan' => $bulan
         ];
         // echo '<pre>';
         // print_r($total_terjual);

@@ -358,78 +358,40 @@
 												</tr>
 											</thead>
 											<tbody>
+												<?php foreach ($bulan as $bulan) : ?>
 												<tr>
-													<td>Januari</td>
-													<td>24</td>
-													<td>9576000</td>
+													<td><?php if($bulan['bulan'] == 1){
+														echo "Januari";
+													} else if($bulan['bulan'] == 2){
+														echo "Februari";
+													} else if($bulan['bulan'] == 3){
+														echo "Maret";
+													} else if($bulan['bulan'] == 4){
+														echo "April";
+													} else if($bulan['bulan'] == 5){
+														echo "Mei";
+													} else if($bulan['bulan'] == 6){
+														echo "Juni";
+													} else if($bulan['bulan'] == 7){
+														echo "Juli";
+													} else if($bulan['bulan'] == 8){
+														echo "Agustus";
+													} else if($bulan['bulan'] == 9){
+														echo "September";
+													} else if($bulan['bulan'] == 10){
+														echo "Oktober";
+													} else if($bulan['bulan'] == 11){
+														echo "November";
+													} else if($bulan['bulan'] == 12){
+														echo "Desember";
+													} 
+													?></td>
+													<td><?= $bulan['jumlah']; ?></td>
+													<td><?= number_format($bulan['total_penjualan']); ?></td>
 													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
 												</tr>
-												<tr>
-													<td>Februari</td>
-													<td>20</td>
-													<td>7290000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Maret</td>
-													<td>18</td>
-													<td>8082000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>April</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Mei</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Juni</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Juli</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Agustus</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>September</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Oktober</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>November</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
-												<tr>
-													<td>Desember</td>
-													<td>24</td>
-													<td>9576000</td>
-													<td><a href="/admin/laporan" class="badge badge-info">Lihat Detail</a></td>
-												</tr>
+												<?php endforeach; ?>
+												<!-- End Bulan -->
 											</tbody>
 										</table>
 									</div>
