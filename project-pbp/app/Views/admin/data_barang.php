@@ -272,6 +272,7 @@
 											</thead>
 											<tbody>
 												<?php foreach ($barang as $data) : ?>
+													<?php $idbarang = $data['idbarang']; ?>
 													<tr>
 														<td><?= $j; ?></td>
 														<td><?= $data['nama']; ?></td>
@@ -280,13 +281,12 @@
 														<td><?= $data['stok']; ?></td>
 														<td>
 															<div class="form-button-action">
-																<a href="/edit/barang/<? $data['idbarang']; ?>" class="d-flex">
+																<a href="/edit/barang/<?= $idbarang; ?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<!-- <form action=""> -->
-																	<a href="/edit/hapusbarang/<? $edit['idbarang'];?>" class="d-flex">
+																	<a href="/edit/hapusbarang/<? $data['idbarang'];?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip"  title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>

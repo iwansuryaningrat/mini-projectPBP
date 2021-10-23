@@ -36,14 +36,13 @@ class Admin extends BaseController
         $i = 1;
         $j = 1;
 
-        // dd($barang);
+        
         $data = [
             'title' => 'Data Barang | Sumber Jaya Furniture',
             'i' => $i,
             'j' => $j,
             'kategori' => $kategori,
             'barang' => $barang
-            
         ];
 
         return view('admin/data_barang', $data);
