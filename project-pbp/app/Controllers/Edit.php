@@ -102,10 +102,17 @@ class Edit extends BaseController
 
     public function editbarang($idbarang)
     {
+        $data = [
+            'idbarang' => $idbarang,
+            'idkategori' => $this->request->getVar('idkategori'),
+            'jumlah' => $this->request->getVar('jumlah'),
+            'berat' => $this->request->getVar('berat'),
+            'keterangan' => $this->request->getVar('keterangan'),
+        ];
         
-        
+        $this->barangModel->update($idbarang, $data);
 
-        session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
+        session()->setFlashdata('pesan barang', 'Data berhasil diubah.');
 
         return redirect()->to('/admin/barang');
     }
