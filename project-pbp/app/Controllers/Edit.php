@@ -77,11 +77,6 @@ class Edit extends BaseController
 
         return view('admin/edit/form-edit-transaksi', $data);
     }
-
-    public function confirmhapuskategori($idkategori)
-    {
-
-    }
     
     public function hapuskategori($idkategori)
     {
@@ -94,10 +89,11 @@ class Edit extends BaseController
 
     public function editkategori($idkategori)
     {
-        $this->kategoriModel->update([
+        $data = [
             'idkategori' => $idkategori,
             'nama' => $this->request->getVar('namaKategori')
-        ]);
+        ];
+        $this->kategoriModel->update($idkategori, $data);
 
         session()->setFlashdata('pesan', 'Data berhasil diubah.');
 

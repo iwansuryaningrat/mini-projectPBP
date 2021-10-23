@@ -250,7 +250,7 @@
 									<div class="card-action">
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
-												<a href="/admin/barang#data-kategori" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
+												<a href="/admin/barang" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
 												<input class="btn btn-primary ml-4" type="submit" value="Submit" style="border-radius: 100px;">
 											</div>										
 										</div>

@@ -16,10 +16,4 @@ class KategoriModel extends Model
     {
         return $this->where(['idkategori' => $idkategori])->first();
     }
-    // public function delete($idbarang)
-    // {
-
-    //     $this->db->where('idbarang',$idbarangid);
-    //     $this->delete('barang');
-    // }
 }
