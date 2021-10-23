@@ -36,6 +36,7 @@ class Admin extends BaseController
         $i = 1;
         $j = 1;
 
+        // dd($barang);
         $data = [
             'title' => 'Data Barang | Sumber Jaya Furniture',
             'i' => $i,

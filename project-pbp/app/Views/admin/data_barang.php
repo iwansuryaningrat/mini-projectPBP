@@ -280,12 +280,12 @@
 														<td><?= $data['stok']; ?></td>
 														<td>
 															<div class="form-button-action">
-																<a href="/admin/detail" class="d-flex">
+																<a href="/edit/<? $data['idbarang']; ?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="#" class="d-flex">
+																<a href="" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>

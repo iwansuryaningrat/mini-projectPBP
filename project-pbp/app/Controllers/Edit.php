@@ -3,24 +3,60 @@
 namespace App\Controllers;
 
 use App\Models\KategoriModel;
+use App\Models\BarangModel;
+use App\Models\PenjualanModel;
 
 class Edit extends BaseController
 {
     protected $kategoriModel;
+    protected $barangModel;
+    protected $penjualanModel;
 
     public function __construct()
     {
         $this->kategoriModel = new KategoriModel();
+        $this->barangModel = new BarangModel();
+        $this->penjualanModel = new PenjualanModel();
     }
 
-    public function barang()
+    // public function ShowEditBarang($idbarang)
+    // {
+    //     $query = $this->barangModel->getBarang();
+    //     // $barang = $query->getResultArray();
+    //     // $i = 1;
+    //     $barang = $query->WHERE(['idbarang' => $idbarang])->first();
+    //     // echo $idbarang; 
+
+    //     dd($barang);
+    //     // $data = [
+    //     //     'title' => 'Form Data Barang | Sumber Jaya Furniture',
+    //     //     'i' => $i,
+    //     //     'barang' => $barang
+            
+    //     // ];
+
+    //     // return view('admin/edit/data_barang', $data);
+    // }
+
+    public function ShowDeleteBarang()
     {
+        $query = $this->barangModel->getBarang();
+        $barang = $query->getResultArray();
+        $i = 1;
+
         $data = [
-            'title' => 'Form Edit Barang | Sumber Jaya Furniture'
+            'title' => 'Form Data Barang | Sumber Jaya Furniture',
+            'i' => $i,
+            // 'j' => $j,
+            // 'kategori' => $kategori,
+            'barang' => $barang
+            
         ];
 
-        return view('admin/edit/form-edit-barang', $data);
+        return view('admin/delete/form-data-barang', $data);
     }
+
+    
 
     public function kategori($idkategori)
     {
@@ -70,10 +106,10 @@ class Edit extends BaseController
 
     public function hapusbarang($idbarang)
     {
-        $this->kagegoriModel->delete($idbarang);
+        $this->barangModel->delete($idbarang);
 
         session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 
-        return redirect()->to('/admin/barang');
+        return redirect()->to('/admin/data_barang');
     }
 }
