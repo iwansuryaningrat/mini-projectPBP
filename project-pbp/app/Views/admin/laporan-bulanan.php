@@ -306,14 +306,22 @@
 
 													<td><span class="mr-3">=</span>
 													<strong>
+														<?php $total=0; ?>
 														<?php foreach ($rekap as $data) : ?>
-															<?php  ?>
+															<?php $total = $total + $data['jumlah']; ?>
 														<?php endforeach; ?>
+														<?php echo $total; ?>
 													</strong></td>
 												</tr>
 												<tr>
 													<th colspan="6">Total Penjualan Keseluruhan</th>
-													<td><span class="mr-3">=</span><strong>23400000</strong></td>
+													<td><span class="mr-3">=</span>
+													<strong><?php $totalPenjualan=0; ?>
+														<?php foreach ($rekap as $data) : ?>
+															<?php $totalPenjualan = $totalPenjualan + $data['totalPenjualan']; ?>
+														<?php endforeach; ?>
+														<?php echo $totalPenjualan; ?>
+													</strong></td>
 												</tr>
 
 											</tbody>
