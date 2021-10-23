@@ -258,16 +258,18 @@
 												</tr>
 											</thead>
 											<tbody>
-												<?php foreach ($rekap as $data)?>
-												<?php $idpenjualan = $data['idpenjualan'];?>
+												<?php foreach ($rekap as $data) : ?>
 												<tr>
 													<td><?= $i; ?></td>
-													<td><?= $data['']; ?></td>
-													<td><?= $data['']; ?></td>
-													<td><?= $data['']; ?></td>
-													<td><?= $data['']; ?></td>
-													<td><?= $data['']; ?></td>
+													<td><?= $data['namaBarang']; ?></td>
+													<td><?= $data['namaKategori']; ?></td>
+													<td><?= $data['jumlah']; ?></td>
+													<td><?= $data['hargaSatuan']; ?></td>
+													<td><?= $data['totalPenjualan']; ?></td>
 												</tr>
+												<?php $i++; ?>
+												<?php endforeach; ?>
+
 												<!-- <tr>
 													<td>2</td>
 													<td>Kursi Goyang</td>

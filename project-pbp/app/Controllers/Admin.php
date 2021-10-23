@@ -109,7 +109,8 @@ class Admin extends BaseController
     
     public function laporan()
     {
-        $rekap = $this->RekapPenjualanModel->findAll();
+        $query = $this->RekapPenjualanModel->getRekap();
+        $rekap = $query->getResultArray();
         $i = 1;
         $data = [
             'title' => 'Detail Barang | Sumber Jaya Furniture',

@@ -14,9 +14,9 @@ class RekapPenjualanModel extends Model
     public function getRekap()
     {
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT penjualan.idpenjualan, barang.nama , penjualan.total_item, barang.harga, penjualan.total_harga, rekap_penjualan.tgl_input
-        FROM (((detail_penjualan 
-        JOIN penjualan ON detail_penjualan.idpenjualan = penjualan.idpenjualan) JOIN barang ON detail_penjualan.idbarang = barang.idbarang) JOIN rekap_penjualan ON detail_penjualan.idpenjualan = rekap_penjualan.idpenjualan)");
+        $query = $db->query("SELECT barang.nama AS namaBarang, kategori.nama AS namaKategori, SUM(rekap_penjualan.jumlah) AS jumlah, rekap_penjualan.harga_satuan AS hargaSatuan, SUM(rekap_penjualan.total_penjualan) AS totalPenjualan
+        FROM ((rekap_penjualan JOIN barang ON rekap_penjualan.idbarang = barang.idbarang) JOIN kategori ON barang.idkategori = kategori.idkategori )
+        GROUP BY barang.nama");
         
         return $query;
     }
