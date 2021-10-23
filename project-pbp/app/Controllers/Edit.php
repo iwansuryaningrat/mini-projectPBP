@@ -19,41 +19,20 @@ class Edit extends BaseController
         $this->penjualanModel = new PenjualanModel();
     }
 
-    // public function ShowEditBarang($idbarang)
-    // {
-    //     $query = $this->barangModel->getBarang();
-    //     // $barang = $query->getResultArray();
-    //     // $i = 1;
-    //     $barang = $query->WHERE(['idbarang' => $idbarang])->first();
-    //     // echo $idbarang; 
-
-    //     dd($barang);
-    //     // $data = [
-    //     //     'title' => 'Form Data Barang | Sumber Jaya Furniture',
-    //     //     'i' => $i,
-    //     //     'barang' => $barang
-            
-    //     // ];
-
-    //     // return view('admin/edit/data_barang', $data);
-    // }
-
-    public function ShowDeleteBarang()
+    public function barang($idbarang)
     {
-        $query = $this->barangModel->getBarang();
+        $query = $this->barangModel->getBarangid($idbarang);
         $barang = $query->getResultArray();
-        $i = 1;
+        $kategori = $this->kategoriModel->findAll();
 
         $data = [
-            'title' => 'Form Data Barang | Sumber Jaya Furniture',
-            'i' => $i,
-            // 'j' => $j,
-            // 'kategori' => $kategori,
-            'barang' => $barang
+            'title' => 'Form Edit Barang | Sumber Jaya Furniture',
+            'barang' => $barang,
+            'kategori' => $kategori
             
         ];
 
-        return view('admin/delete/form-data-barang', $data);
+        return view('admin/edit/form-edit-barang', $data);
     }
 
     
@@ -67,6 +46,17 @@ class Edit extends BaseController
         ];
 
         return view('admin/edit/form-edit-kategori', $data);
+    }
+
+    public function detailhapuskategori($idkategori)
+    {
+        $datakategori = $this->kategoriModel->getKategori($idkategori);
+        $data = [
+            'title' => 'Hapus Kategori | Sumber Jaya Furniture',
+            'data' => $datakategori
+        ];
+
+        return view('admin/delete/form-delete-kategori', $data);
     }
 
     public function transaksi()
@@ -100,26 +90,24 @@ class Edit extends BaseController
         return redirect()->to('/admin/barang');
     }
 
-    public function delete($idbarang)
+    public function hapusbarang($idbarang)
     {
-        // $idbarang = $this->input->get('user');
-
-        // $this->db->where('idbarang',$idbarang);
-        $this->delete('barang');
-        $this->KagegoriModel->delete($idbarang);
+        
+        $this->barangiModel->delete($idbarang);
 
         session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 
         return redirect()->to('/admin/barang');
-        // $barangModel = new BarangkModel();
+    }
 
-        // $barangModel->where('idbarang', $idbarang)->hapusbarang($idbarang);
+    public function editbarang($idbarang)
+    {
+        
+        
 
-        // $session = \Config\Services::session();
+        session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 
-        // $session->setFlashdata('success', 'Book is Deleted');
-
-        // return $this->response->redirect(site_url('/admin'));
+        return redirect()->to('/admin/barang');
     }
 
     

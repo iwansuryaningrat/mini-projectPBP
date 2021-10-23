@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Hapus Kategori | Sumber Jaya Furniture</title>
+	<title><?= $title; ?></title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
 	
@@ -238,7 +238,7 @@
 									<div class="card-title">Hapus Kategori</div>
 								</div> <!-- end card header -->
 
-								<form action="" method="POST">
+								<form action="/edit/hapuskategori/<?= $data['idkategori']; ?>" method="POST">
 									<div class="card-body">
 										<div class="form-group form-show-validation row">
 											<label for="nameKategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Kategori <span class="required-label">*</span></label>
@@ -251,8 +251,8 @@
 									<div class="card-action">
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
-												<a href="/admin/barang" class="btn btn-info" style="border-radius: 100px;">Kembali</a>
-												<a href="/admin/hapuskategori/<?= $data['idkategori']; ?>" class="btn btn-danger ml-4" style="border-radius: 100px;">Hapus Data</a>
+												<a href="/edit/detailhapuskategori/<?= $data['idkategori'];?>" class="btn btn-info" style="border-radius: 100px;">Kembali</a>
+												<input class="btn btn-danger ml-4" type="submit" value="Hapus" style="border-radius: 100px;">
 											</div>										
 										</div>
 									</div> <!-- end card action -->

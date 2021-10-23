@@ -218,13 +218,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="/admin/detail">Chair Coffea Shop</a>
+								<a href="/admin/barang">Data Barang</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="/edit/barang">Formulir Edit Barang</a>
+								<a href="/edit/barang/<?= $data['idbarang']; ?>">Formulir Edit Barang</a>
 							</li>
 						</ul>
 					</div>
@@ -240,7 +240,7 @@
 										<div class="form-group form-show-validation row">
 											<label for="name" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="nama" name="nama" placeholder="" required>
+												<input type="text" class="form-control" id="nama" name="nama" value="<?= $barang['nama']; ?>" required>
 											</div>
 										</div> <!-- end nama -->
 
@@ -250,9 +250,9 @@
 												<select id="Kategori" required class="form-control" name="kategori">
 													<option hidden> --  Pilih Kategori  --</option>
 													<!-- Ambil dari database -->
-													<option value="">Home Furniture</option>
-													<option value="">Hospital Furniture</option>
-													<option value="">Office Furniture</option>
+													<?php foreach($kategori as $data) : ?>
+														<option value="<?= $data['idkategori']; ?>" <?php if($data['idkategori'] = $barang['idkategori']) : echo 'selected'; endif; ?>><?= $data['nama']; ?></option>
+													<?php endforeach; ?>
 												</select>
 											</div>
 										</div> <!-- end kategori -->
@@ -261,7 +261,7 @@
 											<label for="jumlah" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Jumlah <span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="jumlah" min="1" step="1" name="jumlah">
+												<input class="form-control" type="number" id="jumlah" min="1" step="1" name="jumlah" value="<?= $barang['jumlah']; ?>">
 											</div>											
 										</div> <!-- end jumlah -->
 
@@ -269,7 +269,7 @@
 											<label for="harga" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Harga (Rp) <span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="harga" min="500" step="500" name="harga">
+												<input class="form-control" type="number" id="harga" min="500" step="500" name="harga" value="<?= $barang['harga']; ?>">
 											</div>											
 										</div> <!-- end harga -->
 
@@ -277,7 +277,7 @@
 											<label for="berat" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Berat (Kg) <span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="berat" min="1" step="1" name="berat">
+												<input class="form-control" type="number" id="berat" min="1" step="1" name="berat" value="<?= $barang['berat']; ?>">
 											</div>											
 										</div> <!-- end berat -->
 

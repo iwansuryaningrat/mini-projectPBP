@@ -280,24 +280,17 @@
 														<td><?= $data['stok']; ?></td>
 														<td>
 															<div class="form-button-action">
-																<a href="/edit/<? $data['idbarang']; ?>" class="d-flex">
+																<a href="/edit/barang/<? $data['idbarang']; ?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
 																<!-- <form action=""> -->
-																	<a href="/edit/delete/<? $edit['idbarang'];?>" class="d-flex">
+																	<a href="/edit/hapusbarang/<? $edit['idbarang'];?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip"  title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
-																		<!-- /edit/delete/
-																		<?// $edit['idbarang'];?>
-																	 -->
-																		<!-- onclick="delete_barang('.$admin["idbarang"].')" -->
 																	</button>
 																</a>
-
-																<!-- </form> -->
-																
 															</div>
 														</td>
 													</tr>
@@ -346,7 +339,7 @@
 																		<i class="fa fa-edit"></i>
 																	</button>
 																</a>
-																<a href="/edit/hapuskategori/<?= $data['idkategori'];?>" class="d-flex">
+																<a href="/edit/detailhapuskategori/<?= $data['idkategori'];?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
 																		<i class="far fa-trash-alt"></i>
 																	</button>
