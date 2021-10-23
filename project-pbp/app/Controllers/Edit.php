@@ -19,11 +19,13 @@ class Edit extends BaseController
         $this->penjualanModel = new PenjualanModel();
     }
 
-    public function barang($idbarang)
+    public function barang($idbarang = 6)
     {
         $query = $this->barangModel->getBarangid($idbarang);
         $barang = $query->getResultArray();
         $kategori = $this->kategoriModel->findAll();
+
+        // dd($barang);
 
         $data = [
             'title' => 'Form Edit Barang | Sumber Jaya Furniture',
@@ -31,6 +33,8 @@ class Edit extends BaseController
             'kategori' => $kategori
             
         ];
+
+        // dd($data);
 
         return view('admin/edit/form-edit-barang', $data);
     }
@@ -93,7 +97,7 @@ class Edit extends BaseController
     public function hapusbarang($idbarang)
     {
         
-        $this->barangiModel->delete($idbarang);
+        $this->barangModel->delete($idbarang);
 
         session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
 
@@ -104,12 +108,16 @@ class Edit extends BaseController
     {
         $data = [
             'idbarang' => $idbarang,
+            'nama' => $this->request->getVar('nama'),
             'idkategori' => $this->request->getVar('idkategori'),
-            'jumlah' => $this->request->getVar('jumlah'),
+            'stok' => $this->request->getVar('stok'),
+            'harga' => $this->request->getVar('harga'),
             'berat' => $this->request->getVar('berat'),
             'keterangan' => $this->request->getVar('keterangan'),
         ];
         
+        // dd($data);
+
         $this->barangModel->update($idbarang, $data);
 
         session()->setFlashdata('pesan barang', 'Data berhasil diubah.');
