@@ -21,7 +21,7 @@ class BarangModel extends Model
     public function getBarangid($idbarang)
     {
         $db = \Config\Database::connect();
-        $query = $db->query("SELECT barang.idbarang, barang.nama, barang.keterangan, barang.berat, kategori.nama AS kategori, barang.harga, barang.stok FROM barang JOIN kategori ON barang.idkategori = kategori.idkategori AND barang.idbarang = ".$idbarang."");
+        $query = $db->query("SELECT barang.idbarang, barang.nama, barang.keterangan, barang.berat, kategori.nama AS kategori, barang.harga, barang.stok FROM barang JOIN kategori WHERE barang.idkategori = kategori.idkategori AND barang.idbarang = ".$idbarang."");
         
         return $query;
     }

@@ -241,40 +241,46 @@
 											</a>
 										</div> <!-- end pictures -->
 
+										<!-- form delete -->
+										<form action="/edit/hapusbarang/<?= $barang['idbarang']; ?>" method="POST">
 										<div class="col-md-6 com-sm-12">
-											<p>1290901 ID</p>
-											<h1 class="fs_big fw-bold">Chair Coffea Shop</h1>
-											<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Accusantium corrupti odio in nostrum voluptatem perspiciatis eveniet reiciendis enim minus minima, inventore rem aspernatur molestias asperiores maxime similique ratione repellendus ad!</p>
+											<?php foreach ($barang as $data) : ?>
+											<p><?= $data['idbarang']; ?></p>
+											<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
+											<p><?= $data['keterangan']; ?></p>
 
 											<table class="table">
 												<thead>
 													<tr>
 														<td class="fw-bold">Kategori</td>
-														<td>Home Furniture</td>
+														<td><?= $data['kategori']; ?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Harga</td>
-														<td>IDR 1,799,000</td>
+														<td><?= $data['harga']; ?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Berat</td>
-														<td>4,0 Kg</td>
+														<td><?= $data['berat']; ?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Stok</td>
-														<td>32</td>
+														<td><?= $data['stok']; ?></td>
 													</tr>
-													<tr>
+													<!-- <tr>
 														<td class="fw-bold">Tanggal Masuk</td>
 														<td>20/8/2021</td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Tanggal Update</td>
 														<td>20/10/2021</td>
-													</tr>
+													</tr> -->
 												</thead>
 											</table>
+											<?php endforeach;?>
 										</div> <!-- end desc -->
+										</form> 
+										<!-- End Form Delete -->
 									</div> <!-- end row -->
 								</div> <!-- end card body -->
 

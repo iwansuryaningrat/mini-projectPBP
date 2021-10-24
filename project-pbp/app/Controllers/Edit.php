@@ -94,6 +94,18 @@ class Edit extends BaseController
         return redirect()->to('/admin/barang');
     }
 
+    public function detailhapusbarang($idbarang)
+    {
+        $databarang = $this->barangModel->getBarangid($idbarang);
+        // $barang = $databarang->getResultArray();
+        $data = [
+            'title' => 'Delete Barang | Sumber Jaya Furniture',
+            'barang' => $databarang
+        ];
+
+        return view('admin/delete/form-delete-barang', $data);
+    }
+    
     public function hapusbarang($idbarang)
     {
         
@@ -103,6 +115,8 @@ class Edit extends BaseController
 
         return redirect()->to('/admin/barang');
     }
+
+    
 
     public function editbarang($idbarang)
     {
