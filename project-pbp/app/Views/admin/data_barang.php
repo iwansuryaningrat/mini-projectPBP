@@ -281,7 +281,7 @@
 														<td><?= $data['stok']; ?></td>
 														<td>
 															<div class="form-button-action">
-																<a href="/edit/barang/<?= $idbarang; ?>" class="d-flex">
+																<a href="/edit/barang/<?= $data['idbarang']; ?>" class="d-flex">
 																	<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-primary btn-lg" data-original-title="Lihat dan Edit">
 																		<i class="fa fa-edit"></i>
 																	</button>

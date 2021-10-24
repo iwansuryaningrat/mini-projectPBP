@@ -114,12 +114,12 @@ class Edit extends BaseController
     {
         $data = [
             'idbarang' => $idbarang,
-            'nama' => $this->request->getVar('nama'),
-            'idkategori' => $this->request->getVar('idkategori'),
-            'stok' => $this->request->getVar('stok'),
-            'harga' => $this->request->getVar('harga'),
-            'berat' => $this->request->getVar('berat'),
-            'keterangan' => $this->request->getVar('keterangan'),
+            'nama' => $this->request->getPost('nama'),
+            'idkategori' => $this->request->getPost('idkategori'),
+            'stok' => $this->request->getPost('stok'),
+            'harga' => $this->request->getPost('harga'),
+            'berat' => $this->request->getPost('berat'),
+            'keterangan' => $this->request->getPost('keterangan'),
         ];
         
         // dd($data);
