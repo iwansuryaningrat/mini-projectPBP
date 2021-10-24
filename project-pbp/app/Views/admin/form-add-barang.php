@@ -297,13 +297,33 @@
 										</div> <!-- end berat -->
 
 										<div class="form-group form-show-validation row">
-											<label for="keterangant" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Keterangan <span class="required-label">*</span></label>
+											<label for="keterangan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Keterangan <span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<textarea class="form-control" name="keterangan" id="Keterangan" cols="30" rows="10">
 												</textarea>
 											</div>
 										</div> <!-- end keterangan -->
+										
+										<div class="form-group form-show-validation row">
+											<label for="tgl_input" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Tanggal Input<span class="required-label">*</span></label>
+											<br>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<input type="date" class="form-control" name="tgl_input" id="tgl_input" value="<?php echo "date('m/d/y')";?>">
+												
+											</div>
+										</div>
+										<!-- end tgl_input -->
+
+										<div class="form-group form-show-validation row">
+											<label for="tgl_update" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Tanggal Input<span class="required-label">*</span></label>
+											<br>
+											<div class="col-lg-7 col-md-9 col-sm-8">
+												<input type="date" class="form-control" name="tgl_update" id="tgl_update" value="<?php echo date('m/d/y');?>">
+												
+											</div>
+										</div>
+										<!-- end tgl_update -->
 
 										<div class="form-group form-show-validation row">
 											<label class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Upload Image <span class="required-label">*</span></label>

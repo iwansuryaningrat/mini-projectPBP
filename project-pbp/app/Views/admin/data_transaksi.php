@@ -282,7 +282,7 @@
 															echo 'badge-danger';
 														}?>" <?php if($data['status'] == 'Belum Dikirim') : echo 'style="background-color : grey;"'; endif;?>><?= $data['status'];?></span></td>
 														<td style="text-align: center;">
-															<a href="/edit/transaksi">
+															<a href="/edit/edittransaksi/<?= $data['idpenjualan'];?>">
 																<button type="button" class="btn">
 																	<i class="bi bi-pencil-square"></i>
 																</button>

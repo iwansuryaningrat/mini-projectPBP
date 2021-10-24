@@ -236,25 +236,26 @@
 									<div class="card-category">Masukkan data transaksi dengan sebenar-benarnya</div>
 								</div>
 								<form action="" method="POST">
+									<?php foreach($transaksi as $data) : ?>
 									<div class="card-body">
 										<div class="form-group form-show-validation row">
-											<label for="invoice" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">ID Invoice <span class="required-label">*</span></label>
+											<label for="idpenjualan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">ID Invoice <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="invoice" name="invoice" placeholder=""  disabled>
+												<input type="text" class="form-control" id="idpenjualan" name="idpenjualan" placeholder="" value="<?= $data['idpenjualan']?>" disabled>
 											</div>
 										</div> <!-- end invoice -->
 
 										<div class="form-group form-show-validation row">
-											<label for="namaProduk" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Produk <span class="required-label">*</span></label>
+											<label for="nama_produk" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama Produk <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="namaProduk" name="namaProduk" placeholder="" disabled>
+												<input type="text" class="form-control" id="nama_produk" name="nama_produk" placeholder="" value="<?= $data['nama_barang']?>" disabled>
 											</div>
 										</div> <!-- end nama produk -->
 
 										<div class="form-group form-show-validation row">
-											<label for="waktuPemesanan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Waktu Pemesanan <span class="required-label">*</span></label>
+											<label for="tgl_penjualan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Waktu Pemesanan <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="waktuPemesanan" name="waktuPemesanan" placeholder=""  disabled>
+												<input type="text" class="form-control" id="tgl_penjualan" name="tgl_penjualan" placeholder="" value="<?= $data['tgl_penjualan']?>" disabled>
 											</div>
 										</div> 
 										<!-- end waktu pemesanan -->
@@ -262,7 +263,7 @@
 										<div class="form-group form-show-validation row">
 											<label for="status" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Status <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="status" name="status" placeholder=""  disabled>
+												<input type="text" class="form-control" id="status" name="status" placeholder="" value="<?= $data['status']?>" disabled>
 											</div>
 										</div> <!-- end status -->
 
@@ -312,6 +313,7 @@
 											</div>
 										</div>
 									</div> <!-- end button -->
+									<?php endforeach;?>
 								</form> <!-- end form -->
 							</div> <!-- end card -->
 						</div> <!-- end col 12 -->

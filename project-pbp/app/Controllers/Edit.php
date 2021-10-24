@@ -133,25 +133,36 @@ class Edit extends BaseController
         return redirect()->to('/admin/barang');
     }
 
-    public function transaksi()
+    public function transaksi($idpenjualan)
     {
-        $dataTransaksi = $this->penjualanModel->getTransaksi();
+        $query = $this->penjualanModel->getDataTransaksi($idpenjualan);
+        $transaksi = $query->getResultArray();
+
+        
+
         $data = [
-            'title' => 'Form Edit Transaksi | Sumber Jaya Furniture',
-            'data' => $dataTransaksi
+            'title' => 'Form Edit Barang | Sumber Jaya Furniture',
+            'transaksi' => $transaksi
+            
         ];
+
+        // dd($transaksi);
 
         return view('admin/edit/form-edit-transaksi', $data);
     }
 
     public function edittransaksi($idpenjualan)
     {
-        $dataTransaksi = $this->penjualanModel->getDataTransaksi($idpenjualan);
         $data = [
-            'title' => 'Form Edit Transaksi | Sumber Jaya Furniture',
-            'data' => $dataTransaksi
+            'status' => $this->request->getVar('update_status')
         ];
+        
+        // dd($data);
 
-        return view('admin/edit/form-edit-transaksi', $data);
+        $this->penjualanModel->update($idpenjualan, $data);
+
+        session()->setFlashdata('transaki', 'Status berhasil diubah.');
+
+        return redirect()->to('/admin/transaksi');
     }
 }
