@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="/assets/css/sumber-jaya-styles.css">
 </head>
 
-<body class="page-not-found" style="background-image: url(/assets/img/bg-404-page.jpg);">
+<body class="page-not-found">
 	<div class="wrapper not-found">
 		<h1 class="animated fadeIn">404</h1>
 		<div class="desc animated fadeIn">

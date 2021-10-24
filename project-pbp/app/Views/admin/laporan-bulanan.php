@@ -229,9 +229,9 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<?php foreach ($rekap as $bulan) : ?>
-									<a href="/admin/laporan/<?= $bulan['bulan']; ?>">Laporan Penjualan Bulanan</a>
-								<?php endforeach; ?>
+								
+									<a href="/admin/laporan/<?= $rekap->bulan; ?>">Laporan Penjualan Bulanan</a>
+								
 							</li>
 						</ul>
 					</div> <!-- end page header -->

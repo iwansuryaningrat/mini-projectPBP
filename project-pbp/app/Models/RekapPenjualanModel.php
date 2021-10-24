@@ -21,6 +21,7 @@ class RekapPenjualanModel extends Model
         
         return $query;
     }
+    
     public function getTotalPenjualan()
     {
         $db      = \Config\Database::connect();
