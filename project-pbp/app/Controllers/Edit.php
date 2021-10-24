@@ -88,13 +88,15 @@ class Edit extends BaseController
 
     public function detailhapusbarang($idbarang)
     {
-        $databarang = $this->barangModel->getBarangid($idbarang);
+        $query = $this->barangModel->getBarangid($idbarang);
+        $barang = $query->getResultArray();
         // $barang = $databarang->getResultArray();
         $data = [
             'title' => 'Delete Barang | Sumber Jaya Furniture',
-            'barang' => $databarang
+            'barang' => $barang
         ];
 
+        // dd($barang);
         return view('admin/delete/form-delete-barang', $data);
     }
     

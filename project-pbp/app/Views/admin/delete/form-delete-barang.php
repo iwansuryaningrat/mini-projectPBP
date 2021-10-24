@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Delete Barang | Sumber Jaya Furniture</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon"/>
-	
+	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon" />
+
 	<!-- Fonts and icons -->
 	<script src="/assets/js/plugin/webfont/webfont.min.js"></script>
 	<script>
 		WebFont.load({
-			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['/assets/css/fonts.min.css']},
+			google: {
+				"families": ["Lato:300,400,700,900"]
+			},
+			custom: {
+				"families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"],
+				urls: ['/assets/css/fonts.min.css']
+			},
 			active: function() {
 				sessionStorage.fonts = true;
 			}
@@ -27,12 +33,13 @@
 	<!-- custom -->
 	<link rel="stylesheet" href="/assets/css/sumber-jaya-styles.css">
 </head>
+
 <body>
 	<div class="wrapper">
 		<div class="main-header">
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
-				
+
 				<a href="/" class="logo">
 					<img src="/assets/img/title-logo.svg" alt="navbar brand" class="navbar-brand" style="height: 30px;">
 				</a>
@@ -52,7 +59,7 @@
 
 			<!-- Navbar Header -->
 			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="blue2">
-				
+
 				<div class="container-fluid">
 					<div class="collapse" id="search-nav">
 						<form class="navbar-left navbar-form nav-search mr-md-3">
@@ -150,7 +157,7 @@
 			<!-- End Navbar -->
 		</div>
 		<!-- Sidebar -->
-		<div class="sidebar sidebar-style-2">			
+		<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
 				<div class="sidebar-content">
 					<div class="user">
@@ -170,7 +177,7 @@
 
 					<ul class="nav nav-primary">
 						<li class="nav-item">
-							<a  href="/">
+							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
@@ -202,7 +209,7 @@
 				</div> <!-- end sidebar content -->
 			</div> <!-- end sidebar wripper -->
 		</div>
-		
+
 		<!-- detail barang -->
 		<div class="main-panel">
 			<div class="container">
@@ -242,32 +249,35 @@
 										</div> <!-- end pictures -->
 
 										<!-- form delete -->
-										<form action="/edit/hapusbarang/<?= $barang['idbarang']; ?>" method="POST">
-										<div class="col-md-6 com-sm-12">
-											<?php foreach ($barang as $data) : ?>
-											<p><?= $data['idbarang']; ?></p>
-											<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
-											<p><?= $data['keterangan']; ?></p>
+										<?php foreach ($barang as $key => $value) {
+											$id = $barang[$key]['idbarang'];
+										} ?>
+										<form action="/edit/hapusbarang/<?= $id; ?>" method="POST">
+											<div class="col-md-6 com-sm-12">
+												<?php foreach ($barang as $data) : ?>
+													<p><?= $data['idbarang']; ?></p>
+													<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
+													<p><?= $data['keterangan']; ?></p>
 
-											<table class="table">
-												<thead>
-													<tr>
-														<td class="fw-bold">Kategori</td>
-														<td><?= $data['kategori']; ?></td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Harga</td>
-														<td><?= $data['harga']; ?></td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Berat</td>
-														<td><?= $data['berat']; ?></td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Stok</td>
-														<td><?= $data['stok']; ?></td>
-													</tr>
-													<!-- <tr>
+													<table class="table">
+														<thead>
+															<tr>
+																<td class="fw-bold">Kategori</td>
+																<td><?= $data['kategori']; ?></td>
+															</tr>
+															<tr>
+																<td class="fw-bold">Harga</td>
+																<td><?= $data['harga']; ?></td>
+															</tr>
+															<tr>
+																<td class="fw-bold">Berat</td>
+																<td><?= $data['berat']; ?></td>
+															</tr>
+															<tr>
+																<td class="fw-bold">Stok</td>
+																<td><?= $data['stok']; ?></td>
+															</tr>
+															<!-- <tr>
 														<td class="fw-bold">Tanggal Masuk</td>
 														<td>20/8/2021</td>
 													</tr>
@@ -275,117 +285,122 @@
 														<td class="fw-bold">Tanggal Update</td>
 														<td>20/10/2021</td>
 													</tr> -->
-												</thead>
-											</table>
-											<?php endforeach;?>
-										</div> <!-- end desc -->
-										</form> 
+														</thead>
+													</table>
+												
+											</div> <!-- end desc -->
+											<div class="card-body">
+												<div class="d-flex justify-content-end px-lg-4 px-sm-2">
+													<a href="/admin/barang" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
+													<a type="submit" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</a>
+												</div>
+											</div>
+											<?php endforeach; ?>
+										</form>
 										<!-- End Form Delete -->
 									</div> <!-- end row -->
 								</div> <!-- end card body -->
 
-								<div class="card-body">
-									<div class="d-flex justify-content-end px-lg-4 px-sm-2">
-										<a href="/admin/barang" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
-										<a href="#" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</a>
-									</div>
-								</div>
+
 							</div> <!-- end card -->
 						</div> <!-- end col -->
 					</div> <!-- end row -->
 				</div> <!-- end page inner -->
 			</div> <!-- end container -->
 
-			<footer class="footer text-center">	
-				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>	
+			<footer class="footer text-center">
+				<p>Copyright &copy; 2021 | <span class="fw-bold">Sumber Jaya Furniture</span>. Jaya Jaya Jaya!</p>
 			</footer> <!-- end footer -->
 		</div>
-	<!--   Core JS Files   -->
-	<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
-	<script src="/assets/js/core/popper.min.js"></script>
-	<script src="/assets/js/core/bootstrap.min.js"></script>
-	<!-- jQuery UI -->
-	<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-	<!-- Moment JS -->
-	<script src="/assets/js/plugin/moment/moment.min.js"></script>
-	<!-- Bootstrap Toggle -->
-	<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
-	<!-- jQuery Scrollbar -->
-	<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
-	<!-- DateTimePicker -->
-	<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
-	<!-- Select2 -->
-	<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
-	<!-- Magnific Popup -->
-	<script src="/assets/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
-	<!-- jQuery Validation -->
-	<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
-	<!-- Atlantis JS -->
-	<script src="/assets/js/atlantis.min.js"></script>
-	<!-- Atlantis DEMO methods, don't include it in your project! -->
-	<script src="/assets/js/setting-demo2.js"></script>
-	<script>
-		$('#birth').datetimepicker({
-			format: 'MM/DD/YYYY'
-		});
+		<!--   Core JS Files   -->
+		<script src="/assets/js/core/jquery.3.2.1.min.js"></script>
+		<script src="/assets/js/core/popper.min.js"></script>
+		<script src="/assets/js/core/bootstrap.min.js"></script>
+		<!-- jQuery UI -->
+		<script src="/assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+		<script src="/assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+		<!-- Moment JS -->
+		<script src="/assets/js/plugin/moment/moment.min.js"></script>
+		<!-- Bootstrap Toggle -->
+		<script src="/assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+		<!-- jQuery Scrollbar -->
+		<script src="/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+		<!-- DateTimePicker -->
+		<script src="/assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>
+		<!-- Select2 -->
+		<script src="/assets/js/plugin/select2/select2.full.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="/assets/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>
+		<!-- jQuery Validation -->
+		<script src="/assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>
+		<!-- Atlantis JS -->
+		<script src="/assets/js/atlantis.min.js"></script>
+		<!-- Atlantis DEMO methods, don't include it in your project! -->
+		<script src="/assets/js/setting-demo2.js"></script>
+		<script>
+			$('#birth').datetimepicker({
+				format: 'MM/DD/YYYY'
+			});
 
-		$('#state').select2({
-			theme: "bootstrap"
-		});
+			$('#state').select2({
+				theme: "bootstrap"
+			});
 
-		/* validate */
+			/* validate */
 
-		// validation when select change
-		$("#state").change(function(){
-			$(this).valid();
-		})
+			// validation when select change
+			$("#state").change(function() {
+				$(this).valid();
+			})
 
-		// validation when inputfile change
-		$("#uploadImg").on("change", function(){
-			$(this).parent('form').validate();
-		})
+			// validation when inputfile change
+			$("#uploadImg").on("change", function() {
+				$(this).parent('form').validate();
+			})
 
-		$("#exampleValidation").validate({
-			validClass: "success",
-			rules: {
-				gender: {required: true},
-				confirmpassword: {
-					equalTo: "#password"
+			$("#exampleValidation").validate({
+				validClass: "success",
+				rules: {
+					gender: {
+						required: true
+					},
+					confirmpassword: {
+						equalTo: "#password"
+					},
+					birth: {
+						date: true
+					},
+					uploadImg: {
+						required: true,
+					},
 				},
-				birth: {
-					date: true
+				highlight: function(element) {
+					$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
 				},
-				uploadImg: {
-					required: true, 
+				success: function(element) {
+					$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 				},
-			},
-			highlight: function(element) {
-				$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
-			},
-			success: function(element) {
-				$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
-			},
-		});
+			});
 
-		// This will create a single gallery from all elements that have class "gallery-item"
-		$('.image-gallery').magnificPopup({
-			delegate: 'a', 
-			type: 'image',
-			removalDelay: 300,
-			gallery:{
-				enabled:true,
-			},
-			mainClass: 'mfp-with-zoom', 
-			zoom: {
-				enabled: true, 
-				duration: 300,
-				easing: 'ease-in-out',
-				opener: function(openerElement) {
-					return openerElement.is('img') ? openerElement : openerElement.find('img');
+			// This will create a single gallery from all elements that have class "gallery-item"
+			$('.image-gallery').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				removalDelay: 300,
+				gallery: {
+					enabled: true,
+				},
+				mainClass: 'mfp-with-zoom',
+				zoom: {
+					enabled: true,
+					duration: 300,
+					easing: 'ease-in-out',
+					opener: function(openerElement) {
+						return openerElement.is('img') ? openerElement : openerElement.find('img');
+					}
 				}
-			}
-		});
-	</script>
+			});
+		</script>
 </body>
+
 </html>

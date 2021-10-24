@@ -297,7 +297,7 @@
 												<label for="keterangant" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Keterangan <span class="required-label">*</span></label>
 												<br>
 												<div class="col-lg-7 col-md-9 col-sm-8">
-													<textarea class="form-control" name="keterangan" id="Keterangan" cols="30" rows="10" value="<?= $barang['keterangan']; ?>">
+													<textarea class="form-control" name="keterangan" id="Keterangan" cols="30" rows="10" value=""><?= $barang['keterangan']; ?>
 													</textarea>
 												</div>
 											</div> <!-- end keterangan -->

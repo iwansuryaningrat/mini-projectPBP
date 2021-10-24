@@ -241,48 +241,50 @@
 												<img src="/assets/img/productimg/chair-prod.png" class="img-fluid">
 											</a>
 										</div> <!-- end pictures -->
-
+										<?php foreach($barang as $barang) : ?>
+											<?php $tgl_input = date('d F Y', strtotime($barang['tgl_input'])); ?>
+											<?php $tgl_update = date('d F Y', strtotime($barang['tgl_update'])); ?>
 										<div class="col-md-6 com-sm-12">
-											<p>1290901 ID</p>
-											<h1 class="fs_big fw-bold">Chair Coffea Shop</h1>
-											<p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Accusantium corrupti odio in nostrum voluptatem perspiciatis eveniet reiciendis enim minus minima, inventore rem aspernatur molestias asperiores maxime similique ratione repellendus ad!</p>
-
+											<p>000<?= $barang['idbarang'];?> ID</p>
+											<h1 class="fs_big fw-bold"><?= $barang['nama'];?></h1>
+											<p><?= $barang['keterangan'];?></p>
 											<table class="table">
 												<thead>
 													<tr>
 														<td class="fw-bold">Kategori</td>
-														<td>Home Furniture</td>
+														<td><?= $barang['kategori'];?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Harga</td>
-														<td>IDR 1,799,000</td>
+														<td><?= $barang['harga'];?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Berat</td>
-														<td>4,0 Kg</td>
+														<td><?= $barang['berat'];?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Stok</td>
-														<td>32</td>
+														<td><?= $barang['stok'];?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Tanggal Masuk</td>
-														<td>20/8/2021</td>
+														<td><?= $tgl_input?></td>
 													</tr>
 													<tr>
 														<td class="fw-bold">Tanggal Update</td>
-														<td>20/10/2021</td>
+														<td><?= $tgl_update;?></td>
 													</tr>
 												</thead>
 											</table>
 										</div> <!-- end desc -->
+										<?php endforeach;?>
 									</div> <!-- end row -->
 								</div> <!-- end card body -->
 
 								<div class="card-body">
 									<div class="d-flex justify-content-end px-lg-4 px-sm-2">
 										<a href="/admin/barang" class="btn btn-danger" role="button" style="border-radius: 30px;">Kembali</a>
-										<a href="form-edit-barang.html" class="btn btn-primary ml-4" role="button" style="border-radius: 30px;">Edit Data</a>
+										<a href="/edit/barang/<?= $barang['idbarang']; ?>" class="btn btn-primary ml-4" role="button" style="border-radius: 30px;">Edit Data</a>
 									</div>
 								</div>
 							</div> <!-- end card -->

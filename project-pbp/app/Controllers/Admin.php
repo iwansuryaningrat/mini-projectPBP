@@ -104,12 +104,22 @@ class Admin extends BaseController
         return view('admin/data_transaksi', $data);
     }
 
-    public function detail()
+    public function detail($idbarang)
     {
-        $query = $this->barangModel->getBarang();
+        $query = $this->barangModel->getBarangid($idbarang);
+        $barang = $query->getResultArray();
+        // $kategori = $this->kategoriModel->findAll();
+
+        // dd($barang);
+
         $data = [
-            'title' => 'Detail Barang | Sumber Jaya Furniture'
+            'title' => 'Form Edit Barang | Sumber Jaya Furniture',
+            'barang' => $barang
+            // 'kategori' => $kategori
+            
         ];
+
+        // dd($data);
 
         return view('admin/detail-barang', $data);
     }
