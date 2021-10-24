@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Form Tambah Barang | Sumber Jaya Furniture</title>
+	<title><?= $title; ?></title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="/assets/img/favicon-sfj.ico" type="image/x-icon" />
 
@@ -245,12 +245,13 @@
 									<div class="card-title">Tambah Barang</div>
 									<div class="card-category">Masukkan data barang dengan sebenar-benarnya</div>
 								</div>
-								<form action="<?php echo base_url("/admin/add_validation") ?>" method="POST">
+								<form action="/tambah/tambahBarang" method="POST">
+									<?= csrf_field(); ?>
 									<div class="card-body">
 										<div class="form-group form-show-validation row">
 											<label for="name" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="nama" name="nama" placeholder="" required>
+												<input type="text" class="form-control" id="nama" name="nama" placeholder="" required autofocus>
 												<!--  -->
 											</div>
 										</div> <!-- end nama -->
@@ -258,23 +259,26 @@
 										<div class="form-group form-show-validation row">
 											<label for="kategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Kategori <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<select id="Kategori" required class="form-control" name="kategori">
+												<select id="kategori" required class="form-control" name="kategori">
+													
 													<option hidden> -- Pilih Kategori --</option>
+													<?php foreach ($kategori as $data) : ?>
 													<!-- Ambil dari database -->
-													<option value="">Home Furniture</option>
-													<option value="">Hospital Furniture</option>
-													<option value="">Office Furniture</option>
+													<option value="<?= $data['idkategori']; ?>"><?= $data['nama']; ?></option>
+													<!-- <option value="112">Hospital Furniture</option>
+													<option value="113">Office Furniture</option> -->
+													<?php endforeach; ?>
 												</select>
 											</div>
 										</div> <!-- end kategori -->
 
 										<div class="form-group form-show-validation row">
-											<label for="jumlah" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Jumlah <span class="required-label">*</span></label>
+											<label for="stok" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Stok <span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input class="form-control" type="number" id="jumlah" min="1" step="1" name="jumlah">
+												<input class="form-control" type="number" id="stok" min="1" step="1" name="stok">
 											</div>
-										</div> <!-- end jumlah -->
+										</div> <!-- end stok -->
 
 										<div class="form-group form-show-validation row">
 											<label for="harga" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Harga (Rp) <span class="required-label">*</span></label>

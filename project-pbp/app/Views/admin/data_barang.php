@@ -243,7 +243,7 @@
 								<div class="card-header">
 									<div class="d-flex align-items-center">
 										<h4 class="card-title">Data Barang</h4>
-										<a class="d-block ml-auto" href="/tambah/tambahBarang">
+										<a class="d-block ml-auto" href="/tambah/tambah">
 											<button class="btn btn-primary btn-round d-flex align-items-center">
 												<i class="la flaticon-add d-block mr-2"></i>
 												<span class="d-block">Tambah Barang</span>

@@ -7,6 +7,8 @@ use App\Models\BarangModel;
 use App\Models\PenjualanModel;
 use App\Models\RekapPenjualanModel;
 
+use function PHPUnit\Framework\throwException;
+
 class Admin extends BaseController
 {
     protected $kategoriModel;
@@ -80,6 +82,11 @@ class Admin extends BaseController
             'barang' => $barang
         ];
 
+        //jika barang tidak ada di table
+        if(empty($data['barang']))
+        {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('Data barang tidak ditemukan');
+        }
         return view('admin/data_barang', $data);
     }
 

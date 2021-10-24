@@ -19,7 +19,7 @@ class Edit extends BaseController
         $this->penjualanModel = new PenjualanModel();
     }
 
-    public function barang($idbarang = 6)
+    public function barang($idbarang)
     {
         $query = $this->barangModel->getBarangid($idbarang);
         $barang = $query->getResultArray();
