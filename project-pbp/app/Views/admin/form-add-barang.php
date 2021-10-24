@@ -187,7 +187,7 @@
 						</li> <!-- end nav item -->
 
 						<li class="nav-item 
-							<?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
+							<?php if ($title == 'Data Barang | Sumber Jaya Furniture' || $title == 'Form Tambah Barang | Sumber Jaya Furniture') :
 								echo "active";
 							endif;
 							?>">

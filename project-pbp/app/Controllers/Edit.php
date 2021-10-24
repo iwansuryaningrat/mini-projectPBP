@@ -63,14 +63,6 @@ class Edit extends BaseController
         return view('admin/delete/form-delete-kategori', $data);
     }
 
-    public function transaksi()
-    {
-        $data = [
-            'title' => 'Form Edit Transaksi | Sumber Jaya Furniture'
-        ];
-
-        return view('admin/edit/form-edit-transaksi', $data);
-    }
     
     public function hapuskategori($idkategori)
     {
@@ -139,5 +131,25 @@ class Edit extends BaseController
         return redirect()->to('/admin/barang');
     }
 
-    
+    public function transaksi()
+    {
+        $dataTransaksi = $this->penjualanModel->getTransaksi();
+        $data = [
+            'title' => 'Form Edit Transaksi | Sumber Jaya Furniture',
+            'data' => $dataTransaksi
+        ];
+
+        return view('admin/edit/form-edit-transaksi', $data);
+    }
+
+    public function edittransaksi($idpenjualan)
+    {
+        $dataTransaksi = $this->penjualanModel->getDataTransaksi($idpenjualan);
+        $data = [
+            'title' => 'Form Edit Transaksi | Sumber Jaya Furniture',
+            'data' => $dataTransaksi
+        ];
+
+        return view('admin/edit/form-edit-transaksi', $data);
+    }
 }

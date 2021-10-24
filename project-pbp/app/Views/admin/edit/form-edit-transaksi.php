@@ -188,7 +188,7 @@
 						</li> <!-- end nav data barang -->
 
 						<li class="nav-item 
-							<?php if ($title == 'Data Transaksi | Sumber Jaya Furniture') :
+							<?php if ($title == 'Data Transaksi | Sumber Jaya Furniture' || $title == 'Form Edit Transaksi | Sumber Jaya Furniture') :
 								echo "active";
 							endif;
 							?>">
@@ -240,7 +240,7 @@
 										<div class="form-group form-show-validation row">
 											<label for="invoice" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">ID Invoice <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="invoice" name="invoice" placeholder="" disabled>
+												<input type="text" class="form-control" id="invoice" name="invoice" placeholder=""  disabled>
 											</div>
 										</div> <!-- end invoice -->
 
@@ -254,14 +254,15 @@
 										<div class="form-group form-show-validation row">
 											<label for="waktuPemesanan" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Waktu Pemesanan <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="waktuPemesanan" name="waktuPemesanan" placeholder="" disabled>
+												<input type="text" class="form-control" id="waktuPemesanan" name="waktuPemesanan" placeholder=""  disabled>
 											</div>
-										</div> <!-- end waktu pemesanan -->
+										</div> 
+										<!-- end waktu pemesanan -->
 
 										<div class="form-group form-show-validation row">
 											<label for="status" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Status <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="text" class="form-control" id="status" name="status" placeholder="" disabled>
+												<input type="text" class="form-control" id="status" name="status" placeholder=""  disabled>
 											</div>
 										</div> <!-- end status -->
 
