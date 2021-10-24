@@ -253,8 +253,11 @@
 											$id = $barang[$key]['idbarang'];
 										} ?>
 										<form action="/edit/hapusbarang/<?= $id; ?>" method="POST">
-											<div class="col-md-6 com-sm-12">
-												<?php foreach ($barang as $data) : ?>
+											<?php foreach ($barang as $data) : ?>
+												<?php $tgl_input = date('d F Y', strtotime($data['tgl_input'])); ?>
+												<?php $tgl_update = date('d F Y', strtotime($data['tgl_update'])); ?>
+												<div class="col-md-6 com-sm-12">
+
 													<p><?= $data['idbarang']; ?></p>
 													<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
 													<p><?= $data['keterangan']; ?></p>
@@ -277,24 +280,24 @@
 																<td class="fw-bold">Stok</td>
 																<td><?= $data['stok']; ?></td>
 															</tr>
-															<!-- <tr>
-														<td class="fw-bold">Tanggal Masuk</td>
-														<td>20/8/2021</td>
-													</tr>
-													<tr>
-														<td class="fw-bold">Tanggal Update</td>
-														<td>20/10/2021</td>
-													</tr> -->
+															<tr>
+																<td class="fw-bold">Tanggal Masuk</td>
+																<td><?= $tgl_input ?></td>
+															</tr>
+															<tr>
+																<td class="fw-bold">Tanggal Update</td>
+																<td><?= $tgl_update; ?></td>
+															</tr>
 														</thead>
 													</table>
-												
-											</div> <!-- end desc -->
-											<div class="card-body">
-												<div class="d-flex justify-content-end px-lg-4 px-sm-2">
-													<a href="/admin/barang" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
-													<a type="submit" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</a>
+
+												</div> <!-- end desc -->
+												<div class="card-action">
+													<div class="d-flex justify-content-end px-lg-4 px-sm-2">
+														<a href="/admin/barang" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
+														<button type="submit" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</button>
+													</div>
 												</div>
-											</div>
 											<?php endforeach; ?>
 										</form>
 										<!-- End Form Delete -->
