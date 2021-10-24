@@ -235,7 +235,10 @@
 									<div class="card-title">Edit Transaksi</div>
 									<div class="card-category">Masukkan data transaksi dengan sebenar-benarnya</div>
 								</div>
-								<form action="" method="POST">
+								<?php foreach ($transaksi as $key => $value) {
+									$id = $transaksi[$key]['idpenjualan'];
+								} ?>
+								<form action="/edit/edittransaksi/<?= $id ?>" method="POST">
 									<?php foreach($transaksi as $data) : ?>
 									<div class="card-body">
 										<div class="form-group form-show-validation row">

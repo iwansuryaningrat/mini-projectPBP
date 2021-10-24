@@ -154,7 +154,8 @@ class Edit extends BaseController
     public function edittransaksi($idpenjualan)
     {
         $data = [
-            'status' => $this->request->getVar('update_status')
+            'idpenjualan' => $idpenjualan,
+            'status' => $this->request->getPost('update_status')
         ];
         
         // dd($data);
