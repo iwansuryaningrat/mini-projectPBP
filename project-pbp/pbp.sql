@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Okt 2021 pada 08.27
+-- Waktu pembuatan: 25 Okt 2021 pada 10.04
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.10
 
@@ -162,8 +162,8 @@ CREATE TABLE `barang` (
   `idbarang` int(20) NOT NULL,
   `nama` varchar(100) NOT NULL,
   `idkategori` int(20) DEFAULT NULL,
-  `keterangan` varchar(50) NOT NULL,
-  `file_gambar` varchar(50) NOT NULL,
+  `keterangan` varchar(255) NOT NULL,
+  `file_gambar` varchar(500) NOT NULL,
   `tampil` varchar(255) NOT NULL,
   `harga` int(11) NOT NULL,
   `berat` int(11) NOT NULL,
@@ -177,13 +177,17 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`idbarang`, `nama`, `idkategori`, `keterangan`, `file_gambar`, `tampil`, `harga`, `berat`, `stok`, `tgl_insert`, `tgl_update`) VALUES
-(4, 'Bar Table', 111, '', '', '', 1200000, 8, 6, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
+(4, 'Bar Table', 112, 'Meja bar yang kuat dan tahan lama																									', '', '', 1200000, 8, 6, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
 (5, 'Coffe Table', 111, '', '', '', 1000000, 9, 3, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
 (6, 'Lemari Pakaian', 112, '', '', '', 2000000, 20, 3, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
 (7, 'Lemari Document', 112, '', '', '', 1800000, 17, 4, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
-(8, 'Crank Manual Bed Patient', 112, 'Kasur pasien rumah sakit', '', '', 10000000, 88, 7, '2021-10-23 04:11:07', '2021-10-23 04:11:07'),
-(17, 'adjhad', 112, '			aasfsaad									', '', '', 50000000, 3, 5, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(18, 'sgdtgwee', 112, '				qweqqw								', '', '', 2147483647, 5, 5, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(8, 'Crank Manual Bed Patient', 112, 'Kasur pasien rumah sakit																																							', '', '', 10000000, 88, 100, '2021-10-23 04:11:07', '2021-10-23 04:11:07'),
+(19, 'Sofa Kulit', 111, 'Sofa yang terbuat dari kulit sapi asli							', '', '', 2147483647, 10, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(23, 'Kayu', 112, 'Kayi												', 'ulat.jpg', '', 500000, 8, 8, '2021-10-25 00:00:00', '0000-00-00 00:00:00'),
+(25, 'bbjbjbjbj', 111, '33333												', 'download_1.jpg', '', 8787000, 5, 66, '2021-10-25 00:00:00', '0000-00-00 00:00:00'),
+(26, 'mamam', 112, '	reere											', 'ss.png', '', 35555000, 3, 3, '2021-10-25 00:00:00', '0000-00-00 00:00:00'),
+(27, 'mamamam', 111, 'hhshs												', 'wa.png', '', 440000, 8, 5, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(28, 'kakakk', 112, '			lala									', 'ava-musa.jpg', '', 330000, 9, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -896,7 +900,7 @@ CREATE TABLE `penjualan` (
 --
 
 INSERT INTO `penjualan` (`idpenjualan`, `idpelanggan`, `tgl_penjualan`, `total_harga`, `total_item`, `total_berat`, `ongkir`, `jenis_pengiriman`, `nama_kirim`, `alamat_kirim`, `idkota_kirim`) VALUES
-('INV101', 1, '2021-10-23', 3600000, 3, 9, 20000, 'Reguler', 'Musa', 'Batang', 1868),
+('INV101', 1, '0000-00-00', 3600000, 3, 9, 20000, 'Reguler', 'Musa', 'Batang', 1868),
 ('INV103', 1, '2021-10-30', 3600000, 3, NULL, NULL, NULL, NULL, NULL, NULL),
 ('INV104', 1, '2021-10-23', 2400000, 2, 6, 20000, 'Reguler', 'Musa', 'Batang', 1868),
 ('INV105', 1, '2021-10-23', 3000000, 3, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -1031,7 +1035,7 @@ CREATE TABLE `status_penjualan` (
 --
 
 INSERT INTO `status_penjualan` (`idpenjualan`, `idstatus`, `tgl_update`, `idpetugas`) VALUES
-('INV101', 5, '2021-10-23', NULL),
+('INV101', 3, '2021-10-23', NULL),
 ('INV103', 1, '2021-10-24', NULL),
 ('INV104', 2, '2021-10-24', NULL),
 ('INV105', 3, '2021-10-24', NULL),
@@ -1754,9 +1758,9 @@ ALTER TABLE `status`
 -- Indeks untuk tabel `status_penjualan`
 --
 ALTER TABLE `status_penjualan`
-  ADD PRIMARY KEY (`idpenjualan`,`idstatus`),
+  ADD PRIMARY KEY (`idpenjualan`),
   ADD KEY `idpetugas` (`idpetugas`),
-  ADD KEY `idpenjualan` (`idpenjualan`,`idstatus`),
+  ADD KEY `idpenjualan` (`idpenjualan`),
   ADD KEY `idstatus` (`idstatus`);
 
 --
@@ -1817,7 +1821,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `idbarang` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idbarang` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
@@ -1909,9 +1913,9 @@ ALTER TABLE `barang`
 --
 ALTER TABLE `data_transaksi`
   ADD CONSTRAINT `data_transaksi_ibfk_1` FOREIGN KEY (`invoice`) REFERENCES `penjualan` (`idpenjualan`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `data_transaksi_ibfk_2` FOREIGN KEY (`idbarang`) REFERENCES `barang` (`idbarang`),
   ADD CONSTRAINT `data_transaksi_ibfk_3` FOREIGN KEY (`idpelanggan`) REFERENCES `pelanggan` (`idpelanggan`),
-  ADD CONSTRAINT `data_transaksi_ibfk_4` FOREIGN KEY (`idstatus`) REFERENCES `status` (`idstatus`);
+  ADD CONSTRAINT `data_transaksi_ibfk_4` FOREIGN KEY (`idstatus`) REFERENCES `status` (`idstatus`),
+  ADD CONSTRAINT `data_transaksi_ibfk_5` FOREIGN KEY (`idbarang`) REFERENCES `barang` (`idbarang`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `detail_penjualan`
