@@ -274,35 +274,48 @@
 											<label for="updateStatus" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Update Status <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<div class="selectgroup selectgroup-pills d-flex">
-													<label class="selectgroup-item">
+													<?php foreach ($status as $status) : ?>
+														<label class="selectgroup-item">
+														<input type="radio" name="update_status" id="update_status" class="selectgroup-input bg-red"
+														 value="<?= $status['idstatus']; ?>" >
+														
+														<span class="selectgroup-button"><?= $status['nama']; ?></span>
+													</label> <!-- end sukses -->
+													<?php endforeach; ?>
+													<!-- <label class="selectgroup-item">
 														<input type="radio" name="update_status" value="sukses"
 															class="selectgroup-input bg-red">
 														<span class="selectgroup-button">Sukses</span>
-													</label> <!-- end sukses -->
+													</label>  -->
+													<!-- end sukses -->
 
-													<label class="selectgroup-item">
+													<!-- <label class="selectgroup-item">
 														<input type="radio" name="update_status" value="dikirim"
 															class="selectgroup-input">
 														<span class="selectgroup-button">Dikirim</span>
-													</label> <!-- end dikirim -->
+													</label>  -->
+													<!-- end dikirim -->
 
-													<label class="selectgroup-item">
+													<!-- <label class="selectgroup-item">
 														<input type="radio" name="update_status" value="belum_dikirim"
 															class="selectgroup-input">
 														<span class="selectgroup-button">Belum Dikirim</span>
-													</label> <!-- end belum dikirm -->
+													</label>  -->
+													<!-- end belum dikirm -->
 
-													<label class="selectgroup-item">
+													<!-- <label class="selectgroup-item">
 														<input type="radio" name="update_status" value="belum_Transfer"
 															class="selectgroup-input">
 														<span class="selectgroup-button">Belum Transfer</span>
-													</label> <!-- end belum transfer -->
-													
+													</label>  -->
+													<!-- end belum transfer -->
+<!-- 													
 													<label class="selectgroup-item">
 														<input type="radio" name="update_status" value="dibatalkan"
 															class="selectgroup-input bg-red">
 														<span class="selectgroup-button">Dibatalkan</span>
-													</label> <!-- end dibatalkan -->
+													</label>  -->
+													<!-- end dibatalkan -->
 												</div> <!-- end selectgroup -->
 											</div> <!-- end col -->
 										</div> <!-- end edit status -->
@@ -312,7 +325,7 @@
 										<div class="row">
 											<div class="col-md-12 d-flex justify-content-end">
 												<a href="/admin/transaksi" class="btn btn-danger" style="border-radius: 100px;">Batal</a>
-												<input class="btn btn-primary ml-4" type="submit" value="Tambah" style="border-radius: 100px;">
+												<input class="btn btn-primary ml-4" type="submit" value="Edit" style="border-radius: 100px;">
 											</div>
 										</div>
 									</div> <!-- end button -->

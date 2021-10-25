@@ -4,11 +4,11 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProvinsiModel extends Model
+class StatusModel extends Model
 {
-    protected $table      = 'provinsi';
-    protected $primaryKey = 'id_provinsi';
+    protected $table      = 'status';
+    protected $primaryKey = 'idstatus';
 
     protected $useAutoIncrement = true;
-    protected $allowedFields = ['id_provinsi','nama'];
+    protected $allowedFields = ['idstatus','nama'];
 }

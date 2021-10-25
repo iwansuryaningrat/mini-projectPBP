@@ -5,18 +5,24 @@ namespace App\Controllers;
 use App\Models\KategoriModel;
 use App\Models\BarangModel;
 use App\Models\PenjualanModel;
+use App\Models\StatusModel;
+use App\Models\StatusPenjualanModel;
 
 class Edit extends BaseController
 {
     protected $kategoriModel;
     protected $barangModel;
     protected $penjualanModel;
+    protected $statusModel;
+    protected $statusPenjualanModel;
 
     public function __construct()
     {
         $this->kategoriModel = new KategoriModel();
         $this->barangModel = new BarangModel();
         $this->penjualanModel = new PenjualanModel();
+        $this->statusModel = new StatusModel();
+        $this->statusPenjualanModel = new StatusPenjualanModel();
     }
 
     public function barang($idbarang)
@@ -124,12 +130,12 @@ class Edit extends BaseController
             'keterangan' => $this->request->getPost('keterangan'),
         ];
         
-        // dd($data);
+        
 
         $this->barangModel->update($idbarang, $data);
 
         session()->setFlashdata('pesan barang', 'Data berhasil diubah.');
-
+        // dd($data);
         return redirect()->to('/admin/barang');
     }
 
@@ -137,16 +143,19 @@ class Edit extends BaseController
     {
         $query = $this->penjualanModel->getDataTransaksi($idpenjualan);
         $transaksi = $query->getResultArray();
-
+        $status = $this->statusModel->findAll();
+        $statusPenjualan = $this->statusPenjualanModel->findAll();
         
 
         $data = [
             'title' => 'Form Edit Barang | Sumber Jaya Furniture',
-            'transaksi' => $transaksi
+            'transaksi' => $transaksi,
+            'status' => $status,
+            'statusPenjualan' => $statusPenjualan
             
         ];
 
-        // dd($transaksi);
+        // dd($data);
 
         return view('admin/edit/form-edit-transaksi', $data);
     }
@@ -155,15 +164,16 @@ class Edit extends BaseController
     {
         $data = [
             'idpenjualan' => $idpenjualan,
-            'status' => $this->request->getPost('update_status')
+            'status' => $this->request->getVar('update_status')
         ];
         
         // dd($data);
 
-        $this->penjualanModel->update($idpenjualan, $data);
+        $this->statusPenjualanModel->update($idpenjualan, $data);
 
         session()->setFlashdata('transaki', 'Status berhasil diubah.');
 
+        // dd($data);
         return redirect()->to('/admin/transaksi');
     }
 }
