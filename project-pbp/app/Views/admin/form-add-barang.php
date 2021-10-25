@@ -245,7 +245,7 @@
 									<div class="card-title">Tambah Barang</div>
 									<div class="card-category">Masukkan data barang dengan sebenar-benarnya</div>
 								</div>
-								<form action="/tambah/tambahBarang" method="POST">
+								<form action="/tambah/tambahBarang" method="POST" enctype="multipart/form-data">
 									<?= csrf_field(); ?>
 									<div class="card-body">
 										<div class="form-group form-show-validation row">
@@ -259,7 +259,7 @@
 										<div class="form-group form-show-validation row">
 											<label for="kategori" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Kategori <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<select id="kategori" required class="form-control" name="kategori">
+												<select id="kategori" required class="form-control" name="kategori" required>
 													
 													<option hidden> -- Pilih Kategori --</option>
 													<?php foreach ($kategori as $data) : ?>
@@ -306,14 +306,13 @@
 										</div> <!-- end keterangan -->
 										
 										<div class="form-group form-show-validation row">
-											<label for="tgl_input" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Tanggal Input<span class="required-label">*</span></label>
+											<label for="tgl_insert" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Tanggal Insert<span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="date" class="form-control" name="tgl_input" id="tgl_input" value="<?php echo "date('m/d/y')";?>">
-												
+												<input type="date" class="form-control" name="tgl_insert" id="tgl_insert" value="<?php echo "date('m/d/y')";?>">
 											</div>
 										</div>
-										<!-- end tgl_input -->
+										<!-- end tgl_insert -->
 
 										<div class="form-group form-show-validation row">
 											<label for="tgl_update" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Tanggal Input<span class="required-label">*</span></label>
@@ -326,12 +325,13 @@
 										<!-- end tgl_update -->
 
 										<div class="form-group form-show-validation row">
-											<label class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Upload Image <span class="required-label">*</span></label>
+											<label class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Upload Gambar <span class="required-label">*</span></label>
 											<div class="col-lg-7 col-md-9 col-sm-8">
 												<div class="input-file input-file-image">
 													<img class="img-upload-preview" width="100" height="100" src="http://placehold.it/100x100" alt="preview">
-													<input type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required>
-													<label for="uploadImg" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload a Image</label>
+													<input type="file" class="form-control form-control-file" id="image" name="image" accept="image/*" required>
+													
+													<label for="image" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload gambar</label>
 												</div>
 											</div>
 										</div>

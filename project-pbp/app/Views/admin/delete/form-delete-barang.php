@@ -254,7 +254,7 @@
 										} ?>
 										<form action="/edit/hapusbarang/<?= $id; ?>" method="POST">
 											<?php foreach ($barang as $data) : ?>
-												<?php $tgl_input = date('d F Y', strtotime($data['tgl_input'])); ?>
+												<?php $tgl_insert = date('d F Y', strtotime($data['tgl_insert'])); ?>
 												<?php $tgl_update = date('d F Y', strtotime($data['tgl_update'])); ?>
 												<div class="col-md-6 com-sm-12">
 
@@ -282,7 +282,7 @@
 															</tr>
 															<tr>
 																<td class="fw-bold">Tanggal Masuk</td>
-																<td><?= $tgl_input ?></td>
+																<td><?= $tgl_insert ?></td>
 															</tr>
 															<tr>
 																<td class="fw-bold">Tanggal Update</td>

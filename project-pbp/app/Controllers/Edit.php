@@ -120,6 +120,10 @@ class Edit extends BaseController
 
     public function editbarang($idbarang)
     {
+        // $foto = $_FILES['foto'];
+        // if ($foto='')
+        // {  }
+        // else $config['uplo'];
         $data = [
             'idbarang' => $idbarang,
             'nama' => $this->request->getPost('nama'),

@@ -45,24 +45,51 @@ class Tambah extends BaseController
 		// }
 		// else
 		// {
+        // if (!$this->validate([
+        //     'image' => [ 'rules' => 'uploaded[image]|max_size[image,2048]|is_image[image]|mime_in[image,image/jpg,image/jpeg,image/png]',
+        //     'errors' =>  [
+        //         'Uploaded' => 'Pilih gambar',
+        //         'max_size' => 'Ukuran gambar terlalu besar',
+        //         'is_image' => 'Yang dipilih bukan gambar',
+        //         'mime_in'  => 'Yang dipilih bukan gambar'
+        //     ]
+        //     ]
+        // ])) 
+        // {
+        //     $validation = \Config\Services::validation();
+        //     return redirect()->to('/tambah/tambah')->withInput();
+        // }
 
-			$this->barangModel->insert([
+            $image = $this->request->getFile('image');
+            if($image->getError() == 4){
+                $namaImage = 'chair-prod.png';
+            } else {
+                $image->move('assets/img/productimg');
+                $namaImage = $image->getName();
+            }
+            
+
+            // dd($image);
+            // $tgl_insert = date('m/d/y');
+			$this->barangModel->save([
 				'nama' => $this->request->getVar('nama'),
 				'idkategori' => $this->request->getVar('kategori'),
                 'stok' => $this->request->getVar('stok'),
 				'harga' => $this->request->getVar('harga'),
                 'berat' => $this->request->getVar('berat'),
-                'keterangan' => $this->request->getVar('keterangan')
-				
+                'keterangan' => $this->request->getVar('keterangan'),
+                'tgl_insert' => $this->request->getVar('tgl_insert'),
+                'file_gambar' => $namaImage
+
 			]);
-            $data = [
-                'nama' => $this->request->getVar('nama'),
-				'kategori' => $this->request->getVar('kategori'),
-                'stok' => $this->request->getVar('stok'),
-				'harga' => $this->request->getVar('harga'),
-                'berat' => $this->request->getVar('berat'),
-                'keterangan' => $this->request->getVar('keterangan')
-            ];
+            // $data = [
+            //     'nama' => $this->request->getVar('nama'),
+			// 	'kategori' => $this->request->getVar('kategori'),
+            //     'stok' => $this->request->getVar('stok'),
+			// 	'harga' => $this->request->getVar('harga'),
+            //     'berat' => $this->request->getVar('berat'),
+            //     'keterangan' => $this->request->getVar('keterangan')
+            // ];
 			// $session = \Config\Services::session();
 			// $session->setFlashdata('success', 'Book Added');
 
