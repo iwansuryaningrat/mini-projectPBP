@@ -306,7 +306,7 @@
 												<label class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Upload Image <span class="required-label">*</span></label>
 												<div class="col-lg-7 col-md-9 col-sm-8">
 													<div class="input-file input-file-image">
-														<img class="img-upload-preview" width="100" height="100" src="http://placehold.it/100x100" alt="preview">
+														<img class="img-upload-preview" width="100" height="100" src="/assets/img/productimg/<?= $barang['file_gambar'] ?>" alt="preview">
 														<input type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required>
 														<label for="uploadImg" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload a Image</label>
 													</div>
