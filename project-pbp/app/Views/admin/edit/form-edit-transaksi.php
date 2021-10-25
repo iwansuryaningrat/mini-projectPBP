@@ -277,7 +277,9 @@
 													<?php foreach ($status as $status) : ?>
 														<label class="selectgroup-item">
 														<input type="radio" name="update_status" id="update_status" class="selectgroup-input bg-red"
-														 value="<?= $status['idstatus']; ?>" >
+														 value="<?= $status['idstatus']; ?>" 
+														 <?php if ( $statusPenjualan['idstatus'] = $status['idstatus'] ) : echo 'checked';endif; ?>
+														 >
 														
 														<span class="selectgroup-button"><?= $status['nama']; ?></span>
 													</label> <!-- end sukses -->

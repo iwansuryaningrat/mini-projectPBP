@@ -164,7 +164,7 @@ class Edit extends BaseController
     {
         $data = [
             'idpenjualan' => $idpenjualan,
-            'status' => $this->request->getVar('update_status')
+            'idstatus' => $this->request->getVar('update_status')
         ];
         
         // dd($data);
