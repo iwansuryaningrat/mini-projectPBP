@@ -309,7 +309,7 @@
 											<label for="tgl_insert" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Tanggal Insert<span class="required-label">*</span></label>
 											<br>
 											<div class="col-lg-7 col-md-9 col-sm-8">
-												<input type="date" class="form-control" name="tgl_insert" id="tgl_insert" value="<?php echo "date('m/d/y')";?>">
+												<input type="date" class="form-control" name="tgl_insert" id="tgl_insert" value="<?php echo "date('m/d/y')";?> required">
 											</div>
 										</div>
 										<!-- end tgl_insert -->

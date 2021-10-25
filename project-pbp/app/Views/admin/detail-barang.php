@@ -102,7 +102,7 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="data_transaksi.html">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
 													<div class="avatar-item bg-warning rounded-circle">
 														<i class="fas fa-shopping-cart"></i>
@@ -227,13 +227,13 @@
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="data_barang.html">Data Barang</a>
+								<a href="/admin/barang">Data Barang</a>
 							</li>
 							<li class="separator">
 								<i class="flaticon-right-arrow"></i>
 							</li>
 							<li class="nav-item">
-								<a href="detail-barang.html">Detail Barang</a>
+								<a href="#">Detail Barang</a>
 							</li>
 						</ul>
 					</div> <!-- end page header -->
