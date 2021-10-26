@@ -156,6 +156,7 @@
 			</nav>
 			<!-- End Navbar -->
 		</div>
+		
 		<!-- Sidebar -->
 		<div class="sidebar sidebar-style-2">
 			<div class="sidebar-wrapper scrollbar scrollbar-inner">
@@ -242,9 +243,9 @@
 							<div class="card">
 								<div class="card-body">
 									<div class="row">
-									<?php foreach ($barang as $key => $value) {
-											$id = $barang[$key]['idbarang'];
-										} ?>
+										<!-- pictures -->
+										<?php foreach ($barang as $key => $value) {
+											$id = $barang[$key]['idbarang'];} ?>
 										<?php foreach ($barang as $data) : ?>
 										<div class="col-md-6 col-sm-12 row image-gallery">
 											<a href="/assets/img/productimg/<?= $data['file_gambar'] ?>">
@@ -253,61 +254,56 @@
 										</div> <!-- end pictures -->
 
 										<!-- form delete -->
-										
-										<form action="/edit/hapusbarang/<?= $id; ?>" method="POST">
-											
+										<div class="col-md-6 com-sm-12">
+											<form action="/edit/hapusbarang/<?= $id; ?>" method="POST">
 												<?php $tgl_insert = date('d F Y', strtotime($data['tgl_insert'])); ?>
 												<?php $tgl_update = date('d F Y', strtotime($data['tgl_update'])); ?>
-												<div class="col-md-6 com-sm-12">
-
-													<p>000<?= $data['idbarang']; ?> ID </p>
-													<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
-													<p><?= $data['keterangan']; ?></p>
-
-													<table class="table">
-														<thead>
-															<tr>
-																<td class="fw-bold">Kategori</td>
-																<td><?= $data['kategori']; ?></td>
-															</tr>
-															<tr>
-																<td class="fw-bold">Harga</td>
-																<td><?= $data['harga']; ?></td>
-															</tr>
-															<tr>
-																<td class="fw-bold">Berat</td>
-																<td><?= $data['berat']; ?></td>
-															</tr>
-															<tr>
-																<td class="fw-bold">Stok</td>
-																<td><?= $data['stok']; ?></td>
-															</tr>
-															<tr>
-																<td class="fw-bold">Tanggal Masuk</td>
-																<td><?= $tgl_insert ?></td>
-															</tr>
-															<tr>
-																<td class="fw-bold">Tanggal Update</td>
-																<td><?= $tgl_update; ?></td>
-															</tr>
-														</thead>
-													</table>
-
-												</div> <!-- end desc -->
-												<div class="card-action">
+												
+												<p>000<?= $data['idbarang']; ?> ID </p>
+												<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
+												<p><?= $data['keterangan']; ?></p>
+												
+												<table class="table">
+													<thead>
+														<tr>
+															<td class="fw-bold">Kategori</td>
+															<td><?= $data['kategori']; ?></td>
+														</tr>
+														<tr>
+															<td class="fw-bold">Harga</td>
+															<td><?= $data['harga']; ?></td>
+														</tr>
+														<tr>
+															<td class="fw-bold">Berat</td>
+															<td><?= $data['berat']; ?></td>
+														</tr>
+														<tr>
+															<td class="fw-bold">Stok</td>
+															<td><?= $data['stok']; ?></td>
+														</tr>
+														<tr>
+															<td class="fw-bold">Tanggal Masuk</td>
+															<td><?= $tgl_insert ?></td>
+														</tr>
+														<tr>
+															<td class="fw-bold">Tanggal Update</td>
+															<td><?= $tgl_update; ?></td>
+														</tr>
+													</thead>
+												</table> <!-- end table -->
+												
+												<div class="card-body">
 													<div class="d-flex justify-content-end px-lg-4 px-sm-2">
 														<a href="/admin/barang" class="btn btn-info" role="button" style="border-radius: 30px;">Kembali</a>
 														<button type="submit" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</button>
 													</div>
-												</div>
-											
-										</form>
-										<!-- End Form Delete -->
-										<?php endforeach; ?>
+												</div> <!-- end button action -->
+											</form>
+											<?php endforeach; ?>
+											<!-- end form -->
+										</div> <!-- End Delete -->
 									</div> <!-- end row -->
 								</div> <!-- end card body -->
-
-
 							</div> <!-- end card -->
 						</div> <!-- end col -->
 					</div> <!-- end row -->

@@ -33,7 +33,7 @@ class Admin extends BaseController
         // $index = $this->RekapPenjualanModel->findAll();
         $total_terjual = $this->RekapPenjualanModel->getTotalPenjualan();
         $total = $total_terjual->getResultArray();
-        
+
         // total pembeli
         $total_pembelian = $this->RekapPenjualanModel->getPenjualan();
         $pembeli = $total_pembelian->getResultArray();
@@ -41,7 +41,7 @@ class Admin extends BaseController
         //total pendapatan
         $total_pendapatan = $this->RekapPenjualanModel->getTotalPendapatan();
         $pendapatan = $total_pendapatan->getResultArray();
-        
+
         //terlaris
         $barangTerlaris = $this->RekapPenjualanModel->getTerlaris();
         $terlaris = $barangTerlaris->getResultArray();
@@ -73,7 +73,7 @@ class Admin extends BaseController
         $i = 1;
         $j = 1;
 
-        
+
         $data = [
             'title' => 'Data Barang | Sumber Jaya Furniture',
             'i' => $i,
@@ -83,8 +83,7 @@ class Admin extends BaseController
         ];
 
         //jika barang tidak ada di table
-        if(empty($data['barang']))
-        {
+        if (empty($data['barang'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Data barang tidak ditemukan');
         }
         return view('admin/data_barang', $data);
@@ -94,7 +93,7 @@ class Admin extends BaseController
     {
         $query = $this->penjualanModel->getTransaksi();
         $transaksi = $query->getResultArray();
-        
+
         $data = [
             'title' => 'Data Transaksi | Sumber Jaya Furniture',
             'transaksi' => $transaksi
@@ -116,14 +115,14 @@ class Admin extends BaseController
             'title' => 'Form Edit Barang | Sumber Jaya Furniture',
             'barang' => $barang
             // 'kategori' => $kategori
-            
+
         ];
 
         // dd($data);
 
         return view('admin/detail-barang', $data);
     }
-    
+
     public function laporan($bln)
     {
         $query = $this->RekapPenjualanModel->getRekap($bln);
