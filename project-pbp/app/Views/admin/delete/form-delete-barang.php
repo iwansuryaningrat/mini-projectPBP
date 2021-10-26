@@ -242,23 +242,25 @@
 							<div class="card">
 								<div class="card-body">
 									<div class="row">
+									<?php foreach ($barang as $key => $value) {
+											$id = $barang[$key]['idbarang'];
+										} ?>
+										<?php foreach ($barang as $data) : ?>
 										<div class="col-md-6 col-sm-12 row image-gallery">
-											<a href="/assets/img/productimg/chair-prod.png">
-												<img src="/assets/img/productimg/chair-prod.png" class="img-fluid">
+											<a href="/assets/img/productimg/<?= $data['file_gambar'] ?>">
+												<img src="/assets/img/productimg/<?= $data['file_gambar'] ?>" class="img-fluid">
 											</a>
 										</div> <!-- end pictures -->
 
 										<!-- form delete -->
-										<?php foreach ($barang as $key => $value) {
-											$id = $barang[$key]['idbarang'];
-										} ?>
+										
 										<form action="/edit/hapusbarang/<?= $id; ?>" method="POST">
-											<?php foreach ($barang as $data) : ?>
+											
 												<?php $tgl_insert = date('d F Y', strtotime($data['tgl_insert'])); ?>
 												<?php $tgl_update = date('d F Y', strtotime($data['tgl_update'])); ?>
 												<div class="col-md-6 com-sm-12">
 
-													<p><?= $data['idbarang']; ?></p>
+													<p>000<?= $data['idbarang']; ?> ID </p>
 													<h1 class="fs_big fw-bold"><?= $data['nama']; ?></h1>
 													<p><?= $data['keterangan']; ?></p>
 
@@ -298,9 +300,10 @@
 														<button type="submit" class="btn btn-danger ml-4" role="button" style="border-radius: 30px;">Hapus Data</button>
 													</div>
 												</div>
-											<?php endforeach; ?>
+											
 										</form>
 										<!-- End Form Delete -->
+										<?php endforeach; ?>
 									</div> <!-- end row -->
 								</div> <!-- end card body -->
 
