@@ -237,11 +237,24 @@
 								</div>
 
 								<div class="card-body">
-									<?php if (session()->getFlashdata('pesan barang')) : ?>
+									<!-- alert kelola barang -->
+									<?php if (session()->getFlashdata('add-msg-barang')) : ?>
 										<div class="alert alert-success" role="alert">
-											<?= session()->getFlashdata('pesan barang'); ?>
+											<?= session()->getFlashdata('add-msg-barang'); ?>
 										</div>
 									<?php endif; ?>
+									<?php if (session()->getFlashdata('edit-msg-barang')) : ?>
+										<div class="alert alert-success" role="alert">
+											<?= session()->getFlashdata('edit-msg-barang'); ?>
+										</div>
+									<?php endif; ?>
+									<?php if (session()->getFlashdata('delete-msg-barang')) : ?>
+										<div class="alert alert-danger" role="alert">
+											<?= session()->getFlashdata('delete-msg-barang'); ?>
+										</div>
+									<?php endif; ?>
+									<!-- end alert kelola barang -->
+
 									<div class="table-responsive">
 										<table id="add-row" class="display table table-striped table-hover">
 											<thead>
@@ -296,11 +309,19 @@
 									</div>
 								</div>
 								<div class="card-body">
-									<?php if (session()->getFlashdata('pesan')) : ?>
+									<!-- alert kelola kategori -->
+									<?php if (session()->getFlashdata('edit-msg-kategori')) : ?>
 										<div class="alert alert-success" role="alert">
-											<?= session()->getFlashdata('pesan'); ?>
+											<?= session()->getFlashdata('edit-msg-kategori'); ?>
 										</div>
 									<?php endif; ?>
+									<?php if (session()->getFlashdata('delete-msg-kategori')) : ?>
+										<div class="alert alert-danger" role="alert">
+											<?= session()->getFlashdata('delete-msg-kategori'); ?>
+										</div>
+									<?php endif; ?>
+									<!-- end alert kelola kategori -->
+									
 									<div class="table-responsive">
 										<table id="add-row2" class="display table table-striped table-hover">
 											<thead>
