@@ -231,11 +231,14 @@
 									<h4 class="card-title">Transaksi Penjualan</h4>
 								</div>
 								<div class="card-body">
-									<?php if (session()->getFlashdata('pesan transaksi')) : ?>
+									<!-- alert kelola kategori -->
+									<?php if (session()->getTempdata('edit-msg-transaksi')) : ?>
 										<div class="alert alert-success" role="alert">
-											<?= session()->getFlashdata('pesan transaksi'); ?>
+											<?= session()->getTempdata('edit-msg-transaksi'); ?>
 										</div>
 									<?php endif; ?>
+									<!-- end alert kelola kategori -->
+
 									<div class="table-responsive">
 										<table id="multi-filter-select" class="display table table-striped table-hover">
 											<thead>

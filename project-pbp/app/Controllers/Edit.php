@@ -74,7 +74,7 @@ class Edit extends BaseController
     {
         $this->kategoriModel->delete($idkategori);
 
-        session()->setFlashdata('pesan', 'Data berhasil dihapus.');
+        session()->setFlashdata('delete-msg-kategori', 'Data Kategori berhasil dihapus.');
 
         return redirect()->to('/admin/barang');
     }
@@ -87,7 +87,7 @@ class Edit extends BaseController
         ];
         $this->kategoriModel->update($idkategori, $data);
 
-        session()->setFlashdata('pesan', 'Data berhasil diubah.');
+        session()->setFlashdata('edit-msg-kategori', 'Data Kategori berhasil diubah.');
 
         return redirect()->to('/admin/barang');
     }
@@ -111,7 +111,7 @@ class Edit extends BaseController
         
         $this->barangModel->delete($idbarang);
 
-        session()->setFlashdata('pesan barang', 'Data berhasil dihapus.');
+        session()->setFlashdata('delete-msg-barang', 'Data Barang berhasil dihapus.');
 
         return redirect()->to('/admin/barang');
     }
@@ -147,7 +147,7 @@ class Edit extends BaseController
 
         $this->barangModel->update($idbarang, $data);
 
-        session()->setFlashdata('pesan barang', 'Data berhasil diubah.');
+        session()->setFlashdata('edit-msg-barang', 'Data Barang berhasil diubah.');
         // dd($data);
         return redirect()->to('/admin/barang');
     }
@@ -184,7 +184,7 @@ class Edit extends BaseController
 
         $this->statusPenjualanModel->update($idpenjualan, $data);
 
-        session()->setFlashdata('transaki', 'Status berhasil diubah.');
+        session()->setTempdata('edit-msg-transaksi', 'Status berhasil diubah.', 1);
 
         // dd($data);
         return redirect()->to('/admin/transaksi');

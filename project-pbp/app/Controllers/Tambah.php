@@ -85,9 +85,9 @@ class Tambah extends BaseController
 			]);
             
 			$session = \Config\Services::session();
-			$session->setFlashdata('success', 'Book Added');
+			// $session->setFlashdata('success', 'Book Added');
 
-            session()->setFlashdata('pesan', 'Data barang berhasil ditambahkan.');
+            session()->setFlashdata('add-msg-barang', 'Data Barang berhasil ditambahkan.');
             // dd($data);
 			return redirect()->to('/admin/barang');
 		// }
