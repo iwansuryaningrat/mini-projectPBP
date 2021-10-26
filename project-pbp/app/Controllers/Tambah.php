@@ -64,8 +64,9 @@ class Tambah extends BaseController
             if($image->getError() == 4){
                 $namaImage = 'chair-prod.png';
             } else {
-                $image->move('assets/img/productimg');
                 $namaImage = $image->getName();
+                $image->move('assets/img/productimg');
+                
             }
             
 
@@ -82,18 +83,11 @@ class Tambah extends BaseController
                 'file_gambar' => $namaImage
 
 			]);
-            // $data = [
-            //     'nama' => $this->request->getVar('nama'),
-			// 	'kategori' => $this->request->getVar('kategori'),
-            //     'stok' => $this->request->getVar('stok'),
-			// 	'harga' => $this->request->getVar('harga'),
-            //     'berat' => $this->request->getVar('berat'),
-            //     'keterangan' => $this->request->getVar('keterangan')
-            // ];
-			// $session = \Config\Services::session();
-			// $session->setFlashdata('success', 'Book Added');
+            
+			$session = \Config\Services::session();
+			$session->setFlashdata('success', 'Book Added');
 
-            // session()->setFlashdata('pesan', 'Data barang berhasil ditambahkan.');
+            session()->setFlashdata('pesan', 'Data barang berhasil ditambahkan.');
             // dd($data);
 			return redirect()->to('/admin/barang');
 		// }

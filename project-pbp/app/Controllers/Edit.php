@@ -119,19 +119,28 @@ class Edit extends BaseController
     
 
     public function editbarang($idbarang)
-    {
-        // $foto = $_FILES['foto'];
-        // if ($foto='')
-        // {  }
-        // else $config['uplo'];
+    {   
+        $image = $this->request->getFile('image');
+            if($image->getError() == 4){ //user tidak upload file
+                $namaImage = $this->request->getVar('imageLama');
+            } else { //jika user upload file baru
+                //mengambil nama file gambar
+                $namaImage = $image->getName();
+                //pindahkan letak file
+                $image->move('assets/img/productimg',$namaImage);
+                //hapus file lama
+                unlink('assets/img/productimg/'. $this->request->getVar('imageLama'));
+                
+            }
         $data = [
             'idbarang' => $idbarang,
-            'nama' => $this->request->getPost('nama'),
-            'idkategori' => $this->request->getPost('idkategori'),
-            'stok' => $this->request->getPost('stok'),
-            'harga' => $this->request->getPost('harga'),
-            'berat' => $this->request->getPost('berat'),
-            'keterangan' => $this->request->getPost('keterangan'),
+            'nama' => $this->request->getVar('nama'),
+            'idkategori' => $this->request->getVar('idkategori'),
+            'stok' => $this->request->getVar('stok'),
+            'harga' => $this->request->getVar('harga'),
+            'berat' => $this->request->getVar('berat'),
+            'keterangan' => $this->request->getVar('keterangan'),
+            'file_gambar' => $namaImage
         ];
         
         

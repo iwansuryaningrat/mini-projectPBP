@@ -245,8 +245,10 @@
 								<?php foreach ($barang as $key => $value) {
 									$id = $barang[$key]['idbarang'];
 								} ?>
-								<form action="/edit/editbarang/<?= $id ?>" method="POST">
-									<?php foreach ($barang as $barang) : ?>
+								<form action="/edit/editbarang/<?= $id ?>" method="POST"  enctype="multipart/form-data">
+								<?= csrf_field(); ?>	
+								<?php foreach ($barang as $barang) : ?>
+										<input type="hidden" name="imageLama" value="<?= $barang['file_gambar'] ?>">
 										<div class="card-body">
 											<div class="form-group form-show-validation row">
 												<label for="name" class="col-lg-3 col-md-3 col-sm-4 mt-sm-2 text-right">Nama <span class="required-label">*</span></label>
@@ -307,8 +309,8 @@
 												<div class="col-lg-7 col-md-9 col-sm-8">
 													<div class="input-file input-file-image">
 														<img class="img-upload-preview" width="100" height="100" src="/assets/img/productimg/<?= $barang['file_gambar'] ?>" alt="preview">
-														<input type="file" class="form-control form-control-file" id="uploadImg" name="uploadImg" accept="image/*" required>
-														<label for="uploadImg" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload a Image</label>
+														<input type="file" class="form-control form-control-file" id="image" name="image" accept="image/*">
+														<label for="image" class="btn btn-primary btn-round btn-lg"><i class="fa fa-file-image"></i> Upload gambar</label>
 													</div>
 												</div>
 											</div>
