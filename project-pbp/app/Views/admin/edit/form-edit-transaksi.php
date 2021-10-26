@@ -80,7 +80,6 @@
 									<span class="title mb-1">Quick Actions</span>
 									<span class="subtitle op-8">Shortcuts</span>
 								</div> <!-- quick actions header -->
-
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
@@ -165,7 +164,7 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
@@ -179,7 +178,7 @@
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>

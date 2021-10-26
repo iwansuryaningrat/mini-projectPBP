@@ -93,9 +93,7 @@
 								<div class="quick-actions-header">
 									<span class="title mb-1">Quick Actions</span>
 									<span class="subtitle op-8">Shortcuts</span>
-								</div>
-								<!-- quick actions header -->
-
+								</div> <!-- quick actions header -->
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
@@ -108,12 +106,12 @@
 												</div>
 											</a> <!-- end data barang -->
 
-											<a class="col-6 col-md-4 p-0" href="/">
+											<a class="col-6 col-md-4 p-0" href="/admin/transaksi">
 												<div class="quick-actions-item">
-													<div class="avatar-item bg-success rounded-circle">
-														<i class="fas fa-home"></i>
+													<div class="avatar-item bg-warning rounded-circle">
+														<i class="fas fa-shopping-cart"></i>
 													</div>
-													<span class="text">Dashboard</span>
+													<span class="text">Data Transaksi</span>
 												</div>
 											</a> <!-- end data transaksi -->
 
@@ -180,7 +178,7 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
@@ -194,7 +192,7 @@
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
