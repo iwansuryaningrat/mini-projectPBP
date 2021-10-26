@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Okt 2021 pada 10.04
+-- Waktu pembuatan: 26 Okt 2021 pada 06.40
 -- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 8.0.10
 
@@ -177,17 +177,17 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`idbarang`, `nama`, `idkategori`, `keterangan`, `file_gambar`, `tampil`, `harga`, `berat`, `stok`, `tgl_insert`, `tgl_update`) VALUES
-(4, 'Bar Table', 112, 'Meja bar yang kuat dan tahan lama																									', '', '', 1200000, 8, 6, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
-(5, 'Coffe Table', 111, '', '', '', 1000000, 9, 3, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
-(6, 'Lemari Pakaian', 112, '', '', '', 2000000, 20, 3, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
-(7, 'Lemari Document', 112, '', '', '', 1800000, 17, 4, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
-(8, 'Crank Manual Bed Patient', 112, 'Kasur pasien rumah sakit																																							', '', '', 10000000, 88, 100, '2021-10-23 04:11:07', '2021-10-23 04:11:07'),
-(19, 'Sofa Kulit', 111, 'Sofa yang terbuat dari kulit sapi asli							', '', '', 2147483647, 10, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'Bar Table', 113, 'Meja bar yang kuat dan tahan lama																																																			', 'bar-table.jpg', '', 1200000, 8, 6, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
+(5, 'Coffe Table', 111, '', 'chair-prod.png', '', 1000000, 9, 3, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
+(6, 'Lemari Pakaian', 112, '', 'chair-prod.png', '', 2000000, 20, 3, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
+(7, 'Lemari Document', 112, '', 'chair-prod.png', '', 1800000, 17, 4, '2021-10-19 11:13:07', '2021-10-19 11:13:07'),
+(8, 'Crank Manual Bed Patient', 112, 'Kasur pasien rumah sakit																																							', 'chair-prod.png', '', 10000000, 88, 100, '2021-10-23 04:11:07', '2021-10-23 04:11:07'),
+(19, 'Sofa Kulit', 111, 'Sofa yang terbuat dari kulit sapi asli							', 'chair-prod.png', '', 2147483647, 10, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (23, 'Kayu', 112, 'Kayi												', 'ulat.jpg', '', 500000, 8, 8, '2021-10-25 00:00:00', '0000-00-00 00:00:00'),
 (25, 'bbjbjbjbj', 111, '33333												', 'download_1.jpg', '', 8787000, 5, 66, '2021-10-25 00:00:00', '0000-00-00 00:00:00'),
 (26, 'mamam', 112, '	reere											', 'ss.png', '', 35555000, 3, 3, '2021-10-25 00:00:00', '0000-00-00 00:00:00'),
 (27, 'mamamam', 111, 'hhshs												', 'wa.png', '', 440000, 8, 5, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(28, 'kakakk', 112, '			lala									', 'ava-musa.jpg', '', 330000, 9, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+(28, 'kakakk', 113, '			lala																																			', 'bar-table.jpg', '', 330000, 9, 3, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1035,7 +1035,7 @@ CREATE TABLE `status_penjualan` (
 --
 
 INSERT INTO `status_penjualan` (`idpenjualan`, `idstatus`, `tgl_update`, `idpetugas`) VALUES
-('INV101', 3, '2021-10-23', NULL),
+('INV101', 5, '2021-10-23', NULL),
 ('INV103', 1, '2021-10-24', NULL),
 ('INV104', 2, '2021-10-24', NULL),
 ('INV105', 3, '2021-10-24', NULL),
@@ -1821,7 +1821,7 @@ ALTER TABLE `auth_tokens`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `idbarang` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idbarang` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT untuk tabel `kategori`
