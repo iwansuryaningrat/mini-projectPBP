@@ -180,33 +180,21 @@
 					</div> <!-- end user -->
 
 					<ul class="nav nav-primary">
-						<li class="nav-item 
-							<?php if ($title == 'Admin Dashboard | Sumber Jaya Furniture') :
-								echo "active";
-							endif;
-							?>">
+						<li class="nav-item">
 							<a href="/">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
 							</a>
 						</li> <!-- end nav item -->
 
-						<li class="nav-item 
-							<?php if ($title == 'Data Barang | Sumber Jaya Furniture') :
-								echo "active";
-							endif;
-							?>">
+						<li class="nav-item">
 							<a href="/admin/barang">
 								<i class="fas fa-box-open"></i>
 								<p>Data Barang</p>
 							</a>
 						</li> <!-- end nav data barang -->
 
-						<li class="nav-item 
-							<?php if ($title == 'Data Transaksi | Sumber Jaya Furniture') :
-								echo "active";
-							endif;
-							?>">
+						<li class="nav-item active">
 							<a href="/admin/transaksi">
 								<i class="fas fa-shopping-cart"></i>
 								<p>Data Transaksi</p>
