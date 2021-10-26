@@ -37,7 +37,6 @@
 <body>
 	<div class="wrapper">
 		<div class="main-header">
-
 			<!-- Logo Header -->
 			<div class="logo-header" data-background-color="blue">
 
@@ -91,7 +90,6 @@
 									<span class="title mb-1">Quick Actions</span>
 									<span class="subtitle op-8">Shortcuts</span>
 								</div> <!-- quick actions header -->
-
 								<div class="quick-actions-scroll scrollbar-outer">
 									<div class="quick-actions-items">
 										<div class="row m-0">
